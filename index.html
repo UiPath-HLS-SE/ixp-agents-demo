@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UiPath IXP Agents Demo</title>
+    <meta
+      name="description"
+      content="A sanitized demo repo showing how coding agents accelerate IXP automations and document AI solutions."
+    />
+    <link rel="stylesheet" href="./landing.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="eyebrow">UiPath Demo Repo</span>
+          <a class="brand" href="#top">IXP Agents Demo</a>
+        </div>
+        <nav class="topnav" aria-label="Section navigation">
+          <a href="#start">Start Here</a>
+          <a href="#demo">10-Min Demo</a>
+          <a href="#map">Repo Map</a>
+          <a href="#pages">GitHub Pages</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero panel">
+          <div class="hero-copy">
+            <span class="eyebrow">Sanitized And Shareable</span>
+            <h1>Coding agents for IXP automations, packaged as a clean demo repo.</h1>
+            <p class="lede">
+              This repo is built to show how coding agents help developers build better document solutions faster:
+              faster artifact creation, faster extraction troubleshooting, and a much more realistic path for
+              Studio-first teams to create useful Python logic such as coded agents and automation helpers.
+            </p>
+            <div class="action-row">
+              <a class="button button-primary" href="./presentation/coding-agents-for-ixp/site/index.html">
+                Open Full Presentation
+              </a>
+              <a class="button button-secondary" href="https://github.com/UiPath-HLS-SE/ixp-agents-demo">
+                View On GitHub
+              </a>
+            </div>
+          </div>
+          <div class="hero-rail">
+            <div class="rail-card rail-card-strong">
+              <span class="eyebrow">Key Message</span>
+              <p>
+                Coding agents accelerate IXP work in two major ways: they help developers build solution logic faster,
+                and they help developers troubleshoot extraction faster.
+              </p>
+            </div>
+            <div class="rail-card">
+              <span class="eyebrow">Major Unlock</span>
+              <p>
+                Studio-first developers can now package useful complex Python logic, including coded agents and helper
+                utilities, without needing to start as expert Python authors.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="start" class="panel section">
+          <div class="section-header">
+            <span class="eyebrow">Start Here</span>
+            <h2>Use the repo in three layers.</h2>
+          </div>
+          <div class="card-grid">
+            <a class="feature-card" href="./presentation/coding-agents-for-ixp/site/index.html">
+              <span class="card-tag">Presentation</span>
+              <strong>Presentation microsite</strong>
+              <p>Use the browser-ready presentation to explain the lesson and the developer workflow.</p>
+            </a>
+            <a class="feature-card" href="https://github.com/UiPath-HLS-SE/ixp-agents-demo/blob/main/document_review_agent_demo/README.md">
+              <span class="card-tag">Code</span>
+              <strong>Offline coded-agent demo</strong>
+              <p>Show how Python-based review logic can be packaged as a reusable coded component.</p>
+            </a>
+            <a class="feature-card" href="https://github.com/UiPath-HLS-SE/ixp-agents-demo/blob/main/document_ixp_sanity/README.md">
+              <span class="card-tag">Evaluation</span>
+              <strong>Generic IXP sanity helper</strong>
+              <p>Show how teams can score extraction changes and keep reusable evaluation artifacts.</p>
+            </a>
+          </div>
+        </section>
+
+        <section id="demo" class="section">
+          <div class="section-header">
+            <span class="eyebrow">10-Min Demo</span>
+            <h2>A fast path for a live walkthrough.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-step">
+              <div class="step-number">1</div>
+              <div>
+                <strong>Open the presentation</strong>
+                <p>Start with the full microsite and walk the audience through the lesson flow and the key message.</p>
+              </div>
+              <code>presentation/coding-agents-for-ixp/site/index.html</code>
+            </article>
+            <article class="timeline-step">
+              <div class="step-number">2</div>
+              <div>
+                <strong>Run the offline coded-agent demo</strong>
+                <p>Show the kind of Python review logic teams can now package much more easily.</p>
+              </div>
+              <code>python3 document_review_agent_demo/main.py --input document_review_agent_demo/input.sample.json</code>
+            </article>
+            <article class="timeline-step">
+              <div class="step-number">3</div>
+              <div>
+                <strong>Run the evaluator smoke test</strong>
+                <p>Show how extraction quality changes can be measured rather than discussed only anecdotally.</p>
+              </div>
+              <code>python3 document_ixp_sanity/main.py --run-smoke document_ixp_sanity/sample_ixp/sample1_ixp.json</code>
+            </article>
+            <article class="timeline-step">
+              <div class="step-number">4</div>
+              <div>
+                <strong>Close on the platform message</strong>
+                <p>Land the idea that coding agents expand both developer speed and developer capability.</p>
+              </div>
+              <code>Studio + IXP + coding-agent-assisted development + reusable Python logic</code>
+            </article>
+          </div>
+        </section>
+
+        <section id="map" class="panel section">
+          <div class="section-header">
+            <span class="eyebrow">Repo Map</span>
+            <h2>The repo is intentionally small and demo-safe.</h2>
+          </div>
+          <div class="map-grid">
+            <div class="map-card">
+              <strong><code>presentation/coding-agents-for-ixp/</code></strong>
+              <p>Slide deck, demo script, prompt pack, architecture handout, and the polished presentation site.</p>
+            </div>
+            <div class="map-card">
+              <strong><code>document_review_agent_demo/</code></strong>
+              <p>Offline coded-agent-style demo showing field review against synthetic packet text.</p>
+            </div>
+            <div class="map-card">
+              <strong><code>document_ixp_sanity/</code></strong>
+              <p>Generic evaluator package with sample data and smoke-run support.</p>
+            </div>
+            <div class="map-card">
+              <strong><code>demo_resources/</code></strong>
+              <p>Synthetic packet text, extracted output, and ground truth used by the demos.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pages" class="section">
+          <div class="section-header">
+            <span class="eyebrow">GitHub Pages</span>
+            <h2>This repo is ready for a root-level Pages publish.</h2>
+          </div>
+          <div class="pages-callout">
+            <p>
+              The root <code>index.html</code> is designed as a clean landing page for GitHub Pages, and the repo now
+              includes a Pages workflow. Once Pages is enabled for the repository, this landing page can act as the
+              public front door to the demo.
+            </p>
+            <a class="button button-secondary" href="https://github.com/UiPath-HLS-SE/ixp-agents-demo/actions">
+              Open GitHub Actions
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,12 @@ This repository is a sanitized, demo-safe starter repo for showing how coding ag
 
 It intentionally excludes customer-specific materials, production bucket references, restricted artifacts, and business-domain notes from the source repo it was derived from.
 
+## Start here
+
+- Landing page: `index.html`
+- Full presentation microsite: `presentation/coding-agents-for-ixp/site/index.html`
+- GitHub repo: `https://github.com/UiPath-HLS-SE/ixp-agents-demo`
+
 ## What is included
 
 - `presentation/coding-agents-for-ixp/`
@@ -39,6 +45,10 @@ Open the presentation microsite directly in a browser:
 
 - `presentation/coding-agents-for-ixp/site/index.html`
 
+Open the root landing page for a cleaner repo entry point:
+
+- `index.html`
+
 Run the generic evaluator smoke test:
 
 ```bash
@@ -50,6 +60,30 @@ Run the offline coded-agent demo:
 ```bash
 python3 document_review_agent_demo/main.py --input document_review_agent_demo/input.sample.json
 ```
+
+## How to demo this in 10 minutes
+
+1. Open `index.html` or `presentation/coding-agents-for-ixp/site/index.html`.
+2. Walk through the core message:
+   coding agents help teams build solution logic faster and troubleshoot extraction faster.
+3. Make the Python unlock explicit:
+   Studio-first developers can now package useful coded logic much more easily.
+4. Run the offline coded-agent demo:
+   `python3 document_review_agent_demo/main.py --input document_review_agent_demo/input.sample.json`
+5. Run the evaluator smoke test:
+   `python3 document_ixp_sanity/main.py --run-smoke document_ixp_sanity/sample_ixp/sample1_ixp.json`
+6. Close on the architecture:
+   Studio orchestration + IXP extraction + coding-agent-assisted development + reusable Python logic.
+
+## GitHub Pages
+
+This repo now includes:
+
+- a root `index.html` landing page
+- a static presentation microsite under `presentation/coding-agents-for-ixp/site/`
+- a GitHub Pages workflow at `.github/workflows/pages.yml`
+
+If Pages is enabled for this repository, the root landing page is ready to act as the public entry point.
 
 ## Demo-safe boundaries
 
