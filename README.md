@@ -81,9 +81,15 @@ This repo now includes:
 
 - a root `index.html` landing page
 - a static presentation microsite under `presentation/coding-agents-for-ixp/site/`
-- a GitHub Pages workflow at `.github/workflows/pages.yml`
 
-If Pages is enabled for this repository, the root landing page is ready to act as the public entry point.
+To publish it with the simplest setup:
+
+1. Open the repository Pages settings.
+2. Set `Source` to `Deploy from a branch`.
+3. Select branch `main`.
+4. Select folder `/(root)`.
+
+With that configuration, the root landing page is ready to act as the public entry point.
 
 ## Demo-safe boundaries
 
