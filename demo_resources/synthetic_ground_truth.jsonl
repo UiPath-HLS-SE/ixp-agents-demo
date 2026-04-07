@@ -1,0 +1,4 @@
+{"doc_id":"DOC-SAMPLE-1","canonical_field":"patient_name","value":"John Doe","annotator_id":"demo-user"}
+{"doc_id":"DOC-SAMPLE-1","canonical_field":"patient_dob","value":"01/23/1985","annotator_id":"demo-user"}
+{"doc_id":"DOC-SAMPLE-1","canonical_field":"member_id","value":"M-1029384","annotator_id":"demo-user"}
+{"doc_id":"DOC-SAMPLE-1","canonical_field":"provider_npi","value":"1234567890","annotator_id":"demo-user"}

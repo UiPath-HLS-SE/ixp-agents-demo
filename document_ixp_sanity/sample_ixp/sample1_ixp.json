@@ -1,0 +1,21 @@
+{
+  "documents": [
+    {
+      "document_id": "DOC-SAMPLE-1",
+      "extracted_fields": [
+        {
+          "field_name": "patientName",
+          "value": "John Doe",
+          "confidence": 0.92,
+          "page": 1
+        },
+        {
+          "field_name": "dob",
+          "value": "1985-01-23",
+          "confidence": 0.98,
+          "page": 1
+        }
+      ]
+    }
+  ]
+}

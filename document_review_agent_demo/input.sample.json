@@ -1,0 +1,38 @@
+{
+  "document_name": "synthetic_packet.txt",
+  "packet_text_path": "../demo_resources/synthetic_packet.txt",
+  "current_ixp_fields": {
+    "patient_name": "John Doe",
+    "patient_dob": "1985-01-23",
+    "member_id": "M-1029384",
+    "provider_npi": "1234567890",
+    "requested_service": "MRI Lumbar Spine"
+  },
+  "requested_fields": [
+    {
+      "path": "patient_name",
+      "label": "Patient Name",
+      "patterns": ["Patient Name:\\s*(.+)"]
+    },
+    {
+      "path": "patient_dob",
+      "label": "Date of Birth",
+      "patterns": ["Date of Birth:\\s*(.+)"]
+    },
+    {
+      "path": "member_id",
+      "label": "Member ID",
+      "patterns": ["Member ID:\\s*(.+)"]
+    },
+    {
+      "path": "provider_npi",
+      "label": "Provider NPI",
+      "patterns": ["Provider NPI:\\s*(.+)"]
+    },
+    {
+      "path": "requested_service",
+      "label": "Requested Service",
+      "patterns": ["Requested Service:\\s*(.+)"]
+    }
+  ]
+}

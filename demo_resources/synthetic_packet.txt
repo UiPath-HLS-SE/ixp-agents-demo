@@ -1,0 +1,12 @@
+Authorization Request
+Patient Name: John Doe
+Date of Birth: 01/23/1985
+Member ID: M-1029384
+Provider NPI: 1234567890
+Requested Service: MRI Lumbar Spine
+Priority: Standard
+Admission Date: 05/14/2026
+
+Notes:
+The ordering provider is requesting outpatient imaging.
+Please review the attached clinical notes before scheduling.

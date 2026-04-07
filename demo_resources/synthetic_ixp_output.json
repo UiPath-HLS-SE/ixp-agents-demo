@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "document_id": "DOC-SAMPLE-1",
+      "extracted_fields": [
+        {
+          "field_name": "patientName",
+          "value": "John Doe",
+          "confidence": 0.94,
+          "page": 1
+        },
+        {
+          "field_name": "dob",
+          "value": "1985-01-23",
+          "confidence": 0.97,
+          "page": 1
+        },
+        {
+          "field_name": "memberId",
+          "value": "M-1029384",
+          "confidence": 0.91,
+          "page": 1
+        },
+        {
+          "field_name": "providerNPI",
+          "value": "1234567890",
+          "confidence": 0.93,
+          "page": 1
+        }
+      ]
+    }
+  ]
+}

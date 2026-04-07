@@ -1,0 +1,41 @@
+{
+  "canonical_fields": {
+    "patient_name": {
+      "ixp_candidates": ["patientName", "name", "Patient_Name"],
+      "normalize": "lower",
+      "validators": [],
+      "acceptance_threshold": 0.85
+    },
+    "patient_dob": {
+      "ixp_candidates": ["dob", "dateOfBirth", "patientDOB"],
+      "normalize": "date",
+      "validators": ["date"],
+      "acceptance_threshold": 0.9
+    },
+    "provider_npi": {
+      "ixp_candidates": ["npi", "providerNPI", "Provider_NPI"],
+      "normalize": "digits",
+      "validators": ["npi"],
+      "acceptance_threshold": 0.95
+    },
+    "member_id": {
+      "ixp_candidates": ["memberId", "MRN", "member_id"],
+      "normalize": "digits",
+      "validators": [],
+      "acceptance_threshold": 0.9
+    },
+    "requested_cpt_code": {
+      "ixp_candidates": ["cpt_codes", "requestedCPT"],
+      "normalize": "uppercase",
+      "validators": [],
+      "acceptance_threshold": 0.95
+    }
+  },
+  "global": {
+    "fuzzy_backend": "rapidfuzz",
+    "default_acceptance_threshold": 0.8,
+    "synonyms": {
+      "mrn": ["member_id", "member", "memberId"]
+    }
+  }
+}
