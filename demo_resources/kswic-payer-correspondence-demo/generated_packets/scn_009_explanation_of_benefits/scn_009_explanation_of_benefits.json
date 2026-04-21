@@ -1,0 +1,53 @@
+{
+  "scenario_id": "SCN-009",
+  "document_type": "Explanation of Benefits",
+  "document_family": "claims",
+  "sender_name": "North Plains Select",
+  "sender_address": "901 Oak Harbor Row, Omaha, NE 68114",
+  "sender_phone": "(877) 555-4401",
+  "sender_fax": "(877) 555-4408",
+  "recipient_name": "Member and provider copy",
+  "recipient_role": "Member",
+  "recipient_address": "Wichita, KS 67203",
+  "line_of_business": "Commercial PPO",
+  "clinical_area": "Office Visit and Labs",
+  "summary": "Paid office visit and lab panel with deductible and coinsurance applied.",
+  "channel": "portal_notice",
+  "member_name": "Riley Mercer",
+  "member_id": "NPS-118290-01",
+  "member_dob": "1995-09-21",
+  "provider_name": "Kansas Sunflower Women's Imaging Center",
+  "provider_npi": "1881357012",
+  "ordering_provider": "Dr. Maya Voss",
+  "policy_or_group_id": "NPS-42117",
+  "claim_number": "CLM-7224508",
+  "authorization_number": "",
+  "service_description": "Office visit and lab panel",
+  "requested_units": "",
+  "approved_units": "",
+  "dates": {
+    "request_received": "",
+    "decision_date": "2026-02-25",
+    "service_date": "2026-02-04",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": ""
+  },
+  "decision_status": "paid",
+  "reason_category": "claim_paid",
+  "reason_codes": [
+    "PAID"
+  ],
+  "reason_text": "Claim processed per plan benefits with deductible and coinsurance applied.",
+  "financials": {
+    "billed_amount": 640.0,
+    "allowed_amount": 425.0,
+    "plan_paid": 297.5,
+    "member_responsibility": 127.5
+  },
+  "documents_requested": [],
+  "next_steps": [
+    "Add a patient-account note in Cerner if the EOB needs to be reconciled against the claim balance.",
+    "No payer-portal follow-up is required unless the remittance and EOB disagree."
+  ]
+}

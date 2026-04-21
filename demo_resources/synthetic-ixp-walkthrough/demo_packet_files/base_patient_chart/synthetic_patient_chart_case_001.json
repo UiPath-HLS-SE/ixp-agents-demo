@@ -1,0 +1,406 @@
+{
+  "record_meta": {
+    "generated_on": "2026-02-26",
+    "disclaimer": "All information in this chart is synthetic and generated for testing/demo use.",
+    "record_id": "SYN-CHART-0001"
+  },
+  "patient": {
+    "name": "Jordan M. Alvarez",
+    "dob": "1981-07-18",
+    "age": "44",
+    "sex_at_birth": "Female",
+    "gender_identity": "Female",
+    "mrn": "10458271",
+    "account": "A-778231",
+    "address": "2471 Meadow Ridge Ln, Franklin, TN 37067",
+    "phone": "(615) 555-0148",
+    "email": "jordan.alvarez@example.test",
+    "language": "English",
+    "marital_status": "Married",
+    "occupation": "Project manager",
+    "insurance": "BlueCross PPO (synthetic policy)",
+    "pcp": "Nina Patel, MD",
+    "emergency_contact": "Luis Alvarez (spouse) (615) 555-0191",
+    "height": "165 cm (5 ft 5 in)",
+    "weight": "82.3 kg (181 lb)",
+    "bmi": "30.2 kg/m^2",
+    "blood_type": "O+"
+  },
+  "allergies": [
+    {
+      "substance": "Penicillin",
+      "reaction": "Pruritic rash",
+      "severity": "Moderate"
+    },
+    {
+      "substance": "Lisinopril",
+      "reaction": "Persistent cough",
+      "severity": "Mild"
+    }
+  ],
+  "problems": [
+    {
+      "problem": "Type 2 diabetes mellitus",
+      "status": "Active",
+      "since": "2019",
+      "icd10": "E11.9"
+    },
+    {
+      "problem": "Essential hypertension",
+      "status": "Active",
+      "since": "2018",
+      "icd10": "I10"
+    },
+    {
+      "problem": "Hyperlipidemia",
+      "status": "Active",
+      "since": "2020",
+      "icd10": "E78.5"
+    },
+    {
+      "problem": "GERD",
+      "status": "Intermittent",
+      "since": "2021",
+      "icd10": "K21.9"
+    },
+    {
+      "problem": "Mild intermittent asthma",
+      "status": "Active",
+      "since": "Childhood",
+      "icd10": "J45.20"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Metformin ER 1000 mg",
+      "sig": "Take 1 tablet by mouth twice daily with meals",
+      "status": "Active",
+      "start": "2024-11-04",
+      "prescriber": "N. Patel, MD"
+    },
+    {
+      "name": "Losartan 50 mg",
+      "sig": "Take 1 tablet by mouth daily",
+      "status": "Active",
+      "start": "2025-03-14",
+      "prescriber": "N. Patel, MD"
+    },
+    {
+      "name": "Rosuvastatin 10 mg",
+      "sig": "Take 1 tablet by mouth nightly",
+      "status": "Active",
+      "start": "2024-08-20",
+      "prescriber": "N. Patel, MD"
+    },
+    {
+      "name": "Omeprazole 20 mg",
+      "sig": "Take 1 capsule by mouth daily before breakfast as needed",
+      "status": "PRN",
+      "start": "2025-01-10",
+      "prescriber": "N. Patel, MD"
+    },
+    {
+      "name": "Albuterol HFA 90 mcg",
+      "sig": "2 puffs inhaled every 4-6 hours as needed for wheeze",
+      "status": "PRN",
+      "start": "2023-06-02",
+      "prescriber": "M. Chen, DO"
+    }
+  ],
+  "immunizations": [
+    {
+      "vaccine": "Influenza (quadrivalent)",
+      "date": "2025-10-02",
+      "site": "Left deltoid"
+    },
+    {
+      "vaccine": "COVID-19 booster (mRNA)",
+      "date": "2025-10-02",
+      "site": "Right deltoid"
+    },
+    {
+      "vaccine": "Tdap",
+      "date": "2024-06-18",
+      "site": "Left deltoid"
+    },
+    {
+      "vaccine": "Pneumococcal PCV20",
+      "date": "2025-03-14",
+      "site": "Left deltoid"
+    }
+  ],
+  "encounters": [
+    {
+      "date": "2025-03-14",
+      "type": "Primary Care - Annual Physical",
+      "provider": "Nina Patel, MD",
+      "location": "Northwind Family Medicine",
+      "vitals": "BP 142/88, HR 78, Temp 98.4 F, RR 14, SpO2 98%, Wt 184 lb",
+      "reason": "Annual preventive visit and chronic disease follow-up.",
+      "assessment": [
+        "Type 2 diabetes: A1c above goal at 7.8%. Discussed diet consistency and exercise plan.",
+        "Hypertension: BP persistently above goal; changed from lisinopril (cough) to losartan.",
+        "Hyperlipidemia: Continue statin; repeat fasting lipids in 6 months."
+      ],
+      "plan": [
+        "Increase metformin ER to 1000 mg twice daily.",
+        "Start losartan 50 mg daily.",
+        "Order CMP, A1c, urine microalbumin, fasting lipid panel.",
+        "Vaccinate with PCV20 due to diabetes risk profile."
+      ],
+      "signed_at": "2025-03-14 17:42"
+    },
+    {
+      "date": "2025-11-20",
+      "type": "Urgent Care Visit",
+      "provider": "Maya Chen, DO",
+      "location": "Lakeview Urgent Care",
+      "vitals": "BP 136/84, HR 96, Temp 99.1 F, RR 18, SpO2 96%",
+      "reason": "3-day cough, wheezing, sinus congestion after viral illness exposure.",
+      "assessment": [
+        "Likely viral bronchitis with asthma exacerbation (mild).",
+        "No focal consolidation on exam; no severe respiratory distress."
+      ],
+      "plan": [
+        "Albuterol refill; spacer technique reviewed.",
+        "Prednisone 40 mg daily x5 days.",
+        "Supportive care and return precautions discussed."
+      ],
+      "signed_at": "2025-11-20 19:06"
+    },
+    {
+      "date": "2026-01-09",
+      "type": "Emergency Department Visit",
+      "provider": "Aaron Feldman, MD",
+      "location": "Northwind Medical Center ED",
+      "vitals": "BP 154/92, HR 104, Temp 98.2 F, RR 20, SpO2 99%",
+      "reason": "Intermittent substernal chest pressure x6 hours with mild nausea; improved on arrival.",
+      "assessment": [
+        "Low-risk chest pain; serial troponins negative.",
+        "ECG: sinus tachycardia, no ST-elevation; nonspecific T-wave changes.",
+        "CXR: no acute cardiopulmonary abnormality.",
+        "Symptoms possibly reflux-related; advised close PCP follow-up."
+      ],
+      "plan": [
+        "Observation and repeat troponin x2 (negative).",
+        "Trial GI cocktail with symptom improvement.",
+        "Discharge with return precautions and PCP/cardiology follow-up if recurrence."
+      ],
+      "signed_at": "2026-01-09 23:11"
+    },
+    {
+      "date": "2026-01-16",
+      "type": "Primary Care Follow-up",
+      "provider": "Nina Patel, MD",
+      "location": "Northwind Family Medicine",
+      "vitals": "BP 132/82, HR 76, Temp 98.6 F, RR 14, SpO2 98%, Wt 182 lb",
+      "reason": "Post-ED follow-up for chest pain and chronic disease review.",
+      "assessment": [
+        "No recurrent chest pain since ED discharge; likely GERD contributor.",
+        "BP improved with losartan; home readings averaging 128-134/78-84.",
+        "A1c trending down; patient increased walking to 4 days/week."
+      ],
+      "plan": [
+        "Continue current meds; use omeprazole daily for 4 weeks then PRN.",
+        "Refer for outpatient exercise stress test due to risk factors and ED visit.",
+        "Repeat A1c/CMP in 3 months."
+      ],
+      "signed_at": "2026-01-16 16:28"
+    },
+    {
+      "date": "2026-02-20",
+      "type": "Endocrinology Consult",
+      "provider": "Leah Morgan, MD",
+      "location": "Northwind Endocrinology",
+      "vitals": "BP 128/80, HR 74, Temp 98.1 F, RR 14, SpO2 99%, Wt 181 lb",
+      "reason": "Diabetes management optimization.",
+      "assessment": [
+        "A1c improved to 7.1%; still above individualized target <7.0%.",
+        "No nephropathy or retinopathy documented; annual eye exam due next month.",
+        "Discussed GLP-1 RA option for glycemic and weight benefit."
+      ],
+      "plan": [
+        "Continue metformin ER 1000 mg BID.",
+        "Start semaglutide 0.25 mg weekly x4 weeks, then 0.5 mg weekly if tolerated.",
+        "Monitor fasting glucose 3-4 times/week and maintain food/activity log."
+      ],
+      "signed_at": "2026-02-20 15:39"
+    }
+  ],
+  "labs": [
+    {
+      "date": "2025-03-14",
+      "a1c": 7.8,
+      "glucose": 168,
+      "creatinine": 0.82,
+      "egfr": 91,
+      "ldl": 118,
+      "microalb": 13
+    },
+    {
+      "date": "2025-06-20",
+      "a1c": 7.5,
+      "glucose": 154,
+      "creatinine": 0.8,
+      "egfr": 94,
+      "ldl": 101,
+      "microalb": 11
+    },
+    {
+      "date": "2025-10-02",
+      "a1c": 7.3,
+      "glucose": 149,
+      "creatinine": 0.79,
+      "egfr": 96,
+      "ldl": 88,
+      "microalb": 10
+    },
+    {
+      "date": "2026-01-16",
+      "a1c": 7.2,
+      "glucose": 143,
+      "creatinine": 0.84,
+      "egfr": 89,
+      "ldl": 84,
+      "microalb": 12
+    },
+    {
+      "date": "2026-02-20",
+      "a1c": 7.1,
+      "glucose": 138,
+      "creatinine": 0.81,
+      "egfr": 92,
+      "ldl": 80,
+      "microalb": 9
+    }
+  ],
+  "diagnostics": {
+    "ecg": {
+      "date": "2026-01-09",
+      "summary": "Sinus tachycardia (rate 103 bpm), normal axis, QTc 437 ms, nonspecific T-wave flattening in lateral leads; no STEMI criteria.",
+      "reported_by": "Aaron Feldman, MD"
+    },
+    "cxr": {
+      "date": "2026-01-09",
+      "summary": "Single-view chest radiograph: cardiac silhouette within normal size limits, no focal airspace opacity, pleural effusion, or pneumothorax. No acute osseous abnormality on this exam.",
+      "reported_by": "Priya Raman, MD"
+    },
+    "stress_test": {
+      "date": "2026-02-05",
+      "summary": "Exercise treadmill test completed 9:21 Bruce protocol; no ischemic ST changes, no arrhythmia, appropriate BP response. Low-risk study.",
+      "reported_by": "Thomas Reeves, MD"
+    },
+    "ultrasound": {
+      "date": "2025-08-12",
+      "summary": "RUQ ultrasound for episodic abdominal discomfort: mild hepatic steatosis, no cholelithiasis, no biliary dilation.",
+      "reported_by": "Priya Raman, MD"
+    }
+  },
+  "surgical_report": {
+    "procedure_date": "2025-07-22",
+    "facility": "Northwind Medical Center - Outpatient Surgery",
+    "surgeon": "Caleb Monroe, MD",
+    "assistant": "K. Wright, PA-C",
+    "anesthesia": "General endotracheal",
+    "preop_diagnosis": "Symptomatic cholelithiasis",
+    "postop_diagnosis": "Symptomatic cholelithiasis without acute cholecystitis",
+    "procedure": "Laparoscopic cholecystectomy",
+    "findings": [
+      "Chronically inflamed gallbladder with multiple cholesterol stones.",
+      "Critical view of safety obtained prior to clipping cystic duct/artery.",
+      "No bile leak noted after irrigation and hemostasis check."
+    ],
+    "specimen_sent": "Gallbladder submitted to pathology in formalin.",
+    "estimated_blood_loss_ml": "25",
+    "complications": "None apparent.",
+    "disposition": "Transferred to PACU in stable condition.",
+    "signed_at": "2025-07-22 16:04"
+  },
+  "pathology_report": {
+    "accession": "SP-25-071982",
+    "collection_date": "2025-07-22",
+    "pathologist": "Elena Russo, MD",
+    "specimen": "Gallbladder, cholecystectomy",
+    "gross_description": "7.8 x 3.1 x 2.9 cm gallbladder with green-brown bile and multiple yellow stones up to 0.8 cm.",
+    "microscopic_description": "Mucosal flattening with chronic inflammatory infiltrate and focal Rokitansky-Aschoff sinus formation.",
+    "final_diagnosis": [
+      "Chronic cholecystitis with cholelithiasis.",
+      "No dysplasia or malignancy identified."
+    ],
+    "signed_at": "2025-07-23 09:27"
+  },
+  "discharge_summary": {
+    "facility": "Northwind Medical Center",
+    "admission_date": "2026-01-09",
+    "discharge_date": "2026-01-10",
+    "attending": "Aaron Feldman, MD",
+    "admission_diagnosis": "Chest pain, rule out acute coronary syndrome",
+    "discharge_diagnosis": "Low-risk chest pain, likely reflux-related; hypertension; type 2 diabetes mellitus",
+    "hospital_course": [
+      "Presented with intermittent substernal pressure with mild nausea.",
+      "Serial high-sensitivity troponins remained negative and ECG showed no acute ischemic changes.",
+      "Symptoms improved with GI cocktail and observation; remained hemodynamically stable overnight."
+    ],
+    "discharge_medications": [
+      "Metformin ER 1000 mg PO twice daily.",
+      "Losartan 50 mg PO daily.",
+      "Rosuvastatin 10 mg PO nightly.",
+      "Omeprazole 20 mg PO daily for 4 weeks then PRN."
+    ],
+    "follow_up": [
+      "Primary care follow-up in 1 week.",
+      "Cardiology follow-up within 2-4 weeks if recurrent symptoms.",
+      "Return to ED immediately for persistent chest pain, dyspnea, syncope, or new neurologic symptoms."
+    ],
+    "signed_at": "2026-01-10 09:14"
+  },
+  "consult_note": {
+    "service": "Cardiology Consult",
+    "date": "2026-02-05",
+    "consultant": "Thomas Reeves, MD",
+    "requesting_provider": "Nina Patel, MD",
+    "reason": "Evaluation after ED chest pain episode and multiple cardiovascular risk factors.",
+    "history": "No recurrent exertional chest pain. Walks 30 minutes 4 times weekly. Denies syncope, orthopnea, edema, or palpitations.",
+    "assessment": [
+      "Atypical chest pain with reassuring ED and outpatient treadmill workup.",
+      "ASCVD risk elevated due to diabetes, hypertension, and dyslipidemia.",
+      "Blood pressure and lipid control improved on current regimen."
+    ],
+    "recommendations": [
+      "Continue losartan and rosuvastatin without change.",
+      "Maintain structured exercise and Mediterranean-style diet.",
+      "No additional ischemic testing unless symptom pattern changes.",
+      "Follow up in cardiology clinic in 6 months."
+    ],
+    "signed_at": "2026-02-05 12:03"
+  },
+  "anesthesia_report": {
+    "case_date": "2025-07-22",
+    "anesthesiologist": "Mira Khanna, MD",
+    "crna": "Jordan Lee, CRNA",
+    "procedure": "Laparoscopic cholecystectomy",
+    "asa_class": "ASA III",
+    "airway": "Mallampati II, Grade I view with MAC 3 blade",
+    "anesthetic_type": "General endotracheal anesthesia",
+    "induction": "Propofol, fentanyl, rocuronium",
+    "maintenance": "Sevoflurane with balanced opioid-sparing analgesia",
+    "events": [
+      "Intubation successful on first attempt with 7.0 cuffed ETT.",
+      "Hemodynamics stable throughout case; no vasopressor requirement.",
+      "Multimodal antiemetic prophylaxis administered.",
+      "Extubated awake in OR and transferred to PACU on supplemental oxygen."
+    ],
+    "post_anesthesia": "Pain controlled, no post-op nausea/vomiting, Aldrete 9 on arrival to PACU.",
+    "signed_at": "2025-07-22 16:22"
+  },
+  "report_signatures": {
+    "radiology_signed_at": "2026-01-09 15:11",
+    "cardiology_signed_at": "2026-02-05 12:03",
+    "pathology_signed_at": "2025-07-23 09:27",
+    "surgery_signed_at": "2025-07-22 16:04"
+  },
+  "document_settings": {
+    "include_synthetic_imaging_default": false,
+    "show_center_watermark_default": false
+  }
+}

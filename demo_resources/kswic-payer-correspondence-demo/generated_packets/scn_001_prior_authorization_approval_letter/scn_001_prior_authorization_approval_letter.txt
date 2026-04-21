@@ -1,0 +1,32 @@
+Prior Authorization Approval Letter
+Scenario ID: SCN-001
+Sender: Prairie Horizon Health Plan
+Recipient: Kansas Sunflower Women's Imaging Center
+Member: Avery Sutton (PHH-484920-01)
+Member DOB: 1988-04-17
+Provider: Kansas Sunflower Women's Imaging Center (1881357012)
+Claim Number: N/A
+Authorization Number: PA-884201
+Line Of Business: Commercial PPO
+Clinical Area: Advanced Imaging
+Decision Status: approved
+Reason Category: medical_necessity_met
+Reason Codes: MED-NEC-APP
+Reason Text: Submitted records support medical necessity under imaging guidelines.
+Request Received: 2026-02-04
+Decision Date: 2026-02-06
+Service Date: 2026-02-12
+Authorization Window: 2026-02-07 to 2026-03-07
+Response Deadline: N/A
+Summary: Approval for CT abdomen/pelvis with contrast requested by KSWIC imaging scheduling.
+Service Description: CT abdomen/pelvis with contrast
+Requested Units: 1
+Approved Units: 1
+Billed Amount: -
+Allowed Amount: -
+Plan Paid: -
+Member Responsibility: -
+Documents Requested: None
+Next Steps:
+- Update the Cerner authorization record with the approved authorization number and validity window.
+- Release the imaging visit from the auth workqueue once the scheduled service date is confirmed.

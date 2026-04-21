@@ -1,0 +1,26 @@
+{
+  "automation_id": "dummy_payer_portal_follow_up",
+  "display_name": "Dummy - Payer Portal Follow Up",
+  "system": "Synthetic payer portal",
+  "supported_actions": [
+    "check_status",
+    "upload_missing_documents",
+    "submit_reconsideration",
+    "submit_cob_update",
+    "request_recoupment_detail"
+  ],
+  "required_inputs": [
+    "document_id",
+    "member_id",
+    "payer_name",
+    "claim_number",
+    "authorization_number",
+    "action"
+  ],
+  "outputs": [
+    "portal_reference_number",
+    "portal_status",
+    "submitted_at",
+    "notes"
+  ]
+}

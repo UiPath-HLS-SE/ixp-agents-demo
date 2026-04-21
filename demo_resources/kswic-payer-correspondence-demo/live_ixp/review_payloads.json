@@ -1,0 +1,131 @@
+[
+  {
+    "action_app_gap": {
+      "missing_piece_in_this_repo": "Live IXP API output is available, but DU validation artifacts and the deployed Action App task are not yet created in Studio Web.",
+      "required_input_type": "ContentValidationData",
+      "supported_maestro_pattern": "User task -> Create Action App task"
+    },
+    "document_id": "84bc23ea-fe34-f111-8ef3-00224826ae6b",
+    "document_type": "Prior Authorization Approval Letter",
+    "extracted_preview": {
+      "authorization_number": "PA-884201",
+      "claim_number": null,
+      "member_id": "PHH-484920-01",
+      "note_text": null,
+      "provider_name": "Kansas Sunflower Women's Imaging C...",
+      "request_date": null,
+      "service_description": "CT abdomen/pelvis with contrast"
+    },
+    "maestro_routing_preview": {
+      "decision_status": "approved",
+      "fax_category": "prior_authorization",
+      "is_denial_of_service": false,
+      "missing_information": false,
+      "payer_auth_problem": false,
+      "payer_portal_action": "confirm_auth",
+      "rev_cycle_queue": "KSWIC_AUTH",
+      "target_record_type": "authorization"
+    },
+    "packet_name": "scn_001_prior_authorization_approval_letter",
+    "project_name": "UM Intake",
+    "project_tag_name": "live",
+    "project_version_name": "5",
+    "review_focus": [
+      "document_type",
+      "member_id",
+      "authorization_or_claim_number",
+      "service_description",
+      "routing_flags"
+    ],
+    "review_mode": "interim_json_review",
+    "review_required": true,
+    "scenario_id": "SCN-001",
+    "source_pdf": "/Users/peterreischer/Desktop/uipath-projects/ixp-agents-demo/demo_resources/kswic-payer-correspondence-demo/generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.pdf"
+  },
+  {
+    "action_app_gap": {
+      "missing_piece_in_this_repo": "Live IXP API output is available, but DU validation artifacts and the deployed Action App task are not yet created in Studio Web.",
+      "required_input_type": "ContentValidationData",
+      "supported_maestro_pattern": "User task -> Create Action App task"
+    },
+    "document_id": "d3242d1b-ff34-f111-8ef3-00224826ae6b",
+    "document_type": "Prior Authorization Denial Letter",
+    "extracted_preview": {
+      "authorization_number": "PA-118943",
+      "claim_number": null,
+      "member_id": "FHC-228174-02",
+      "note_text": null,
+      "provider_name": "Kansas Sunflower Women's Imaging C...",
+      "request_date": null,
+      "service_description": "In-lab polysomnography"
+    },
+    "maestro_routing_preview": {
+      "decision_status": "denied",
+      "fax_category": "prior_authorization",
+      "is_denial_of_service": false,
+      "missing_information": false,
+      "payer_auth_problem": true,
+      "payer_portal_action": "start_appeal",
+      "rev_cycle_queue": "KSWIC_AUTH",
+      "target_record_type": "authorization"
+    },
+    "packet_name": "scn_003_prior_authorization_denial_letter",
+    "project_name": "UM Intake",
+    "project_tag_name": "live",
+    "project_version_name": "5",
+    "review_focus": [
+      "document_type",
+      "member_id",
+      "authorization_or_claim_number",
+      "service_description",
+      "routing_flags"
+    ],
+    "review_mode": "interim_json_review",
+    "review_required": true,
+    "scenario_id": "SCN-003",
+    "source_pdf": "/Users/peterreischer/Desktop/uipath-projects/ixp-agents-demo/demo_resources/kswic-payer-correspondence-demo/generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.pdf"
+  },
+  {
+    "action_app_gap": {
+      "missing_piece_in_this_repo": "Live IXP API output is available, but DU validation artifacts and the deployed Action App task are not yet created in Studio Web.",
+      "required_input_type": "ContentValidationData",
+      "supported_maestro_pattern": "User task -> Create Action App task"
+    },
+    "document_id": "5d15cd8e-ff34-f111-8ef3-00224826ae6b",
+    "document_type": "Request for Additional Information",
+    "extracted_preview": {
+      "authorization_number": "N/A",
+      "claim_number": null,
+      "member_id": "SPM-775114-05",
+      "note_text": "Claim pended due to missing operative report and itemized bill.",
+      "provider_name": "KSWIC Revenue Cycle Billing Office",
+      "request_date": "02/21/2026",
+      "service_description": "Outpatient surgery facility claim"
+    },
+    "maestro_routing_preview": {
+      "decision_status": "pended",
+      "fax_category": "claim_denial",
+      "is_denial_of_service": false,
+      "missing_information": true,
+      "payer_auth_problem": false,
+      "payer_portal_action": "submit_missing_docs",
+      "rev_cycle_queue": "KSWIC_BILLING",
+      "target_record_type": "patient_account"
+    },
+    "packet_name": "scn_005_request_for_additional_information",
+    "project_name": "UM Intake",
+    "project_tag_name": "live",
+    "project_version_name": "5",
+    "review_focus": [
+      "document_type",
+      "member_id",
+      "authorization_or_claim_number",
+      "service_description",
+      "routing_flags"
+    ],
+    "review_mode": "interim_json_review",
+    "review_required": true,
+    "scenario_id": "SCN-005",
+    "source_pdf": "/Users/peterreischer/Desktop/uipath-projects/ixp-agents-demo/demo_resources/kswic-payer-correspondence-demo/generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.pdf"
+  }
+]

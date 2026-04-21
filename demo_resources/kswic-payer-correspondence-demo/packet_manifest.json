@@ -1,0 +1,92 @@
+[
+  {
+    "document_id": "scn_001_prior_authorization_approval_letter",
+    "scenario_id": "SCN-001",
+    "document_type": "Prior Authorization Approval Letter",
+    "document_family": "prior_auth",
+    "pdf": "generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.pdf",
+    "json": "generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.json",
+    "text": "generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.txt"
+  },
+  {
+    "document_id": "scn_003_prior_authorization_denial_letter",
+    "scenario_id": "SCN-003",
+    "document_type": "Prior Authorization Denial Letter",
+    "document_family": "prior_auth",
+    "pdf": "generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.pdf",
+    "json": "generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.json",
+    "text": "generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.txt"
+  },
+  {
+    "document_id": "scn_004_claim_denial_letter",
+    "scenario_id": "SCN-004",
+    "document_type": "Claim Denial Letter",
+    "document_family": "claims",
+    "pdf": "generated_packets/scn_004_claim_denial_letter/scn_004_claim_denial_letter.pdf",
+    "json": "generated_packets/scn_004_claim_denial_letter/scn_004_claim_denial_letter.json",
+    "text": "generated_packets/scn_004_claim_denial_letter/scn_004_claim_denial_letter.txt"
+  },
+  {
+    "document_id": "scn_005_request_for_additional_information",
+    "scenario_id": "SCN-005",
+    "document_type": "Request for Additional Information",
+    "document_family": "claims",
+    "pdf": "generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.pdf",
+    "json": "generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.json",
+    "text": "generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.txt"
+  },
+  {
+    "document_id": "scn_006_appeal_receipt_acknowledgment",
+    "scenario_id": "SCN-006",
+    "document_type": "Appeal Receipt Acknowledgment",
+    "document_family": "appeal",
+    "pdf": "generated_packets/scn_006_appeal_receipt_acknowledgment/scn_006_appeal_receipt_acknowledgment.pdf",
+    "json": "generated_packets/scn_006_appeal_receipt_acknowledgment/scn_006_appeal_receipt_acknowledgment.json",
+    "text": "generated_packets/scn_006_appeal_receipt_acknowledgment/scn_006_appeal_receipt_acknowledgment.txt"
+  },
+  {
+    "document_id": "scn_007_appeal_determination_overturn_letter",
+    "scenario_id": "SCN-007",
+    "document_type": "Appeal Determination Overturn Letter",
+    "document_family": "appeal",
+    "pdf": "generated_packets/scn_007_appeal_determination_overturn_letter/scn_007_appeal_determination_overturn_letter.pdf",
+    "json": "generated_packets/scn_007_appeal_determination_overturn_letter/scn_007_appeal_determination_overturn_letter.json",
+    "text": "generated_packets/scn_007_appeal_determination_overturn_letter/scn_007_appeal_determination_overturn_letter.txt"
+  },
+  {
+    "document_id": "scn_009_explanation_of_benefits",
+    "scenario_id": "SCN-009",
+    "document_type": "Explanation of Benefits",
+    "document_family": "claims",
+    "pdf": "generated_packets/scn_009_explanation_of_benefits/scn_009_explanation_of_benefits.pdf",
+    "json": "generated_packets/scn_009_explanation_of_benefits/scn_009_explanation_of_benefits.json",
+    "text": "generated_packets/scn_009_explanation_of_benefits/scn_009_explanation_of_benefits.txt"
+  },
+  {
+    "document_id": "scn_010_coordination_of_benefits_questionnaire_letter",
+    "scenario_id": "SCN-010",
+    "document_type": "Coordination of Benefits Questionnaire Letter",
+    "document_family": "member_admin",
+    "pdf": "generated_packets/scn_010_coordination_of_benefits_questionnaire_letter/scn_010_coordination_of_benefits_questionnaire_letter.pdf",
+    "json": "generated_packets/scn_010_coordination_of_benefits_questionnaire_letter/scn_010_coordination_of_benefits_questionnaire_letter.json",
+    "text": "generated_packets/scn_010_coordination_of_benefits_questionnaire_letter/scn_010_coordination_of_benefits_questionnaire_letter.txt"
+  },
+  {
+    "document_id": "scn_011_overpayment_recovery_notice",
+    "scenario_id": "SCN-011",
+    "document_type": "Overpayment Recovery Notice",
+    "document_family": "payment_integrity",
+    "pdf": "generated_packets/scn_011_overpayment_recovery_notice/scn_011_overpayment_recovery_notice.pdf",
+    "json": "generated_packets/scn_011_overpayment_recovery_notice/scn_011_overpayment_recovery_notice.json",
+    "text": "generated_packets/scn_011_overpayment_recovery_notice/scn_011_overpayment_recovery_notice.txt"
+  },
+  {
+    "document_id": "scn_014_pharmacy_exception_denial",
+    "scenario_id": "SCN-014",
+    "document_type": "Pharmacy Exception Denial",
+    "document_family": "pharmacy",
+    "pdf": "generated_packets/scn_014_pharmacy_exception_denial/scn_014_pharmacy_exception_denial.pdf",
+    "json": "generated_packets/scn_014_pharmacy_exception_denial/scn_014_pharmacy_exception_denial.json",
+    "text": "generated_packets/scn_014_pharmacy_exception_denial/scn_014_pharmacy_exception_denial.txt"
+  }
+]

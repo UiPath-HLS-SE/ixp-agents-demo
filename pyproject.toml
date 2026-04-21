@@ -1,0 +1,24 @@
+[project]
+name = "ixp-agents-demo"
+version = "0.1.0"
+description = "Sanitized UiPath IXP, Maestro, and coded-agent demo repo"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "UiPath HLS SE" }]
+dependencies = [
+    "httpx>=0.27,<1",
+    "pydantic>=2,<3",
+    "PyYAML>=6,<7",
+    "python-dotenv>=1,<2",
+    "rapidfuzz>=3,<4",
+    "uipath>=2.10,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.uv]
+package = false

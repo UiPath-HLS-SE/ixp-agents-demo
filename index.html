@@ -73,6 +73,11 @@
               <strong>Presentation microsite</strong>
               <p>Use the browser-ready presentation to explain the lesson and the developer workflow.</p>
             </a>
+            <a class="feature-card" href="./demo_resources/kswic-payer-correspondence-demo/README.md">
+              <span class="card-tag">Starter Demo</span>
+              <strong>KSWIC payer correspondence</strong>
+              <p>Show a full fax-intake routing starter with synthetic PDFs, simulated IXP output, and Maestro handoff artifacts.</p>
+            </a>
             <a class="feature-card" href="https://github.com/UiPath-HLS-SE/ixp-agents-demo/blob/main/document_review_agent_demo/README.md">
               <span class="card-tag">Code</span>
               <strong>Offline coded-agent demo</strong>
@@ -111,13 +116,21 @@
             <article class="timeline-step">
               <div class="step-number">3</div>
               <div>
+                <strong>Walk the KSWIC payer-correspondence starter</strong>
+                <p>Open one synthetic payer fax, then show the simulated IXP extraction and Maestro routing outputs.</p>
+              </div>
+              <code>demo_resources/kswic-payer-correspondence-demo/README.md</code>
+            </article>
+            <article class="timeline-step">
+              <div class="step-number">4</div>
+              <div>
                 <strong>Run the evaluator smoke test</strong>
                 <p>Show how extraction quality changes can be measured rather than discussed only anecdotally.</p>
               </div>
               <code>python3 document_ixp_sanity/main.py --run-smoke document_ixp_sanity/sample_ixp/sample1_ixp.json</code>
             </article>
             <article class="timeline-step">
-              <div class="step-number">4</div>
+              <div class="step-number">5</div>
               <div>
                 <strong>Close on the platform message</strong>
                 <p>Land the idea that coding agents expand both developer speed and developer capability.</p>
@@ -148,6 +161,10 @@
             <div class="map-card">
               <strong><code>demo_resources/</code></strong>
               <p>Synthetic packet text, extracted output, and ground truth used by the demos.</p>
+            </div>
+            <div class="map-card">
+              <strong><code>demo_resources/kswic-payer-correspondence-demo/</code></strong>
+              <p>Synthetic payer-correspondence PDFs, IXP field contracts, Maestro flow assets, and dummy automation payloads.</p>
             </div>
           </div>
         </section>

@@ -3,7 +3,7 @@
 - Format: JSONL (one JSON object per line) or CSV with `doc_id,canonical_field,value,annotator_id,page,bbox`.
 - Required fields:
   - `doc_id` - document identifier
-  - `canonical_field` - canonical name (see `mapping_config.example.yaml`)
+  - `canonical_field` - canonical name (see `mapping_config.example.json`)
   - `value` - annotated value (string or list)
   - `annotator_id` - who annotated
   - optional `page`, `bbox` for provenance

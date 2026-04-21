@@ -1,0 +1,23 @@
+{
+  "automation_id": "dummy_cerner_patient_account_update",
+  "display_name": "Dummy - Cerner Patient Account Note",
+  "system": "Synthetic Cerner",
+  "supported_actions": [
+    "add_patient_account_note",
+    "add_coverage_follow_up",
+    "post_payment_summary",
+    "note_denial_reversal"
+  ],
+  "required_inputs": [
+    "document_id",
+    "member_id",
+    "claim_number",
+    "decision_status",
+    "note_text"
+  ],
+  "outputs": [
+    "patient_account_reference",
+    "note_id",
+    "update_status"
+  ]
+}

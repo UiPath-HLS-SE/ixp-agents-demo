@@ -1,0 +1,32 @@
+Appeal Receipt Acknowledgment
+Scenario ID: SCN-006
+Sender: Prairie Horizon Health Plan
+Recipient: KSWIC Appeals Desk
+Member: Paige Dorsey (PHH-664200-01)
+Member DOB: 1984-03-09
+Provider: KSWIC Appeals Desk (1457965210)
+Claim Number: CLM-6005121
+Authorization Number: N/A
+Line Of Business: Commercial EPO
+Clinical Area: Infusion Therapy
+Decision Status: appeal_received
+Reason Category: appeal_tracking
+Reason Codes: APP-RCVD-01
+Reason Text: The first-level appeal was accepted for review and a standard determination is expected within 30 calendar days.
+Request Received: 2026-02-18
+Decision Date: 2026-02-22
+Service Date: 2026-01-14
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-24
+Summary: Acknowledgment of first-level appeal for a denied infusion therapy claim.
+Service Description: Infusion therapy appeal acknowledgment
+Requested Units: N/A
+Approved Units: N/A
+Billed Amount: $1,865.42
+Allowed Amount: $0.00
+Plan Paid: $0.00
+Member Responsibility: $0.00
+Documents Requested: None
+Next Steps:
+- Update the appeal tracker in the rev cycle system and record the appeal case number.
+- Hold outbound payer follow-up unless the expected decision timeframe is missed.

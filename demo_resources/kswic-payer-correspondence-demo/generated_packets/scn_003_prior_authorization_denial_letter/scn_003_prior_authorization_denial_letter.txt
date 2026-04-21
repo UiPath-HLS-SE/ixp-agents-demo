@@ -1,0 +1,32 @@
+Prior Authorization Denial Letter
+Scenario ID: SCN-003
+Sender: Flint Hills CareNet
+Recipient: Kansas Sunflower Women's Imaging Center
+Member: Mila Hart (FHC-228174-02)
+Member DOB: 1979-11-08
+Provider: Kansas Sunflower Women's Imaging Center (1881357012)
+Claim Number: N/A
+Authorization Number: PA-118943
+Line Of Business: Commercial HMO
+Clinical Area: Sleep Medicine
+Decision Status: denied
+Reason Category: medical_necessity_not_met
+Reason Codes: UM-102, ALT-CARE-01
+Reason Text: Clinical criteria for in-lab polysomnography were not met and a home sleep test must be completed first.
+Request Received: 2026-02-14
+Decision Date: 2026-02-16
+Service Date: 2026-02-24
+Authorization Window: N/A to N/A
+Response Deadline: 2026-02-26
+Summary: Denied in-lab sleep study; home sleep test recommended first.
+Service Description: In-lab polysomnography
+Requested Units: 1
+Approved Units: 0
+Billed Amount: -
+Allowed Amount: -
+Plan Paid: -
+Member Responsibility: -
+Documents Requested: None
+Next Steps:
+- Create an auth follow-up task in Cerner and route the case to the KSWIC authorization team.
+- Use the payer portal to confirm peer-to-peer and reconsideration deadlines before the sleep study date.

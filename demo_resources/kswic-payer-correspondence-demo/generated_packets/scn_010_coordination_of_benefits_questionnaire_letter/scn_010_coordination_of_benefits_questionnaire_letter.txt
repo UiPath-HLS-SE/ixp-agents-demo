@@ -1,0 +1,32 @@
+Coordination of Benefits Questionnaire Letter
+Scenario ID: SCN-010
+Sender: Prairie Horizon Health Plan
+Recipient: Member and provider copy
+Member: Cameron Vale (PHH-551002-03)
+Member DOB: 1974-01-04
+Provider: Kansas Sunflower Women's Imaging Center (1881357012)
+Claim Number: CLM-8892014
+Authorization Number: N/A
+Line Of Business: Commercial PPO
+Clinical Area: Coordination of Benefits
+Decision Status: information_requested
+Reason Category: cob_verification
+Reason Codes: COB-PEND-11
+Reason Text: Claim processing is delayed pending verification of other active insurance coverage.
+Request Received: N/A
+Decision Date: 2026-02-26
+Service Date: 2026-02-02
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-18
+Summary: Request to verify whether the member has other active insurance coverage.
+Service Description: COB verification request
+Requested Units: N/A
+Approved Units: N/A
+Billed Amount: $920.00
+Allowed Amount: -
+Plan Paid: -
+Member Responsibility: -
+Documents Requested: Completed COB questionnaire, Proof of active or inactive secondary coverage
+Next Steps:
+- Add a coverage follow-up note to the patient account in Cerner so front office or billing staff can obtain the response.
+- If the patient returns updated insurance information, submit the COB update through the payer portal.

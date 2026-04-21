@@ -1,0 +1,53 @@
+{
+  "scenario_id": "SCN-007",
+  "document_type": "Appeal Determination Overturn Letter",
+  "document_family": "appeal",
+  "sender_name": "Sun Prairie Medicare Advantage",
+  "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+  "sender_phone": "(844) 555-5100",
+  "sender_fax": "(844) 555-5105",
+  "recipient_name": "KSWIC Appeals Desk",
+  "recipient_role": "Provider",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Medicare Advantage",
+  "clinical_area": "Specialty Imaging",
+  "summary": "Initial denial overturned after review of specialist notes.",
+  "channel": "fax",
+  "member_name": "Eliana Brooks",
+  "member_id": "SPM-109448-02",
+  "member_dob": "1958-05-27",
+  "provider_name": "KSWIC Appeals Desk",
+  "provider_npi": "1457965210",
+  "ordering_provider": "Dr. Nate Fulton",
+  "policy_or_group_id": "SPM-60519",
+  "claim_number": "CLM-4400192",
+  "authorization_number": "PA-4400192A",
+  "service_description": "Appeal overturn for specialist imaging request",
+  "requested_units": "1",
+  "approved_units": "1",
+  "dates": {
+    "request_received": "2026-02-01",
+    "decision_date": "2026-02-24",
+    "service_date": "2026-01-10",
+    "authorization_start": "2026-02-24",
+    "authorization_end": "2026-03-31",
+    "response_deadline": ""
+  },
+  "decision_status": "overturned",
+  "reason_category": "medical_necessity_met_on_appeal",
+  "reason_codes": [
+    "OVT-APP-02"
+  ],
+  "reason_text": "Additional specialist documentation demonstrated medical necessity and the prior denial was reversed.",
+  "financials": {
+    "billed_amount": 1865.42,
+    "allowed_amount": 1865.42,
+    "plan_paid": 1678.88,
+    "member_responsibility": 186.54
+  },
+  "documents_requested": [],
+  "next_steps": [
+    "Update the rev cycle appeal tracker to closed-overturned and note that reprocessing is expected.",
+    "If the authorization is required downstream, update the Cerner authorization record with the reinstated decision."
+  ]
+}

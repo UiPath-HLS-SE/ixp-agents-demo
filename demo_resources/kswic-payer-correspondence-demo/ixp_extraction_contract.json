@@ -1,0 +1,166 @@
+{
+  "demo_name": "KSWIC Payer Correspondence Intake",
+  "description": "Starter IXP field contract for payer-correspondence classification and extraction.",
+  "guidance": [
+    "Treat the inbound file as potentially mixed-content because cover sheets and payer letters may share the same fax packet.",
+    "Classify the correspondence first, then extract only the fields that are present in the payer notice.",
+    "Route decision logic such as denial-of-service and payer-auth-problem downstream in Maestro or coded logic instead of forcing it into extraction prompts."
+  ],
+  "fields": [
+    {
+      "name": "document_type",
+      "group": "classification",
+      "type": "choice"
+    },
+    {
+      "name": "document_family",
+      "group": "classification",
+      "type": "choice"
+    },
+    {
+      "name": "line_of_business",
+      "group": "classification",
+      "type": "text"
+    },
+    {
+      "name": "payer_name",
+      "group": "sender_recipient",
+      "type": "text"
+    },
+    {
+      "name": "recipient_name",
+      "group": "sender_recipient",
+      "type": "text"
+    },
+    {
+      "name": "member_name",
+      "group": "member",
+      "type": "text"
+    },
+    {
+      "name": "member_id",
+      "group": "member",
+      "type": "text"
+    },
+    {
+      "name": "member_dob",
+      "group": "member",
+      "type": "date"
+    },
+    {
+      "name": "provider_name",
+      "group": "provider",
+      "type": "text"
+    },
+    {
+      "name": "provider_npi",
+      "group": "provider",
+      "type": "text"
+    },
+    {
+      "name": "claim_number",
+      "group": "financial",
+      "type": "text"
+    },
+    {
+      "name": "authorization_number",
+      "group": "authorization",
+      "type": "text"
+    },
+    {
+      "name": "policy_or_group_id",
+      "group": "member",
+      "type": "text"
+    },
+    {
+      "name": "service_description",
+      "group": "service",
+      "type": "text"
+    },
+    {
+      "name": "decision_status",
+      "group": "decision",
+      "type": "choice"
+    },
+    {
+      "name": "reason_category",
+      "group": "decision",
+      "type": "choice"
+    },
+    {
+      "name": "reason_codes",
+      "group": "decision",
+      "type": "list"
+    },
+    {
+      "name": "reason_text",
+      "group": "decision",
+      "type": "text"
+    },
+    {
+      "name": "request_received",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "decision_date",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "service_date",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "authorization_start",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "authorization_end",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "response_deadline",
+      "group": "dates",
+      "type": "date"
+    },
+    {
+      "name": "requested_units",
+      "group": "service",
+      "type": "text"
+    },
+    {
+      "name": "approved_units",
+      "group": "service",
+      "type": "text"
+    },
+    {
+      "name": "billed_amount",
+      "group": "financial",
+      "type": "currency"
+    },
+    {
+      "name": "allowed_amount",
+      "group": "financial",
+      "type": "currency"
+    },
+    {
+      "name": "plan_paid",
+      "group": "financial",
+      "type": "currency"
+    },
+    {
+      "name": "member_responsibility",
+      "group": "financial",
+      "type": "currency"
+    },
+    {
+      "name": "documents_requested",
+      "group": "follow_up",
+      "type": "list"
+    }
+  ]
+}

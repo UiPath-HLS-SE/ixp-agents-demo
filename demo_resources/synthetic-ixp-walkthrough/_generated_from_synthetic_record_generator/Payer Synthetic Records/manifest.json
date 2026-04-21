@@ -1,0 +1,20 @@
+[
+  {
+    "record": "A",
+    "risk_tier": "High-Risk Member",
+    "pdf": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_a_high_risk_member.pdf",
+    "json": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_a_high_risk_member.json"
+  },
+  {
+    "record": "B",
+    "risk_tier": "Complex Polypharmacy Case",
+    "pdf": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_b_complex_polypharmacy_case.pdf",
+    "json": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_b_complex_polypharmacy_case.json"
+  },
+  {
+    "record": "C",
+    "risk_tier": "Socially Complex Case",
+    "pdf": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_c_socially_complex_case.pdf",
+    "json": "_generated_from_synthetic_record_generator/Payer Synthetic Records/record_c_socially_complex_case.json"
+  }
+]

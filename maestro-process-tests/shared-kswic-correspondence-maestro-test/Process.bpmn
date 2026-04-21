@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="shared-kswic-correspondence-maestro-test-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="Codex">
+  <bpmn:process id="Process_1" name="Shared KSWIC Correspondence Maestro Test" isExecutable="false">
+    <bpmn:extensionElements>
+      <uipath:variables version="v1">
+        <uipath:input id="vPacketId" name="packet_id" type="string" elementId="Event_start" />
+        <uipath:input id="vScenarioId" name="scenario_id" type="string" elementId="Event_start" />
+        <uipath:input id="vDocumentType" name="document_type" type="string" elementId="Event_start" />
+        <uipath:input id="vDecisionStatus" name="decision_status" type="string" elementId="Event_start" />
+        <uipath:input id="vFaxCategory" name="fax_category" type="string" elementId="Event_start" />
+        <uipath:input id="vClassificationConfidence" name="classification_confidence" type="double" elementId="Event_start" />
+        <uipath:input id="vExtractionConfidence" name="extraction_confidence" type="double" elementId="Event_start" />
+        <uipath:input id="vIsDenialOfService" name="is_denial_of_service" type="bool" elementId="Event_start" />
+        <uipath:input id="vPayerAuthProblem" name="payer_auth_problem" type="bool" elementId="Event_start" />
+        <uipath:input id="vMissingInformation" name="missing_information" type="bool" elementId="Event_start" />
+        <uipath:input id="vTargetRecordType" name="target_record_type" type="string" elementId="Event_start" />
+        <uipath:input id="vPayerPortalAction" name="payer_portal_action" type="string" elementId="Event_start" />
+        <uipath:input id="vRevCycleQueue" name="rev_cycle_queue" type="string" elementId="Event_start" />
+        <uipath:input id="vExecuteLiveFollowUp" name="execute_live_follow_up" type="bool" elementId="Event_start" />
+        <uipath:input id="vDelaySeconds" name="delay_seconds" type="integer" elementId="Event_start" />
+        <uipath:input id="vSourceKind" name="source_kind" type="string" elementId="Event_start" />
+        <uipath:input id="vSourcePdf" name="source_pdf" type="string" elementId="Event_start" />
+        <uipath:input id="vIxpDocumentId" name="ixp_document_id" type="string" elementId="Event_start" />
+        <uipath:input id="vMemberId" name="member_id" type="string" elementId="Event_start" />
+        <uipath:input id="vClaimNumber" name="claim_number" type="string" elementId="Event_start" />
+        <uipath:input id="vAuthorizationNumber" name="authorization_number" type="string" elementId="Event_start" />
+        <uipath:input id="vServiceDescription" name="service_description" type="string" elementId="Event_start" />
+        <uipath:input id="vNoteText" name="note_text" type="string" elementId="Event_start" />
+
+        <uipath:inputOutput id="inPacketId" name="packet_id" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inScenarioId" name="scenario_id" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inDocumentType" name="document_type" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inDecisionStatus" name="decision_status" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inFaxCategory" name="fax_category" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inClassificationConfidence" name="classification_confidence" type="double" elementId="Event_start" />
+        <uipath:inputOutput id="inExtractionConfidence" name="extraction_confidence" type="double" elementId="Event_start" />
+        <uipath:inputOutput id="inIsDenialOfService" name="is_denial_of_service" type="bool" elementId="Event_start" />
+        <uipath:inputOutput id="inPayerAuthProblem" name="payer_auth_problem" type="bool" elementId="Event_start" />
+        <uipath:inputOutput id="inMissingInformation" name="missing_information" type="bool" elementId="Event_start" />
+        <uipath:inputOutput id="inTargetRecordType" name="target_record_type" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inPayerPortalAction" name="payer_portal_action" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inRevCycleQueue" name="rev_cycle_queue" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inExecuteLiveFollowUp" name="execute_live_follow_up" type="bool" elementId="Event_start" />
+        <uipath:inputOutput id="inDelaySeconds" name="delay_seconds" type="integer" elementId="Event_start" />
+        <uipath:inputOutput id="inSourceKind" name="source_kind" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inSourcePdf" name="source_pdf" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inIxpDocumentId" name="ixp_document_id" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inMemberId" name="member_id" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inClaimNumber" name="claim_number" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inAuthorizationNumber" name="authorization_number" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inServiceDescription" name="service_description" type="string" elementId="Event_start" />
+        <uipath:inputOutput id="inNoteText" name="note_text" type="string" elementId="Event_start" />
+
+        <uipath:inputOutput id="outPrimaryRoute" name="primary_route" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outNeedsHumanReview" name="needs_human_review" type="bool" elementId="Activity_Call" />
+        <uipath:inputOutput id="outPayerPortalAction" name="payer_portal_action" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outCernerAction" name="cerner_action" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outRevCycleAction" name="rev_cycle_action" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outExecutionStatus" name="execution_status" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outExecutionDetail" name="execution_detail" type="string" elementId="Activity_Call" />
+        <uipath:inputOutput id="outActionSummary" name="action_summary" type="string" elementId="Activity_Call" />
+
+        <uipath:bindings version="v1">
+          <uipath:binding id="bTargetName" name="name" type="string" default="Shared KSWIC Correspondence Smoke Agent" resource="process" resourceSubType="Agent" resourceKey="Shared KSWIC Correspondence Smoke Agent" propertyAttribute="name" />
+          <uipath:binding id="bTargetFolder" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="Shared KSWIC Correspondence Smoke Agent" propertyAttribute="folderPath" />
+        </uipath:bindings>
+      </uipath:variables>
+      <uipath:migrationVersion version="8" />
+    </bpmn:extensionElements>
+
+    <bpmn:startEvent id="Event_start" name="Start event">
+      <bpmn:extensionElements>
+        <uipath:entryPointId value="b7d61d7c-7fd3-499a-8ca9-7d5846f38c8d" />
+        <uipath:mapping version="v1">
+          <uipath:type value="BPMN.Variables" version="v1" />
+          <uipath:output name="packet_id" type="string" source="=vars.vPacketId" var="inPacketId" />
+          <uipath:output name="scenario_id" type="string" source="=vars.vScenarioId" var="inScenarioId" />
+          <uipath:output name="document_type" type="string" source="=vars.vDocumentType" var="inDocumentType" />
+          <uipath:output name="decision_status" type="string" source="=vars.vDecisionStatus" var="inDecisionStatus" />
+          <uipath:output name="fax_category" type="string" source="=vars.vFaxCategory" var="inFaxCategory" />
+          <uipath:output name="classification_confidence" type="double" source="=vars.vClassificationConfidence" var="inClassificationConfidence" />
+          <uipath:output name="extraction_confidence" type="double" source="=vars.vExtractionConfidence" var="inExtractionConfidence" />
+          <uipath:output name="is_denial_of_service" type="bool" source="=vars.vIsDenialOfService" var="inIsDenialOfService" />
+          <uipath:output name="payer_auth_problem" type="bool" source="=vars.vPayerAuthProblem" var="inPayerAuthProblem" />
+          <uipath:output name="missing_information" type="bool" source="=vars.vMissingInformation" var="inMissingInformation" />
+          <uipath:output name="target_record_type" type="string" source="=vars.vTargetRecordType" var="inTargetRecordType" />
+          <uipath:output name="payer_portal_action" type="string" source="=vars.vPayerPortalAction" var="inPayerPortalAction" />
+          <uipath:output name="rev_cycle_queue" type="string" source="=vars.vRevCycleQueue" var="inRevCycleQueue" />
+          <uipath:output name="execute_live_follow_up" type="bool" source="=vars.vExecuteLiveFollowUp" var="inExecuteLiveFollowUp" />
+          <uipath:output name="delay_seconds" type="integer" source="=vars.vDelaySeconds" var="inDelaySeconds" />
+          <uipath:output name="source_kind" type="string" source="=vars.vSourceKind" var="inSourceKind" />
+          <uipath:output name="source_pdf" type="string" source="=vars.vSourcePdf" var="inSourcePdf" />
+          <uipath:output name="ixp_document_id" type="string" source="=vars.vIxpDocumentId" var="inIxpDocumentId" />
+          <uipath:output name="member_id" type="string" source="=vars.vMemberId" var="inMemberId" />
+          <uipath:output name="claim_number" type="string" source="=vars.vClaimNumber" var="inClaimNumber" />
+          <uipath:output name="authorization_number" type="string" source="=vars.vAuthorizationNumber" var="inAuthorizationNumber" />
+          <uipath:output name="service_description" type="string" source="=vars.vServiceDescription" var="inServiceDescription" />
+          <uipath:output name="note_text" type="string" source="=vars.vNoteText" var="inNoteText" />
+        </uipath:mapping>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>edge_start_call</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:serviceTask id="Activity_Call" name="Shared KSWIC Correspondence Smoke Agent">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartAgentJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="Shared KSWIC Correspondence Smoke Agent" />
+            <uipath:input name="folderPath" type="string" value="Shared" />
+            <uipath:input name="_label" type="string" value="Shared KSWIC Correspondence Smoke Agent" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"packet_id":{"type":"string"},"scenario_id":{"type":"string"},"document_type":{"type":"string"},"decision_status":{"type":"string"},"fax_category":{"type":"string"},"classification_confidence":{"type":"number"},"extraction_confidence":{"type":"number"},"is_denial_of_service":{"type":"boolean"},"payer_auth_problem":{"type":"boolean"},"missing_information":{"type":"boolean"},"target_record_type":{"type":"string"},"payer_portal_action":{"type":"string"},"rev_cycle_queue":{"type":"string"},"execute_live_follow_up":{"type":"boolean"},"delay_seconds":{"type":"integer"},"source_kind":{"type":"string"},"source_pdf":{"type":"string"},"ixp_document_id":{"type":"string"},"member_id":{"type":"string"},"claim_number":{"type":"string"},"authorization_number":{"type":"string"},"service_description":{"type":"string"},"note_text":{"type":"string"}},"required":["packet_id","scenario_id","document_type","decision_status","fax_category","classification_confidence","extraction_confidence","is_denial_of_service","payer_auth_problem","missing_information","target_record_type","payer_portal_action","execute_live_follow_up","delay_seconds"]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"packet_id":"=vars.inPacketId","scenario_id":"=vars.inScenarioId","document_type":"=vars.inDocumentType","decision_status":"=vars.inDecisionStatus","fax_category":"=vars.inFaxCategory","classification_confidence":"=vars.inClassificationConfidence","extraction_confidence":"=vars.inExtractionConfidence","is_denial_of_service":"=vars.inIsDenialOfService","payer_auth_problem":"=vars.inPayerAuthProblem","missing_information":"=vars.inMissingInformation","target_record_type":"=vars.inTargetRecordType","payer_portal_action":"=vars.inPayerPortalAction","rev_cycle_queue":"=vars.inRevCycleQueue","execute_live_follow_up":"=vars.inExecuteLiveFollowUp","delay_seconds":"=vars.inDelaySeconds","source_kind":"=vars.inSourceKind","source_pdf":"=vars.inSourcePdf","ixp_document_id":"=vars.inIxpDocumentId","member_id":"=vars.inMemberId","claim_number":"=vars.inClaimNumber","authorization_number":"=vars.inAuthorizationNumber","service_description":"=vars.inServiceDescription","note_text":"=vars.inNoteText","shared_folder_path":"Shared"}]]></uipath:input>
+          <uipath:output name="primary_route" type="string" source="=primary_route" var="outPrimaryRoute" />
+          <uipath:output name="needs_human_review" type="bool" source="=needs_human_review" var="outNeedsHumanReview" />
+          <uipath:output name="payer_portal_action" type="string" source="=payer_portal_action" var="outPayerPortalAction" />
+          <uipath:output name="cerner_action" type="string" source="=cerner_action" var="outCernerAction" />
+          <uipath:output name="rev_cycle_action" type="string" source="=rev_cycle_action" var="outRevCycleAction" />
+          <uipath:output name="execution_status" type="string" source="=execution_status" var="outExecutionStatus" />
+          <uipath:output name="execution_detail" type="string" source="=execution_detail" var="outExecutionDetail" />
+          <uipath:output name="action_summary" type="string" source="=action_summary" var="outActionSummary" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_start_call</bpmn:incoming>
+      <bpmn:outgoing>edge_call_end</bpmn:outgoing>
+    </bpmn:serviceTask>
+
+    <bpmn:endEvent id="Event_end" name="End">
+      <bpmn:incoming>edge_call_end</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="edge_start_call" sourceRef="Event_start" targetRef="Activity_Call" />
+    <bpmn:sequenceFlow id="edge_call_end" sourceRef="Activity_Call" targetRef="Event_end" />
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="S_Event_start" bpmnElement="Event_start">
+        <dc:Bounds x="100" y="220" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_Call" bpmnElement="Activity_Call">
+        <dc:Bounds x="220" y="198" width="240" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Event_end" bpmnElement="Event_end">
+        <dc:Bounds x="530" y="220" width="36" height="36" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="E_start_call" bpmnElement="edge_start_call">
+        <di:waypoint x="136" y="238" />
+        <di:waypoint x="220" y="238" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_call_end" bpmnElement="edge_call_end">
+        <di:waypoint x="460" y="238" />
+        <di:waypoint x="530" y="238" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

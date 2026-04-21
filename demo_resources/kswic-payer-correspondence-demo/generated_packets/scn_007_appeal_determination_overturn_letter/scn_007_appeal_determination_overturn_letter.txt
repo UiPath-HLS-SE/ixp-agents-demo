@@ -1,0 +1,32 @@
+Appeal Determination Overturn Letter
+Scenario ID: SCN-007
+Sender: Sun Prairie Medicare Advantage
+Recipient: KSWIC Appeals Desk
+Member: Eliana Brooks (SPM-109448-02)
+Member DOB: 1958-05-27
+Provider: KSWIC Appeals Desk (1457965210)
+Claim Number: CLM-4400192
+Authorization Number: PA-4400192A
+Line Of Business: Medicare Advantage
+Clinical Area: Specialty Imaging
+Decision Status: overturned
+Reason Category: medical_necessity_met_on_appeal
+Reason Codes: OVT-APP-02
+Reason Text: Additional specialist documentation demonstrated medical necessity and the prior denial was reversed.
+Request Received: 2026-02-01
+Decision Date: 2026-02-24
+Service Date: 2026-01-10
+Authorization Window: 2026-02-24 to 2026-03-31
+Response Deadline: N/A
+Summary: Initial denial overturned after review of specialist notes.
+Service Description: Appeal overturn for specialist imaging request
+Requested Units: 1
+Approved Units: 1
+Billed Amount: $1,865.42
+Allowed Amount: $1,865.42
+Plan Paid: $1,678.88
+Member Responsibility: $186.54
+Documents Requested: None
+Next Steps:
+- Update the rev cycle appeal tracker to closed-overturned and note that reprocessing is expected.
+- If the authorization is required downstream, update the Cerner authorization record with the reinstated decision.

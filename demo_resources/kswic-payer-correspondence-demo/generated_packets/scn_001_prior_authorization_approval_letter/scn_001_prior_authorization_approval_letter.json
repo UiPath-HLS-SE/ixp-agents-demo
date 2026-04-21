@@ -1,0 +1,53 @@
+{
+  "scenario_id": "SCN-001",
+  "document_type": "Prior Authorization Approval Letter",
+  "document_family": "prior_auth",
+  "sender_name": "Prairie Horizon Health Plan",
+  "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+  "sender_phone": "(800) 555-2101",
+  "sender_fax": "(800) 555-2102",
+  "recipient_name": "Kansas Sunflower Women's Imaging Center",
+  "recipient_role": "Provider",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Commercial PPO",
+  "clinical_area": "Advanced Imaging",
+  "summary": "Approval for CT abdomen/pelvis with contrast requested by KSWIC imaging scheduling.",
+  "channel": "fax",
+  "member_name": "Avery Sutton",
+  "member_id": "PHH-484920-01",
+  "member_dob": "1988-04-17",
+  "provider_name": "Kansas Sunflower Women's Imaging Center",
+  "provider_npi": "1881357012",
+  "ordering_provider": "Dr. Lena Ortiz",
+  "policy_or_group_id": "KS-77014",
+  "claim_number": "",
+  "authorization_number": "PA-884201",
+  "service_description": "CT abdomen/pelvis with contrast",
+  "requested_units": "1",
+  "approved_units": "1",
+  "dates": {
+    "request_received": "2026-02-04",
+    "decision_date": "2026-02-06",
+    "service_date": "2026-02-12",
+    "authorization_start": "2026-02-07",
+    "authorization_end": "2026-03-07",
+    "response_deadline": ""
+  },
+  "decision_status": "approved",
+  "reason_category": "medical_necessity_met",
+  "reason_codes": [
+    "MED-NEC-APP"
+  ],
+  "reason_text": "Submitted records support medical necessity under imaging guidelines.",
+  "financials": {
+    "billed_amount": null,
+    "allowed_amount": null,
+    "plan_paid": null,
+    "member_responsibility": null
+  },
+  "documents_requested": [],
+  "next_steps": [
+    "Update the Cerner authorization record with the approved authorization number and validity window.",
+    "Release the imaging visit from the auth workqueue once the scheduled service date is confirmed."
+  ]
+}

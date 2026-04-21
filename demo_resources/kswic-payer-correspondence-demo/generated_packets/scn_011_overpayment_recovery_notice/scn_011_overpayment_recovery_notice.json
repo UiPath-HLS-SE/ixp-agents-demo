@@ -1,0 +1,57 @@
+{
+  "scenario_id": "SCN-011",
+  "document_type": "Overpayment Recovery Notice",
+  "document_family": "payment_integrity",
+  "sender_name": "Sun Prairie Medicaid Advantage",
+  "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+  "sender_phone": "(844) 555-5100",
+  "sender_fax": "(844) 555-5105",
+  "recipient_name": "KSWIC Revenue Cycle Billing Office",
+  "recipient_role": "Provider Billing Office",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Managed Medicaid",
+  "clinical_area": "Payment Integrity",
+  "summary": "Recovery initiated for duplicate payment on outpatient claim.",
+  "channel": "fax",
+  "member_name": "Hayden Cole",
+  "member_id": "SPM-402884-08",
+  "member_dob": "1982-08-18",
+  "provider_name": "KSWIC Revenue Cycle Billing Office",
+  "provider_npi": "1457965210",
+  "ordering_provider": "Dr. Elise Monroe",
+  "policy_or_group_id": "SPM-70218",
+  "claim_number": "CLM-1045507",
+  "authorization_number": "",
+  "service_description": "Duplicate outpatient payment recovery",
+  "requested_units": "",
+  "approved_units": "",
+  "dates": {
+    "request_received": "",
+    "decision_date": "2026-02-28",
+    "service_date": "2026-01-11",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-30"
+  },
+  "decision_status": "recoupment",
+  "reason_category": "duplicate_payment",
+  "reason_codes": [
+    "RC-202",
+    "DUP-PMT"
+  ],
+  "reason_text": "Duplicate reimbursement was identified during post-payment review and recovery will occur through offset.",
+  "financials": {
+    "billed_amount": 912.33,
+    "allowed_amount": 912.33,
+    "plan_paid": 912.33,
+    "member_responsibility": 0.0
+  },
+  "documents_requested": [
+    "Remittance advice copy",
+    "Posting audit trail if disputing"
+  ],
+  "next_steps": [
+    "Create a recoupment work item in the rev cycle system and note the impending offset date.",
+    "Add a Cerner patient-account note only if the recovery affects open A/R or collection logic."
+  ]
+}

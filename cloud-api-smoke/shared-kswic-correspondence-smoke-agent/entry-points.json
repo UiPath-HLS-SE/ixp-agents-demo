@@ -1,0 +1,293 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "main",
+      "uniqueId": "915324f3-b419-4dd4-8fe0-c7173fd77b26",
+      "type": "agent",
+      "displayName": "Shared KSWIC Correspondence Smoke Agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "packet_id": {
+            "type": "string",
+            "default": "KSWIC-SCN-004",
+            "description": "Demo business identifier for the payer-correspondence packet."
+          },
+          "scenario_id": {
+            "type": "string",
+            "default": "SCN-004",
+            "description": "Scenario identifier from the synthetic correspondence catalog."
+          },
+          "document_type": {
+            "type": "string",
+            "default": "Claim Denial Letter",
+            "description": "Human-readable document family extracted from the fax packet."
+          },
+          "decision_status": {
+            "type": "string",
+            "enum": [
+              "approved",
+              "denied",
+              "pended",
+              "appeal_received",
+              "overturned",
+              "paid",
+              "information_requested",
+              "partially_approved",
+              "recoupment"
+            ],
+            "default": "denied"
+          },
+          "fax_category": {
+            "type": "string",
+            "enum": [
+              "prior_authorization",
+              "claim_denial",
+              "appeal",
+              "payment_posting",
+              "eligibility",
+              "other"
+            ],
+            "default": "claim_denial"
+          },
+          "classification_confidence": {
+            "type": "number",
+            "default": 0.97,
+            "minimum": 0,
+            "maximum": 1
+          },
+          "extraction_confidence": {
+            "type": "number",
+            "default": 0.95,
+            "minimum": 0,
+            "maximum": 1
+          },
+          "is_denial_of_service": {
+            "type": "boolean",
+            "default": true
+          },
+          "payer_auth_problem": {
+            "type": "boolean",
+            "default": false
+          },
+          "missing_information": {
+            "type": "boolean",
+            "default": false
+          },
+          "target_record_type": {
+            "type": "string",
+            "enum": [
+              "patient_account",
+              "authorization",
+              "none"
+            ],
+            "default": "patient_account"
+          },
+          "payer_portal_action": {
+            "type": "string",
+            "enum": [
+              "confirm_auth",
+              "submit_missing_docs",
+              "start_appeal",
+              "check_claim_status",
+              "none"
+            ],
+            "default": "start_appeal"
+          },
+          "rev_cycle_queue": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": "KSWIC_DENIALS"
+          },
+          "execute_live_follow_up": {
+            "type": "boolean",
+            "default": false
+          },
+          "delay_seconds": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 300
+          },
+          "shared_folder_path": {
+            "type": "string",
+            "default": "Shared"
+          }
+        },
+        "required": [
+          "packet_id",
+          "scenario_id",
+          "document_type",
+          "decision_status",
+          "fax_category",
+          "classification_confidence",
+          "extraction_confidence",
+          "is_denial_of_service",
+          "payer_auth_problem",
+          "missing_information",
+          "target_record_type",
+          "payer_portal_action",
+          "rev_cycle_queue",
+          "execute_live_follow_up",
+          "delay_seconds",
+          "shared_folder_path"
+        ],
+        "title": "GraphInput"
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "packet_id": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "correspondence_category": {
+            "type": "string",
+            "enum": [
+              "prior_authorization",
+              "claim_denial",
+              "appeal",
+              "payment_posting",
+              "eligibility",
+              "other"
+            ]
+          },
+          "primary_route": {
+            "type": "string",
+            "enum": [
+              "cerner_auth_update",
+              "cerner_patient_account_update",
+              "payer_portal_follow_up",
+              "rev_cycle_denial_queue",
+              "manual_triage"
+            ]
+          },
+          "is_denial_of_service": {
+            "type": "boolean"
+          },
+          "payer_auth_problem": {
+            "type": "boolean"
+          },
+          "missing_information": {
+            "type": "boolean"
+          },
+          "needs_human_review": {
+            "type": "boolean"
+          },
+          "payer_portal_action": {
+            "type": "string",
+            "enum": [
+              "confirm_auth",
+              "submit_missing_docs",
+              "start_appeal",
+              "check_claim_status",
+              "none"
+            ]
+          },
+          "cerner_action": {
+            "type": "string"
+          },
+          "rev_cycle_action": {
+            "type": "string"
+          },
+          "action_summary": {
+            "type": "string"
+          },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/AutomationTask"
+            }
+          },
+          "execution_status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "executed",
+              "skipped"
+            ]
+          },
+          "execution_detail": {
+            "type": "string"
+          },
+          "sleep_applied_seconds": {
+            "type": "integer"
+          },
+          "timestamp_utc": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "packet_id",
+          "scenario_id",
+          "document_type",
+          "correspondence_category",
+          "primary_route",
+          "is_denial_of_service",
+          "payer_auth_problem",
+          "missing_information",
+          "needs_human_review",
+          "payer_portal_action",
+          "cerner_action",
+          "rev_cycle_action",
+          "action_summary",
+          "tasks",
+          "execution_status",
+          "execution_detail",
+          "sleep_applied_seconds",
+          "timestamp_utc"
+        ],
+        "title": "GraphOutput"
+      },
+      "$defs": {
+        "AutomationTask": {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "enum": [
+                "payer_portal",
+                "cerner",
+                "rev_cycle"
+              ]
+            },
+            "action": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "planned",
+                "executed",
+                "not_needed"
+              ]
+            },
+            "payload": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "required": [
+            "system",
+            "action",
+            "status",
+            "payload"
+          ]
+        }
+      }
+    }
+  ]
+}

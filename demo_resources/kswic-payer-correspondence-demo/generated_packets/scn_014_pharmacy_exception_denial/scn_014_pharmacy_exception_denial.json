@@ -1,0 +1,56 @@
+{
+  "scenario_id": "SCN-014",
+  "document_type": "Pharmacy Exception Denial",
+  "document_family": "pharmacy",
+  "sender_name": "HeartlandRx Benefit Services",
+  "sender_address": "2202 Cedar Exchange, Tulsa, OK 74103",
+  "sender_phone": "(855) 555-1400",
+  "sender_fax": "(855) 555-1406",
+  "recipient_name": "Kansas Sunflower Women's Imaging Center",
+  "recipient_role": "Prescriber and provider copy",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "PBM / Pharmacy Benefit",
+  "clinical_area": "Rheumatology",
+  "summary": "Requested biologic denied pending trial of preferred formulary alternative.",
+  "channel": "fax",
+  "member_name": "Sasha Glenn",
+  "member_id": "HRX-901114-01",
+  "member_dob": "1990-06-11",
+  "provider_name": "Kansas Sunflower Women's Imaging Center",
+  "provider_npi": "1881357012",
+  "ordering_provider": "Dr. Priya Shah",
+  "policy_or_group_id": "HRX-61122",
+  "claim_number": "",
+  "authorization_number": "RX-PA-661921",
+  "service_description": "Biologic formulary exception request",
+  "requested_units": "30-day supply",
+  "approved_units": "0",
+  "dates": {
+    "request_received": "2026-02-20",
+    "decision_date": "2026-03-01",
+    "service_date": "2026-03-03",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-15"
+  },
+  "decision_status": "denied",
+  "reason_category": "step_therapy",
+  "reason_codes": [
+    "RX-STEP-17"
+  ],
+  "reason_text": "Formulary exception criteria were not met because the preferred step-therapy alternatives have not been trialed.",
+  "financials": {
+    "billed_amount": null,
+    "allowed_amount": null,
+    "plan_paid": null,
+    "member_responsibility": null
+  },
+  "documents_requested": [
+    "Trial-and-failure history",
+    "Prescriber clinical rationale"
+  ],
+  "next_steps": [
+    "Create a Cerner auth workqueue item for pharmacy follow-up and attach the preferred-alternative list.",
+    "Use the payer portal to submit additional step-therapy documentation or a formulary-exception appeal."
+  ]
+}

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synthetic IXP Comparison Dashboard</title>
+  <style>
+    :root {
+      --bg: #f5efe4;
+      --panel: rgba(255, 252, 247, 0.82);
+      --panel-strong: rgba(255, 252, 247, 0.95);
+      --ink: #182126;
+      --muted: #5d675f;
+      --line: rgba(24, 33, 38, 0.12);
+      --match: #1f8f6a;
+      --missing: #d98e04;
+      --mismatch: #b24a2f;
+      --accent: #0f6d7a;
+      --accent-soft: rgba(15, 109, 122, 0.12);
+      --fallback: #6c4a97;
+      --shadow: 0 18px 50px rgba(43, 34, 19, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(15, 109, 122, 0.22), transparent 30%),
+        radial-gradient(circle at top right, rgba(217, 142, 4, 0.18), transparent 24%),
+        linear-gradient(180deg, #f8f2e8 0%, #f2ebdf 45%, #ece4d7 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(24, 33, 38, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 33, 38, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 90%);
+    }
+
+    .page {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 28px auto 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 252, 247, 0.96), rgba(240, 247, 246, 0.9));
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      top: -120px;
+      right: -80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15, 109, 122, 0.18), transparent 68%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(24, 33, 38, 0.05);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.4rem, 4vw, 4.4rem);
+      max-width: 10ch;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 24px;
+      margin-top: 20px;
+      align-items: end;
+    }
+
+    .hero-copy p,
+    .hero-callout p,
+    .metric-card p,
+    .section-copy {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .hero-callout {
+      background: rgba(255, 252, 247, 0.8);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-callout strong {
+      display: block;
+      font-size: 1.65rem;
+      margin-bottom: 8px;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .pill-link,
+    .ghost-link {
+      text-decoration: none;
+      color: inherit;
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 252, 247, 0.76);
+    }
+
+    .pill-link {
+      background: linear-gradient(135deg, #123f48, #0f6d7a);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 12px 24px rgba(15, 109, 122, 0.18);
+    }
+
+    .disabled-link {
+      opacity: 0.58;
+    }
+
+    section {
+      margin-top: 22px;
+      background: var(--panel);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: var(--panel-strong);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      min-height: 160px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .metric-value {
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .compare-panel {
+      background: var(--panel-strong);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+    }
+
+    .compare-panel h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .stat-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 48px;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.96rem;
+    }
+
+    .stat-row strong {
+      font-size: 1rem;
+    }
+
+    .track {
+      height: 12px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(24, 33, 38, 0.08);
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    .fill.match {
+      background: var(--match);
+    }
+
+    .fill.missing {
+      background: var(--missing);
+    }
+
+    .fill.mismatch {
+      background: var(--mismatch);
+    }
+
+    .documents-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .document-card {
+      background: var(--panel-strong);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .document-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .document-head p {
+      color: var(--muted);
+      margin: 6px 0 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .badge-grounded {
+      background: rgba(31, 143, 106, 0.14);
+      color: var(--match);
+    }
+
+    .badge-fallback {
+      background: rgba(108, 74, 151, 0.14);
+      color: var(--fallback);
+    }
+
+    .doc-metrics {
+      display: grid;
+      gap: 10px;
+    }
+
+    .micro-label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .stacked-bar {
+      display: flex;
+      overflow: hidden;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(24, 33, 38, 0.08);
+    }
+
+    .bar-match {
+      background: var(--match);
+    }
+
+    .bar-missing {
+      background: var(--missing);
+    }
+
+    .bar-mismatch {
+      background: var(--mismatch);
+    }
+
+    .doc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    tbody tr:hover {
+      background: rgba(15, 109, 122, 0.05);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      background: var(--panel-strong);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-top: 12px;
+    }
+
+    .prompt-intro {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .prompt-summary-box,
+    .prompt-card {
+      background: var(--panel-strong);
+      border: 1px solid rgba(24, 33, 38, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+    }
+
+    .prompt-summary-box pre,
+    .prompt-card pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      background: rgba(24, 33, 38, 0.04);
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(24, 33, 38, 0.06);
+    }
+
+    .prompt-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .prompt-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .priority-chip {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .priority-highest {
+      background: rgba(178, 74, 47, 0.12);
+      color: var(--mismatch);
+    }
+
+    .priority-medium {
+      background: rgba(217, 142, 4, 0.14);
+      color: #996200;
+    }
+
+    .priority-cross-cutting {
+      background: rgba(15, 109, 122, 0.12);
+      color: var(--accent);
+    }
+
+    .prompt-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .prompt-columns h3,
+    .prompt-summary-box h3 {
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    .prompt-why {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .metrics-grid,
+      .split-grid,
+      .documents-grid,
+      .prompt-intro,
+      .prompt-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="eyebrow">Synthetic Visual Comparison</span>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>IXP vs DeepRAG against fake ground truth.</h1>
+          <p class="section-copy">This dashboard is a visual walkthrough of the same extraction pipeline used in this repo, but populated only with synthetic PDFs and fabricated reviewer spreadsheets. It is meant for a fast demo, not production scoring.</p>
+          <div class="action-row">
+            <a class="pill-link" href="synthetic_ixp_deeprag_ground_truth_comparison.xlsx">Open Comparison Workbook</a>
+            <a class="ghost-link" href="synthetic_ixp_results.xlsx">Open IXP Workbook</a>
+            <a class="ghost-link" href="synthetic_deeprag_results.xlsx">Open DeepRAG Workbook</a>
+            <a class="ghost-link" href="synthetic_ground_truth.xlsx">Open Ground Truth Workbook</a>
+          </div>
+        </div>
+        <aside class="hero-callout">
+          <strong>0 real packet data</strong>
+          <p>Everything shown here was derived from synthetic PDFs located in the sibling generator repo and written into fresh fake spreadsheets under <code>synthetic-ixp-walkthrough</code>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Scorecards</h2>
+          <p>Top-line metrics for the synthetic packet set. Two packets simulate grounded DeepRAG success and one packet simulates an IXP-only fallback.</p>
+        </div>
+      </div>
+      <div class="metrics-grid"><article class="metric-card"><div class="metric-label">Synthetic Packets</div><div class="metric-value">3</div><p>Synthetic source PDFs pulled only from the sibling generator repo.</p></article><article class="metric-card"><div class="metric-label">Grounded DeepRAG</div><div class="metric-value">2</div><p>Grounded second-pass runs that produced comparable extraction output.</p></article><article class="metric-card"><div class="metric-label">Fallback Cases</div><div class="metric-value">1</div><p>Included intentionally so the walkthrough shows non-comparable behavior too.</p></article><article class="metric-card"><div class="metric-label">IXP Match Rate</div><div class="metric-value">63%</div><p>Field-level agreement against the fabricated ground truth.</p></article><article class="metric-card"><div class="metric-label">DeepRAG Match Rate</div><div class="metric-value">97%</div><p>Comparable grounded field-level agreement against the same truth set.</p></article><article class="metric-card"><div class="metric-label">Synthetic Guardrail</div><div class="metric-value">0 customer PDFs</div><p>No customer packets or production extraction outputs were copied into this bundle.</p></article></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Field-Level Outcome</h2>
+          <p>These bars compare each system against the fabricated ground truth spreadsheet, using the same canonical field-path comparison style as the repo's evaluation helpers.</p>
+        </div>
+      </div>
+      <div class="split-grid">
+        <article class="compare-panel">
+          <h3>IXP</h3>
+          <div class="stat-list">
+            <div class="stat-row"><strong>Match</strong><div class="track"><div class="fill match" style="width:63%"></div></div><span>36</span></div>
+            <div class="stat-row"><strong>Missing</strong><div class="track"><div class="fill missing" style="width:25%"></div></div><span>14</span></div>
+            <div class="stat-row"><strong>Mismatch</strong><div class="track"><div class="fill mismatch" style="width:12%"></div></div><span>7</span></div>
+          </div>
+        </article>
+        <article class="compare-panel">
+          <h3>DeepRAG</h3>
+          <div class="stat-list">
+            <div class="stat-row"><strong>Match</strong><div class="track"><div class="fill match" style="width:97%"></div></div><span>37</span></div>
+            <div class="stat-row"><strong>Missing</strong><div class="track"><div class="fill missing" style="width:3%"></div></div><span>1</span></div>
+            <div class="stat-row"><strong>Mismatch</strong><div class="track"><div class="fill mismatch" style="width:0%"></div></div><span>0</span></div>
+          </div>
+          <p class="footer-note">`not_comparable` rows are excluded from the comparable DeepRAG denominator because the fallback packet intentionally does not produce grounded extraction output.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Per-Packet Readout</h2>
+          <p>Each card shows how the baseline IXP extraction compared with the grounded second pass for the same synthetic packet.</p>
+        </div>
+      </div>
+      <div class="documents-grid"><article class="document-card"><div class="document-head"><div><h3>record_a_moderate_acuity</h3><p>provider_records · Inpatient Prior Auth</p></div><span class="badge badge-grounded">jit_deep_rag</span></div><div class="doc-metrics"><div><span class="micro-label">IXP</span><strong>13 match / 4 missing / 2 mismatch</strong></div><div><span class="micro-label">DeepRAG</span><strong>19 match / 0 missing / 0 mismatch</strong></div></div><div class="stacked-bar"><span class="bar-match" style="width:68.42%"></span><span class="bar-missing" style="width:21.05%"></span><span class="bar-mismatch" style="width:10.53%"></span></div><div class="stacked-bar"><span class="bar-match" style="width:100.00%"></span><span class="bar-missing" style="width:0.00%"></span><span class="bar-mismatch" style="width:0.00%"></span></div><div class="doc-links"><a href="demo_packet_files/provider_records/record_a_moderate_acuity.pdf" class="ghost-link">Open Synthetic PDF</a><a href="demo_packet_files/provider_records/record_a_moderate_acuity.json" class="ghost-link">Open Synthetic JSON</a><a href="synthetic_ixp_results.xlsx" class="ghost-link">Open IXP workbook</a><a href="synthetic_deeprag_results.xlsx" class="ghost-link">Open DeepRAG workbook</a></div></article><article class="document-card"><div class="document-head"><div><h3>synthetic_patient_chart_case_001</h3><p>base_patient_chart · Outpatient Prior Auth</p></div><span class="badge badge-grounded">deep_rag</span></div><div class="doc-metrics"><div><span class="micro-label">IXP</span><strong>12 match / 3 missing / 4 mismatch</strong></div><div><span class="micro-label">DeepRAG</span><strong>18 match / 1 missing / 0 mismatch</strong></div></div><div class="stacked-bar"><span class="bar-match" style="width:63.16%"></span><span class="bar-missing" style="width:15.79%"></span><span class="bar-mismatch" style="width:21.05%"></span></div><div class="stacked-bar"><span class="bar-match" style="width:94.74%"></span><span class="bar-missing" style="width:5.26%"></span><span class="bar-mismatch" style="width:0.00%"></span></div><div class="doc-links"><a href="demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.pdf" class="ghost-link">Open Synthetic PDF</a><a href="demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.json" class="ghost-link">Open Synthetic JSON</a><a href="synthetic_ixp_results.xlsx" class="ghost-link">Open IXP workbook</a><a href="synthetic_deeprag_results.xlsx" class="ghost-link">Open DeepRAG workbook</a></div></article><article class="document-card"><div class="document-head"><div><h3>record_a_high_risk_member</h3><p>payer_records · Extension Review Packet</p></div><span class="badge badge-fallback">ixp_hint_only</span></div><div class="doc-metrics"><div><span class="micro-label">IXP</span><strong>11 match / 7 missing / 1 mismatch</strong></div><div><span class="micro-label">DeepRAG</span><strong>0 match / 0 missing / 0 mismatch</strong></div></div><div class="stacked-bar"><span class="bar-match" style="width:57.89%"></span><span class="bar-missing" style="width:36.84%"></span><span class="bar-mismatch" style="width:5.26%"></span></div><div class="stacked-bar"><span class="bar-match" style="width:0.00%"></span><span class="bar-missing" style="width:0.00%"></span><span class="bar-mismatch" style="width:0.00%"></span></div><div class="doc-links"><a href="demo_packet_files/payer_records/record_a_high_risk_member.pdf" class="ghost-link">Open Synthetic PDF</a><a href="demo_packet_files/payer_records/record_a_high_risk_member.json" class="ghost-link">Open Synthetic JSON</a><a href="synthetic_ixp_results.xlsx" class="ghost-link">Open IXP workbook</a><a href="synthetic_deeprag_results.xlsx" class="ghost-link">Open DeepRAG workbook</a></div></article></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Field Hotspots</h2>
+          <p>Fields at the top are where IXP struggled most often in the synthetic walkthrough. In this demo set, DeepRAG mostly closes those gaps except for the deliberate fallback packet.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Field Path</th>
+              <th>IXP Match</th>
+              <th>IXP Missing</th>
+              <th>IXP Mismatch</th>
+              <th>DeepRAG Match</th>
+              <th>DeepRAG Missing</th>
+              <th>DeepRAG Mismatch</th>
+              <th>DeepRAG N/C</th>
+            </tr>
+          </thead>
+          <tbody><tr><td>Service Lines[1] &gt; Number of Units</td><td>0</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Referring Provider ID</td><td>0</td><td>3</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Contact Name</td><td>0</td><td>0</td><td>3</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Existing Authorization Number</td><td>1</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Episode Type</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Diagnosis Codes[3] &gt; Diagnosis Code</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Contact Phone</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Service Lines[1] &gt; Start Date</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Service Lines[1] &gt; Procedure Code</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td></tr><tr><td>Service Lines[1] &gt; End Date</td><td>2</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Current IXP Prompt And Suggested Prompt-Level Changes</h2>
+          <p>This section uses a sanitized prompt snapshot plus the repo's local prompt recommendation notes. It shows the current prompt surface the dashboard is assuming and the prompt edits already being suggested locally.</p>
+        </div>
+      </div>
+      <div class="prompt-intro">
+        <article class="prompt-summary-box">
+          <h3>Current Global Prompt</h3>
+          <pre>You are a healthcare document data extraction specialist processing faxed prior authorization requests for the target health plan. A file may include fax cover sheets, transmission headers, duplicate pages, referral forms, clinical records, or other attachments before the actual request form. First identify the first complete prior authorization request form in the file and ignore cover sheets or non-form pages. Then extract data only from that request form and its continuation pages. If no complete prior authorization request form is present anywhere in the file, do not force a match to partial lookalike content. In that case, return null for non-repeating fields and create no rows for repeating groups such as Diagnosis Codes and Service Lines. Documents may be typed or handwritten. Return null when a field is absent, ambiguous, or illegible. Do not invent defaults.</pre>
+        </article>
+        <article class="prompt-summary-box">
+          <h3>Prompt Sources</h3>
+          <p class="section-copy">Current taxonomy source:</p>
+          <pre>Not included in sanitized demo repo.</pre>
+          <p class="section-copy" style="margin-top:12px;">Prompt change recommendations source:</p>
+          <pre>Not included in sanitized demo repo.</pre>
+        </article>
+      </div>
+      <div class="prompt-stack"><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-cross-cutting">cross-cutting</span><span>Global extraction scope</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>You are a healthcare document data extraction specialist processing faxed prior authorization requests for the target health plan. A file may include fax cover sheets, transmission headers, duplicate pages, referral forms, clinical records, or other attachments before the actual request form. First identify the first complete prior authorization request form in the file and ignore cover sheets or non-form pages. Then extract data only from that request form and its continuation pages. If no complete prior authorization request form is present anywhere in the file, do not force a match to partial lookalike content. In that case, return null for non-repeating fields and create no rows for repeating groups such as Diagnosis Codes and Service Lines. Documents may be typed or handwritten. Return null when a field is absent, ambiguous, or illegible. Do not invent defaults.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Within the selected prior authorization request form, prefer evidence from the same labeled section as the target field. Do not borrow IDs, phone numbers, or dates from a different section when a same-section candidate exists. When a field requires inference, keep the inference local to the same table or labeled block.</pre><p class="prompt-why">Helps reduce section-crossing failures such as wrong IDs, contaminated contact data, and stale carried-forward dates.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-highest">highest</span><span>Type of Request / Urgent / Standard</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>The Type of Request determines the urgency of the prior authorization request. Return Urgent, Standard, or Retrospective based on the selected checkbox or explicit wording. Ignore unchecked boxes. If the selection is not clear, return null.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Treat Urgent, Standard, and Retrospective as one mutually exclusive checkbox group. Inspect only the mark immediately adjacent to each label. If exactly one option is marked, return that label. Ignore unchecked labels and ignore request-action fields such as Initial, Extension, Changes, or Other Request Type. Return null if none or multiple are clearly marked.</pre><p class="prompt-why">The current eval recommends making the checkbox-group logic more explicit because urgency outputs are frequently missing.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-highest">highest</span><span>Episode Type</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>Return one of: IP, OP, BH - IP, or BH - OP. Use the treatment setting plus explicit behavioral health wording when available. If only inpatient/outpatient is clear and behavioral health is not stated, return IP or OP. Return null if unclear.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Return exactly one of BH-IP, BH-OP, IP, or OP. First determine inpatient vs outpatient from Treatment Setting or explicit wording. Then determine BH only from explicit behavioral-health evidence on the request form, such as behavioral health, psychiatry, psych, mental health, substance use, detox, rehab, or a BH-specific request form. If BH evidence is present, return BH-IP or BH-OP. Use the canonical tokens BH-IP and BH-OP without spaces.</pre><p class="prompt-why">The repo's prompt recommendations call out repeated BH-IP vs IP mismatches that look like BH detection failures.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-highest">highest</span><span>Member ID</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>Extract the member or subscriber identifier exactly as shown on the current request form. Prefer the plan member ID and do not substitute other identifiers unless the form uses that as the member ID.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Extract only the identifier labeled Member ID, Subscriber ID, Member Number, or Insurance ID in the member-information block. Preserve all letters, digits, separators, and suffixes exactly as shown, including trailing member segments such as -01. Do not use provider IDs, NPIs, TINs, fax numbers, authorization numbers, or reference numbers.</pre><p class="prompt-why">Suggested because the current prompt is too generic about preserving the full identifier token, especially suffixes.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-highest">highest</span><span>Diagnosis Codes</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>The Diagnosis Codes section is a repeatable list of ICD-10 diagnosis codes for the current request. Look for a clearly labeled diagnosis area such as DIAGNOSIS CODE, DIAGNOSIS CODES, ICD-10, DX, or MEDICAL SECTION. Codes may be shown in a horizontal row of boxes, a vertical list, or a small table. Extract every diagnosis code shown for the current request, one code per repeated row, in reading order from left to right and then top to bottom. Example: if the section shows M25.511, S46.011D, and M75.41, create three diagnosis-code rows with those values. If no complete prior authorization request form is present anywhere in the file, create no diagnosis-code rows.
+
+Extract one ICD-10 diagnosis code from the diagnosis section of the current request. Diagnosis codes may appear in separate adjacent boxes under a shared DIAGNOSIS CODE header. Treat each visible code cell as a separate diagnosis-code row. Preserve the order on the page from left to right and then top to bottom. Accept examples such as M25.511, S46.011D, or M75.41. Return only the diagnosis code value for this row.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Each diagnosis row must be a complete ICD-10 code from the current request form. Reject candidates that lack the leading alpha character or end in a dangling period. When a code is split across adjacent boxes or OCR tokens, merge the visible parts for the same code before returning it. Prefer the diagnosis section of the current request over history, problem lists, or attachment-only diagnoses.</pre><p class="prompt-why">Targets truncated codes, dropped leading letters, and diagnoses borrowed from unrelated clinical history.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-highest">highest</span><span>Service Line Start Date</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>Extract the requested service-line start date. Accept common date formats and standardize to MM/DD/YYYY. If the table clearly carries the value down from a prior row, use that repeated context; otherwise return null.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Use carry-down only when the start-date cell for the current row is visibly blank and the same service-line table clearly uses merged or continued cells. Do not borrow dates from the request date, admission date, prior authorization history, previous packet pages, or unrelated tables. Preserve the year exactly as printed.</pre><p class="prompt-why">The largest table-level problem in the current recommendations is over-broad inference for service-line start dates.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-medium">medium</span><span>Provider IDs</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>This section contains the referring provider or referring physician details for the current request. Extract only the referring provider data and do not confuse it with the servicing provider or facility.
+
+Extract the referring provider identifier when present. Prefer the provider-specific ID field and do not substitute NPI or TIN unless the form explicitly uses that as the provider ID.
+
+Extract the treating or servicing provider identifier when present. Prefer the provider-specific ID field and do not substitute NPI or TIN unless the form explicitly uses that as the provider ID.
+
+Extract the attending provider identifier when present. Prefer a payer- or provider-specific ID field and do not substitute NPI or TIN unless the form explicitly uses that as the provider ID.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Search the matching provider block first and prefer labels like Provider ID, Attending ID, Referring ID, Servicing ID, or plan/provider number before giving up. Keep the do-not-substitute-NPI-or-TIN rule.</pre><p class="prompt-why">Recommended because provider ID fields are mostly missing, which suggests the current prompt is not locating the right labeled block confidently.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-medium">medium</span><span>Contact block</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>Extract the contact or preparer name for the current request form.
+
+Extract the contact phone number for the current request form.
+
+Extract the contact fax number for the current request form.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Contact Name must contain alphabetic name tokens and cannot be only a phone or fax number. Contact Phone and Contact Fax must come from the same contact/preparer block as Contact Name when such a block exists. Do not swap with provider phone/fax numbers.</pre><p class="prompt-why">The existing recommendations flag contamination between contact fields and nearby provider phone/fax fields.</p></div></div></article><article class="prompt-card"><div class="prompt-meta"><span class="priority-chip priority-medium">medium</span><span>Length of Stay</span></div><div class="prompt-columns"><div><h3>Current v5 Prompt</h3><pre>Extract the requested length of stay, total requested days, or equivalent duration for the current request. Return the value verbatim if clearly stated; otherwise return null.</pre></div><div><h3>Suggested Prompt Change</h3><pre>Return the single requested LOS day count only when one value is explicitly stated. Do not convert a range such as 3-5 days or 30-42 into one endpoint unless the form explicitly marks the requested total. If only a range is present, return the range verbatim or null according to the downstream contract.</pre><p class="prompt-why">Recommended because current outputs often return loose ranges rather than a single normalized requested LOS.</p></div></div></article></div>
+    </section>
+
+    <section>
+      <div class="split-grid">
+        <div>
+          <div class="section-head">
+            <div>
+              <h2>Strategy Mix</h2>
+              <p>Intentional spread of grounded and fallback modes.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Strategy</th><th>Packets</th></tr></thead>
+              <tbody><tr><td>deep_rag</td><td>1</td></tr><tr><td>ixp_hint_only</td><td>1</td></tr><tr><td>jit_deep_rag</td><td>1</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <div>
+              <h2>Source Inventory</h2>
+              <p>Every source file below lives in the sibling synthetic generator repo.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Packet</th><th>Family</th><th>PDF</th><th>JSON</th></tr></thead>
+              <tbody><tr><td>record_a_moderate_acuity</td><td>provider_records</td><td><a href="demo_packet_files/provider_records/record_a_moderate_acuity.pdf">record_a_moderate_acuity.pdf</a></td><td><a href="demo_packet_files/provider_records/record_a_moderate_acuity.json">record_a_moderate_acuity.json</a></td></tr><tr><td>synthetic_patient_chart_case_001</td><td>base_patient_chart</td><td><a href="demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.pdf">synthetic_patient_chart_case_001.pdf</a></td><td><a href="demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.json">synthetic_patient_chart_case_001.json</a></td></tr><tr><td>record_a_high_risk_member</td><td>payer_records</td><td><a href="demo_packet_files/payer_records/record_a_high_risk_member.pdf">record_a_high_risk_member.pdf</a></td><td><a href="demo_packet_files/payer_records/record_a_high_risk_member.json">record_a_high_risk_member.json</a></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

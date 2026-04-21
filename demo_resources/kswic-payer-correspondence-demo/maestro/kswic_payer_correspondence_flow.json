@@ -1,0 +1,79 @@
+{
+  "process_name": "KSWIC Payer Correspondence Intake",
+  "trigger": "Inbound fax or portal notice arrives",
+  "variables": [
+    "packet_path",
+    "ixp_document_type",
+    "ixp_document_family",
+    "ixp_confidence",
+    "validation_payload",
+    "review_required",
+    "review_outcome",
+    "denial_of_service",
+    "payer_auth_problem",
+    "owner_queue",
+    "automation_tasks"
+  ],
+  "steps": [
+    {
+      "id": "start",
+      "type": "message_start",
+      "name": "Fax received"
+    },
+    {
+      "id": "persist_packet",
+      "type": "service_task",
+      "name": "Store packet and create intake case"
+    },
+    {
+      "id": "ixp_extract",
+      "type": "service_task",
+      "name": "Run IXP extraction and build review payload"
+    },
+    {
+      "id": "confidence_gate",
+      "type": "exclusive_gateway",
+      "name": "Review required or low confidence?"
+    },
+    {
+      "id": "classification_validation",
+      "type": "user_task",
+      "name": "Validate extraction in Action App"
+    },
+    {
+      "id": "route_logic",
+      "type": "service_task",
+      "name": "Apply routing rules"
+    },
+    {
+      "id": "parallel_dispatch",
+      "type": "parallel_gateway",
+      "name": "Dispatch downstream automations"
+    },
+    {
+      "id": "cerner_auth",
+      "type": "service_task",
+      "name": "Dummy Cerner auth update"
+    },
+    {
+      "id": "cerner_account",
+      "type": "service_task",
+      "name": "Dummy Cerner patient account update"
+    },
+    {
+      "id": "rev_cycle",
+      "type": "service_task",
+      "name": "Dummy rev cycle work item"
+    },
+    {
+      "id": "payer_portal",
+      "type": "service_task",
+      "name": "Dummy payer portal follow-up"
+    },
+    {
+      "id": "complete",
+      "type": "end_event",
+      "name": "Case routed"
+    }
+  ]
+}

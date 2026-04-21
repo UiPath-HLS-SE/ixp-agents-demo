@@ -1,0 +1,56 @@
+{
+  "scenario_id": "SCN-010",
+  "document_type": "Coordination of Benefits Questionnaire Letter",
+  "document_family": "member_admin",
+  "sender_name": "Prairie Horizon Health Plan",
+  "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+  "sender_phone": "(800) 555-2101",
+  "sender_fax": "(800) 555-2102",
+  "recipient_name": "Member and provider copy",
+  "recipient_role": "Member",
+  "recipient_address": "Wichita, KS 67203",
+  "line_of_business": "Commercial PPO",
+  "clinical_area": "Coordination of Benefits",
+  "summary": "Request to verify whether the member has other active insurance coverage.",
+  "channel": "fax",
+  "member_name": "Cameron Vale",
+  "member_id": "PHH-551002-03",
+  "member_dob": "1974-01-04",
+  "provider_name": "Kansas Sunflower Women's Imaging Center",
+  "provider_npi": "1881357012",
+  "ordering_provider": "Dr. Nia Walsh",
+  "policy_or_group_id": "KS-33207",
+  "claim_number": "CLM-8892014",
+  "authorization_number": "",
+  "service_description": "COB verification request",
+  "requested_units": "",
+  "approved_units": "",
+  "dates": {
+    "request_received": "",
+    "decision_date": "2026-02-26",
+    "service_date": "2026-02-02",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-18"
+  },
+  "decision_status": "information_requested",
+  "reason_category": "cob_verification",
+  "reason_codes": [
+    "COB-PEND-11"
+  ],
+  "reason_text": "Claim processing is delayed pending verification of other active insurance coverage.",
+  "financials": {
+    "billed_amount": 920.0,
+    "allowed_amount": null,
+    "plan_paid": null,
+    "member_responsibility": null
+  },
+  "documents_requested": [
+    "Completed COB questionnaire",
+    "Proof of active or inactive secondary coverage"
+  ],
+  "next_steps": [
+    "Add a coverage follow-up note to the patient account in Cerner so front office or billing staff can obtain the response.",
+    "If the patient returns updated insurance information, submit the COB update through the payer portal."
+  ]
+}

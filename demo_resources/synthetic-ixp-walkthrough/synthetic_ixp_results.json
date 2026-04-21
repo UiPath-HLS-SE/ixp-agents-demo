@@ -1,0 +1,151 @@
+{
+  "run_id": "synthetic-ixp-walkthrough-20260407",
+  "started_at": "2026-04-07T19:34:31+00:00",
+  "finished_at": "2026-04-07T19:34:31+00:00",
+  "project_name": "UM Intake",
+  "project_id": "synthetic-um-intake",
+  "tag_name": "Production",
+  "project_version": 999,
+  "project_version_name": "synthetic-demo",
+  "processed_count": 3,
+  "failed_count": 0,
+  "results": [
+    {
+      "source_blob_file_path": "demo_packet_files/provider_records/record_a_moderate_acuity.pdf",
+      "source_file_name": "record_a_moderate_acuity.pdf",
+      "source_bucket_name": "synthetic-record-generator",
+      "status": "success",
+      "document_id": "synthetic-doc-001",
+      "document_type_id": "inpatient_prior_auth",
+      "document_type_name": "Inpatient Prior Auth",
+      "normalized_fields": {
+        "Member Information > Member ID": "30014521",
+        "Request Information > Existing Authorization Number": null,
+        "Provider Information > Treating Provider ID": "1881630041",
+        "Provider Information > Attending Provider ID": "1417028895",
+        "Provider Information > Referring Provider ID": null,
+        "Request Information > Admission Date": "1/8/2026",
+        "Request Information > Length of Stay": "5 days",
+        "Request Information > Contact Name": "Harold Kim MD",
+        "Request Information > Contact Phone": "615-555-1107",
+        "Request Information > Episode Type": null,
+        "Request Information > Urgent": true,
+        "Request Information > Standard": false,
+        "Request Information > Type of Request": "Admission Review",
+        "Request Information > Treatment Setting": "Inpatient"
+      },
+      "normalized_tables": {
+        "Diagnosis Codes": [
+          {
+            "Diagnosis Code": "A41.9"
+          },
+          {
+            "Diagnosis Code": "N17.9"
+          },
+          {
+            "Diagnosis Code": "I50.9"
+          }
+        ],
+        "Service Lines": [
+          {
+            "Procedure Code": "52332",
+            "Start Date": "01/09/2026",
+            "End Date": "01/09/2026",
+            "Number of Units": null
+          }
+        ]
+      },
+      "preprocessing_summary": null,
+      "output_blob_file_path": null,
+      "error": null
+    },
+    {
+      "source_blob_file_path": "demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.pdf",
+      "source_file_name": "synthetic_patient_chart_case_001.pdf",
+      "source_bucket_name": "synthetic-record-generator",
+      "status": "success",
+      "document_id": "synthetic-doc-002",
+      "document_type_id": "outpatient_prior_auth",
+      "document_type_name": "Outpatient Prior Auth",
+      "normalized_fields": {
+        "Member Information > Member ID": "10458271",
+        "Request Information > Existing Authorization Number": null,
+        "Provider Information > Treating Provider ID": "1992874501",
+        "Provider Information > Attending Provider ID": "1508921143",
+        "Provider Information > Referring Provider ID": null,
+        "Request Information > Admission Date": "2/5/2026",
+        "Request Information > Length of Stay": null,
+        "Request Information > Contact Name": "Nina Patel",
+        "Request Information > Contact Phone": "(615) 555-0148",
+        "Request Information > Episode Type": "Initial",
+        "Request Information > Urgent": false,
+        "Request Information > Standard": true,
+        "Request Information > Type of Request": "Outpatient Diagnostics",
+        "Request Information > Treatment Setting": "Outpatient"
+      },
+      "normalized_tables": {
+        "Diagnosis Codes": [
+          {
+            "Diagnosis Code": "E11.9"
+          },
+          {
+            "Diagnosis Code": "I10"
+          },
+          {
+            "Diagnosis Code": "J45.20"
+          }
+        ],
+        "Service Lines": [
+          {
+            "Procedure Code": "93015",
+            "Start Date": "02/05/2026",
+            "End Date": "02/05/2026",
+            "Number of Units": "2"
+          }
+        ]
+      },
+      "preprocessing_summary": null,
+      "output_blob_file_path": null,
+      "error": null
+    },
+    {
+      "source_blob_file_path": "demo_packet_files/payer_records/record_a_high_risk_member.pdf",
+      "source_file_name": "record_a_high_risk_member.pdf",
+      "source_bucket_name": "synthetic-record-generator",
+      "status": "success",
+      "document_id": "synthetic-doc-003",
+      "document_type_id": "extension_review_packet",
+      "document_type_name": "Extension Review Packet",
+      "normalized_fields": {
+        "Member Information > Member ID": "M-8301124",
+        "Request Information > Existing Authorization Number": "PA-SYN-24003",
+        "Provider Information > Treating Provider ID": "1023384756",
+        "Provider Information > Attending Provider ID": "1407785620",
+        "Provider Information > Referring Provider ID": null,
+        "Request Information > Admission Date": "2/10/2026",
+        "Request Information > Length of Stay": "3",
+        "Request Information > Contact Name": "Sonia Patel RN CCM",
+        "Request Information > Contact Phone": null,
+        "Request Information > Episode Type": "Extension",
+        "Request Information > Urgent": false,
+        "Request Information > Standard": true,
+        "Request Information > Type of Request": "Concurrent Review",
+        "Request Information > Treatment Setting": "Inpatient"
+      },
+      "normalized_tables": {
+        "Diagnosis Codes": [
+          {
+            "Diagnosis Code": "I50.9"
+          },
+          {
+            "Diagnosis Code": "J44.9"
+          }
+        ],
+        "Service Lines": []
+      },
+      "preprocessing_summary": null,
+      "output_blob_file_path": null,
+      "error": null
+    }
+  ]
+}

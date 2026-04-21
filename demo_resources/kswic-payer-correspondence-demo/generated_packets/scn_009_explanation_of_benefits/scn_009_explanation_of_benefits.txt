@@ -1,0 +1,32 @@
+Explanation of Benefits
+Scenario ID: SCN-009
+Sender: North Plains Select
+Recipient: Member and provider copy
+Member: Riley Mercer (NPS-118290-01)
+Member DOB: 1995-09-21
+Provider: Kansas Sunflower Women's Imaging Center (1881357012)
+Claim Number: CLM-7224508
+Authorization Number: N/A
+Line Of Business: Commercial PPO
+Clinical Area: Office Visit and Labs
+Decision Status: paid
+Reason Category: claim_paid
+Reason Codes: PAID
+Reason Text: Claim processed per plan benefits with deductible and coinsurance applied.
+Request Received: N/A
+Decision Date: 2026-02-25
+Service Date: 2026-02-04
+Authorization Window: N/A to N/A
+Response Deadline: N/A
+Summary: Paid office visit and lab panel with deductible and coinsurance applied.
+Service Description: Office visit and lab panel
+Requested Units: N/A
+Approved Units: N/A
+Billed Amount: $640.00
+Allowed Amount: $425.00
+Plan Paid: $297.50
+Member Responsibility: $127.50
+Documents Requested: None
+Next Steps:
+- Add a patient-account note in Cerner if the EOB needs to be reconciled against the claim balance.
+- No payer-portal follow-up is required unless the remittance and EOB disagree.

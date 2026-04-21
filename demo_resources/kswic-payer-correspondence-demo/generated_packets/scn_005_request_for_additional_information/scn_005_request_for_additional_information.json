@@ -1,0 +1,57 @@
+{
+  "scenario_id": "SCN-005",
+  "document_type": "Request for Additional Information",
+  "document_family": "claims",
+  "sender_name": "Sun Prairie Medicaid Advantage",
+  "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+  "sender_phone": "(844) 555-5100",
+  "sender_fax": "(844) 555-5105",
+  "recipient_name": "KSWIC Revenue Cycle Billing Office",
+  "recipient_role": "Provider Billing Office",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Managed Medicaid",
+  "clinical_area": "Outpatient Surgery",
+  "summary": "Claim pended due to missing operative report and itemized bill.",
+  "channel": "fax",
+  "member_name": "Darius Wynn",
+  "member_id": "SPM-775114-05",
+  "member_dob": "1991-12-14",
+  "provider_name": "KSWIC Revenue Cycle Billing Office",
+  "provider_npi": "1457965210",
+  "ordering_provider": "Dr. Tessa Lin",
+  "policy_or_group_id": "SPM-22041",
+  "claim_number": "CLM-8100241",
+  "authorization_number": "",
+  "service_description": "Outpatient surgery facility claim",
+  "requested_units": "",
+  "approved_units": "",
+  "dates": {
+    "request_received": "",
+    "decision_date": "2026-02-21",
+    "service_date": "2026-02-03",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-08"
+  },
+  "decision_status": "pended",
+  "reason_category": "missing_information",
+  "reason_codes": [
+    "PEND-DOCS-14"
+  ],
+  "reason_text": "Additional documentation is required to complete adjudication of the outpatient surgery claim.",
+  "financials": {
+    "billed_amount": 7325.88,
+    "allowed_amount": null,
+    "plan_paid": null,
+    "member_responsibility": null
+  },
+  "documents_requested": [
+    "Operative report",
+    "Itemized bill",
+    "Implant log"
+  ],
+  "next_steps": [
+    "Create a patient-account follow-up in Cerner so the chart and billing packet can be assembled.",
+    "Upload the requested documents through the payer portal before the submission deadline."
+  ]
+}

@@ -2,8 +2,12 @@
 __pycache__/
 .pytest_cache/
 .venv/
+.env
+.uipath/
+__uipath/
 *.pyc
 *.pyo
 *.pyd
 *.swp
 *.xlsx
+*.nupkg

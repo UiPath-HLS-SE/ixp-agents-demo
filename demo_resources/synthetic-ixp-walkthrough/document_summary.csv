@@ -1,0 +1,4 @@
+file_name,source_pdf_path,doc_type_id_vs,expected_field_count,ixp_match_count,ixp_missing_count,ixp_mismatch_count,deeprag_strategy_used,deeprag_extraction_field_count,deeprag_match_count,deeprag_missing_count,deeprag_mismatch_count,deeprag_not_comparable_count,deeprag_grounded_field_count
+record_a_moderate_acuity,demo_packet_files/provider_records/record_a_moderate_acuity.pdf,Inpatient Prior Auth,20,13,4,2,jit_deep_rag,19,19,0,0,0,19
+synthetic_patient_chart_case_001,demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.pdf,Outpatient Prior Auth,20,12,3,4,deep_rag,19,18,1,0,0,19
+record_a_high_risk_member,demo_packet_files/payer_records/record_a_high_risk_member.pdf,Extension Review Packet,20,11,7,1,ixp_hint_only,0,0,0,0,19,0

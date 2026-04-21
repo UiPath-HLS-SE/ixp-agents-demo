@@ -1,0 +1,32 @@
+Pharmacy Exception Denial
+Scenario ID: SCN-014
+Sender: HeartlandRx Benefit Services
+Recipient: Kansas Sunflower Women's Imaging Center
+Member: Sasha Glenn (HRX-901114-01)
+Member DOB: 1990-06-11
+Provider: Kansas Sunflower Women's Imaging Center (1881357012)
+Claim Number: N/A
+Authorization Number: RX-PA-661921
+Line Of Business: PBM / Pharmacy Benefit
+Clinical Area: Rheumatology
+Decision Status: denied
+Reason Category: step_therapy
+Reason Codes: RX-STEP-17
+Reason Text: Formulary exception criteria were not met because the preferred step-therapy alternatives have not been trialed.
+Request Received: 2026-02-20
+Decision Date: 2026-03-01
+Service Date: 2026-03-03
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-15
+Summary: Requested biologic denied pending trial of preferred formulary alternative.
+Service Description: Biologic formulary exception request
+Requested Units: 30-day supply
+Approved Units: 0
+Billed Amount: -
+Allowed Amount: -
+Plan Paid: -
+Member Responsibility: -
+Documents Requested: Trial-and-failure history, Prescriber clinical rationale
+Next Steps:
+- Create a Cerner auth workqueue item for pharmacy follow-up and attach the preferred-alternative list.
+- Use the payer portal to submit additional step-therapy documentation or a formulary-exception appeal.

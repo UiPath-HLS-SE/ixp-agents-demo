@@ -1,0 +1,22 @@
+{
+  "automation_id": "dummy_cerner_auth_update",
+  "display_name": "Dummy - Cerner Auth Record Update",
+  "system": "Synthetic Cerner",
+  "supported_actions": [
+    "create_or_update_auth_record",
+    "route_to_auth_workqueue",
+    "close_auth_follow_up"
+  ],
+  "required_inputs": [
+    "document_id",
+    "member_id",
+    "authorization_number",
+    "decision_status",
+    "service_description"
+  ],
+  "outputs": [
+    "cerner_auth_record_id",
+    "workqueue_name",
+    "update_status"
+  ]
+}

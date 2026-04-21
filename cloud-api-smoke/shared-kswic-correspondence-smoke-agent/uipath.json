@@ -1,0 +1,30 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/uipath",
+  "runtimeOptions": {
+    "isConversational": false
+  },
+  "packOptions": {
+    "fileExtensionsIncluded": [],
+    "filesIncluded": [],
+    "filesExcluded": [
+      "input.json",
+      "output.json",
+      ".env",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "*.md"
+    ],
+    "directoriesExcluded": [
+      ".agent",
+      ".claude",
+      "__pycache__",
+      ".venv",
+      ".uipath",
+      "*.egg-info"
+    ],
+    "includeUvLock": false
+  },
+  "functions": {
+    "main": "main.py:main"
+  }
+}

@@ -1,0 +1,32 @@
+Claim Denial Letter
+Scenario ID: SCN-004
+Sender: North Plains Select
+Recipient: KSWIC Revenue Cycle Billing Office
+Member: Jordan Pike (NPS-332845-01)
+Member DOB: 1967-07-30
+Provider: KSWIC Revenue Cycle Billing Office (1457965210)
+Claim Number: CLM-5521907
+Authorization Number: N/A
+Line Of Business: Commercial PPO
+Clinical Area: Durable Medical Equipment
+Decision Status: denied
+Reason Category: medical_necessity_not_met
+Reason Codes: CO-50, N290
+Reason Text: The service was denied because records received did not establish medical necessity for a powered wheelchair.
+Request Received: N/A
+Decision Date: 2026-02-19
+Service Date: 2026-01-22
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-20
+Summary: Claim denied for powered wheelchair due to insufficient supporting documentation.
+Service Description: Powered wheelchair, HCPCS K0823
+Requested Units: 1
+Approved Units: 0
+Billed Amount: $4,280.00
+Allowed Amount: $0.00
+Plan Paid: $0.00
+Member Responsibility: $0.00
+Documents Requested: Face-to-face mobility evaluation, Physical therapy functional assessment, Detailed written order
+Next Steps:
+- Open a denial case in the rev cycle system and add a patient-account note in Cerner.
+- Prepare a portal reconsideration package with the missing clinical support if the account remains collectible.

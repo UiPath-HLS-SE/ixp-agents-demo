@@ -1,0 +1,54 @@
+{
+  "scenario_id": "SCN-003",
+  "document_type": "Prior Authorization Denial Letter",
+  "document_family": "prior_auth",
+  "sender_name": "Flint Hills CareNet",
+  "sender_address": "300 Meridian Center, Hutchinson, KS 67501",
+  "sender_phone": "(866) 555-3101",
+  "sender_fax": "(866) 555-3104",
+  "recipient_name": "Kansas Sunflower Women's Imaging Center",
+  "recipient_role": "Provider",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Commercial HMO",
+  "clinical_area": "Sleep Medicine",
+  "summary": "Denied in-lab sleep study; home sleep test recommended first.",
+  "channel": "fax",
+  "member_name": "Mila Hart",
+  "member_id": "FHC-228174-02",
+  "member_dob": "1979-11-08",
+  "provider_name": "Kansas Sunflower Women's Imaging Center",
+  "provider_npi": "1881357012",
+  "ordering_provider": "Dr. Naomi Beck",
+  "policy_or_group_id": "FHC-99120",
+  "claim_number": "",
+  "authorization_number": "PA-118943",
+  "service_description": "In-lab polysomnography",
+  "requested_units": "1",
+  "approved_units": "0",
+  "dates": {
+    "request_received": "2026-02-14",
+    "decision_date": "2026-02-16",
+    "service_date": "2026-02-24",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-02-26"
+  },
+  "decision_status": "denied",
+  "reason_category": "medical_necessity_not_met",
+  "reason_codes": [
+    "UM-102",
+    "ALT-CARE-01"
+  ],
+  "reason_text": "Clinical criteria for in-lab polysomnography were not met and a home sleep test must be completed first.",
+  "financials": {
+    "billed_amount": null,
+    "allowed_amount": null,
+    "plan_paid": null,
+    "member_responsibility": null
+  },
+  "documents_requested": [],
+  "next_steps": [
+    "Create an auth follow-up task in Cerner and route the case to the KSWIC authorization team.",
+    "Use the payer portal to confirm peer-to-peer and reconsideration deadlines before the sleep study date."
+  ]
+}

@@ -1,0 +1,15 @@
+[project]
+name = "shared-kswic-correspondence-maestro-test"
+version = "0.1.1"
+description = "Shared-folder Maestro wrapper for the KSWIC correspondence smoke agent"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "UiPath HLS SE" }]
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []

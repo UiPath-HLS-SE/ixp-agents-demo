@@ -1,0 +1,297 @@
+{
+  "record_label": "C",
+  "acuity": "Lower Acuity (Gap-Heavy)",
+  "theme": "CHF exacerbation",
+  "patient": {
+    "name": "Patricia L. Bowen",
+    "mrn": "30021904",
+    "age": "72",
+    "gender": "Female",
+    "admission_date": "2026-03-04",
+    "discharge_date": "2026-03-08",
+    "length_of_stay": "4 days",
+    "attending_physician": "Leah Morgan, MD"
+  },
+  "admission_hnp": {
+    "chief_complaint": "Progressive shortness of breath and leg swelling",
+    "admission_context": "Admitted from clinic due volume overload symptoms",
+    "hpi": "Patient reported one week of worsening orthopnea, edema, and reduced exertional tolerance. Documentation identified CHF exacerbation but did not include EF data or systolic/diastolic type. CKD and diabetes were listed as comorbidities, with no CKD stage documented in provider note.",
+    "past_medical_history": [
+      "Congestive heart failure (type unspecified)",
+      "Type 2 diabetes mellitus",
+      "Chronic kidney disease (stage not documented)",
+      "Class II obesity",
+      "Hypertension"
+    ],
+    "medications": [
+      "Furosemide 40 mg PO daily",
+      "Metoprolol succinate 50 mg PO daily",
+      "Losartan 25 mg PO daily",
+      "Metformin 500 mg PO BID",
+      "Insulin glargine 18 units nightly"
+    ],
+    "allergies": [
+      "Lisinopril (cough)",
+      "Latex (contact rash)"
+    ]
+  },
+  "progress_notes": [
+    {
+      "date": "2026-03-04",
+      "hospital_day": "HD1",
+      "title": "Admission Floor Note",
+      "service": "Hospital Medicine",
+      "author": "Leah Morgan, MD",
+      "events": [
+        "Admitted for CHF exacerbation with peripheral edema and bibasilar crackles.",
+        "Started on IV loop diuretic regimen."
+      ],
+      "assessment": [
+        "Volume overload likely cardiac in origin, but linkage not explicitly documented.",
+        "Baseline CKD noted without stage detail."
+      ],
+      "plan": [
+        "IV furosemide and daily weights.",
+        "Fluid and sodium restriction.",
+        "Monitor renal function twice daily."
+      ],
+      "signed_at": "2026-03-04 19:18"
+    },
+    {
+      "date": "2026-03-05",
+      "hospital_day": "HD2",
+      "title": "Ward Escalation Note",
+      "service": "Hospital Medicine",
+      "author": "Leah Morgan, MD",
+      "events": [
+        "Escalation event: worsening dyspnea and poor urine response to initial diuretic dose.",
+        "Diuretic intensification to high-dose IV regimen with add-on thiazide."
+      ],
+      "assessment": [
+        "Persistent fluid overload requiring medication escalation.",
+        "No ICU criteria met; remained stable on telemetry floor."
+      ],
+      "plan": [
+        "Increase IV diuretic frequency and strict output monitoring.",
+        "Repeat BMP and lactate after escalation.",
+        "Cardiology consult for optimization recommendations."
+      ],
+      "signed_at": "2026-03-05 16:47"
+    },
+    {
+      "date": "2026-03-06",
+      "hospital_day": "HD3",
+      "title": "Improvement Note",
+      "service": "Hospital Medicine",
+      "author": "Leah Morgan, MD",
+      "events": [
+        "Urine output improved and oxygen requirement returned to baseline.",
+        "Edema reduced by approximately 2+ to 1+ lower extremities."
+      ],
+      "assessment": [
+        "Clinical response to escalated diuretic strategy.",
+        "Renal function mildly worsened then stabilized."
+      ],
+      "plan": [
+        "Transition toward oral regimen as tolerated.",
+        "Continue daily weights and telemetry monitoring.",
+        "Prepare discharge teaching for fluid management."
+      ],
+      "signed_at": "2026-03-06 15:58"
+    },
+    {
+      "date": "2026-03-07",
+      "hospital_day": "HD4",
+      "title": "Pre-Discharge Note",
+      "service": "Hospital Medicine",
+      "author": "Leah Morgan, MD",
+      "events": [
+        "Net negative fluid balance sustained for 48 hours.",
+        "Ambulating with stable oxygen saturation."
+      ],
+      "assessment": [
+        "Lower-acuity course with improvement, ready for discharge.",
+        "Documentation gaps remain regarding CHF type and CKD stage."
+      ],
+      "plan": [
+        "Discharge home with close cardiology follow-up.",
+        "Outpatient echocardiogram order placed (EF not yet documented).",
+        "Recheck labs and weights within 72 hours."
+      ],
+      "signed_at": "2026-03-07 17:14"
+    }
+  ],
+  "escalation_event": {
+    "date": "2026-03-05",
+    "transfer_path": "Telemetry floor (no ICU transfer)",
+    "hypotension": "Transient borderline BP 92/60, no shock",
+    "lactate_peak": "2.4 mmol/L",
+    "pressor_use": "No",
+    "mechanical_ventilation": "No",
+    "duration": "Ward escalation over 10 hours",
+    "outcome": "Improved with diuretic escalation and monitoring",
+    "transfer_note": [
+      "Rapid-response style bedside reassessment performed for increased work of breathing.",
+      "Escalation handled on monitored floor with intensified diuresis.",
+      "No ICU transfer required; patient stabilized on same unit."
+    ],
+    "signed_by": "Leah Morgan, MD",
+    "signed_at": "2026-03-05 20:09"
+  },
+  "lab_trends": [
+    {
+      "date": "03-04",
+      "time": "AM",
+      "wbc": "9.8",
+      "creatinine": "1.42 H",
+      "lactate": "1.9",
+      "hemoglobin": "10.8 L"
+    },
+    {
+      "date": "03-04",
+      "time": "PM",
+      "wbc": "10.4",
+      "creatinine": "1.50 H",
+      "lactate": "2.2 H",
+      "hemoglobin": "10.6 L"
+    },
+    {
+      "date": "03-05",
+      "time": "AM",
+      "wbc": "10.9",
+      "creatinine": "1.61 H",
+      "lactate": "2.4 H",
+      "hemoglobin": "10.5 L"
+    },
+    {
+      "date": "03-05",
+      "time": "PM",
+      "wbc": "10.2",
+      "creatinine": "1.58 H",
+      "lactate": "2.1 H",
+      "hemoglobin": "10.4 L"
+    },
+    {
+      "date": "03-06",
+      "time": "AM",
+      "wbc": "9.6",
+      "creatinine": "1.54 H",
+      "lactate": "1.8",
+      "hemoglobin": "10.2 L"
+    },
+    {
+      "date": "03-06",
+      "time": "PM",
+      "wbc": "9.3",
+      "creatinine": "1.49 H",
+      "lactate": "1.6",
+      "hemoglobin": "10.2 L"
+    },
+    {
+      "date": "03-07",
+      "time": "AM",
+      "wbc": "8.9",
+      "creatinine": "1.44 H",
+      "lactate": "1.4",
+      "hemoglobin": "10.3 L"
+    },
+    {
+      "date": "03-07",
+      "time": "PM",
+      "wbc": "8.7",
+      "creatinine": "1.40 H",
+      "lactate": "1.3",
+      "hemoglobin": "10.4 L"
+    }
+  ],
+  "lab_interpretation": [
+    "Abnormal trend present: creatinine rise with high-dose diuresis, then stabilization.",
+    "Lactate mildly elevated during escalation event and normalized with improvement.",
+    "Hemoglobin remained low and stable throughout admission."
+  ],
+  "procedure_report": {
+    "procedure": "Ultrasound-guided right thoracentesis",
+    "date": "2026-03-05",
+    "indication": "Symptomatic pleural effusion during CHF exacerbation",
+    "operator": "Aaron Feldman, MD",
+    "anesthesia": "Local lidocaine only",
+    "complications": "No immediate complication",
+    "findings": [
+      "Removed 650 mL clear straw-colored pleural fluid.",
+      "Post-procedure ultrasound confirmed decreased effusion and no pneumothorax.",
+      "Respiratory comfort improved after drainage."
+    ],
+    "signed_at": "2026-03-05 14:22"
+  },
+  "discharge_summary": {
+    "final_diagnoses": [
+      "Congestive heart failure exacerbation (type not documented)",
+      "Volume overload",
+      "Type 2 diabetes mellitus",
+      "Obesity",
+      "Chronic kidney disease (stage not documented)",
+      "Hypertension"
+    ],
+    "hospital_course": [
+      "Managed on telemetry floor without ICU transfer.",
+      "Required diuretic escalation for persistent fluid overload, then improved.",
+      "Discharged after symptom control and sustained negative fluid balance."
+    ],
+    "disposition": "Home",
+    "follow_up": [
+      "Cardiology follow-up within 7 days.",
+      "Outpatient echocardiogram for EF characterization.",
+      "Repeat BMP, weight check, and PCP review within 72 hours."
+    ],
+    "author": "Leah Morgan, MD",
+    "signed_at": "2026-03-08 10:16"
+  },
+  "coding": {
+    "principal_diagnosis": "Congestive heart failure exacerbation",
+    "principal_icd10": "I50.9",
+    "secondary_diagnoses": [
+      [
+        "E11.9",
+        "Type 2 diabetes mellitus"
+      ],
+      [
+        "E66.9",
+        "Obesity, unspecified"
+      ],
+      [
+        "N18.9",
+        "Chronic kidney disease, unspecified"
+      ],
+      [
+        "I10",
+        "Essential hypertension"
+      ],
+      [
+        "E87.70",
+        "Fluid overload, unspecified"
+      ],
+      [
+        "J90",
+        "Pleural effusion"
+      ]
+    ],
+    "documentation_gaps": [
+      [
+        "CHF documented without type",
+        "Need systolic/diastolic/combined classification"
+      ],
+      [
+        "No EF documented during admission",
+        "Missing severity characterization and treatment linkage"
+      ],
+      [
+        "CKD present without stage",
+        "Requires stage 1-5 specification"
+      ],
+      [
+        "Fluid overload not explicitly linked to CHF",
+        "Clarify causal relationship for coding accuracy"
+      ]
+    ]
+  }
+}

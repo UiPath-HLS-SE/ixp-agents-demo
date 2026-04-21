@@ -1,0 +1,32 @@
+Request for Additional Information
+Scenario ID: SCN-005
+Sender: Sun Prairie Medicaid Advantage
+Recipient: KSWIC Revenue Cycle Billing Office
+Member: Darius Wynn (SPM-775114-05)
+Member DOB: 1991-12-14
+Provider: KSWIC Revenue Cycle Billing Office (1457965210)
+Claim Number: CLM-8100241
+Authorization Number: N/A
+Line Of Business: Managed Medicaid
+Clinical Area: Outpatient Surgery
+Decision Status: pended
+Reason Category: missing_information
+Reason Codes: PEND-DOCS-14
+Reason Text: Additional documentation is required to complete adjudication of the outpatient surgery claim.
+Request Received: N/A
+Decision Date: 2026-02-21
+Service Date: 2026-02-03
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-08
+Summary: Claim pended due to missing operative report and itemized bill.
+Service Description: Outpatient surgery facility claim
+Requested Units: N/A
+Approved Units: N/A
+Billed Amount: $7,325.88
+Allowed Amount: -
+Plan Paid: -
+Member Responsibility: -
+Documents Requested: Operative report, Itemized bill, Implant log
+Next Steps:
+- Create a patient-account follow-up in Cerner so the chart and billing packet can be assembled.
+- Upload the requested documents through the payer portal before the submission deadline.

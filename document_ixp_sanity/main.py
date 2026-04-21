@@ -2,10 +2,48 @@ from __future__ import annotations
 
 import json
 import sys
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
-from pydantic import BaseModel, Field
+try:
+    from pydantic import BaseModel, Field
+except Exception:
+    def Field(*, default: Any = None, **_kwargs: Any) -> Any:
+        return default
+
+    class BaseModel:
+        """Minimal fallback for demo runs when pydantic is unavailable."""
+
+        model_config: dict[str, Any] = {}
+
+        def __init__(self, **kwargs: Any) -> None:
+            annotations = getattr(self.__class__, "__annotations__", {})
+            extra_mode = getattr(self.__class__, "model_config", {}).get("extra")
+
+            for name in annotations:
+                if name in kwargs:
+                    value = kwargs[name]
+                else:
+                    value = deepcopy(getattr(self.__class__, name, None))
+                setattr(self, name, value)
+
+            if extra_mode != "ignore":
+                for name, value in kwargs.items():
+                    if name not in annotations:
+                        setattr(self, name, value)
+
+        @classmethod
+        def model_validate(cls, value: Any) -> "BaseModel":
+            if isinstance(value, cls):
+                return value
+            if not isinstance(value, dict):
+                raise TypeError(f"{cls.__name__}.model_validate expected a dict or {cls.__name__} instance.")
+            return cls(**value)
+
+        def model_dump(self) -> dict[str, Any]:
+            annotations = getattr(self.__class__, "__annotations__", {})
+            return {name: getattr(self, name) for name in annotations}
 
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

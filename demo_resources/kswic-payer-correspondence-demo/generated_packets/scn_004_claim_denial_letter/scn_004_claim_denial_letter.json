@@ -1,0 +1,58 @@
+{
+  "scenario_id": "SCN-004",
+  "document_type": "Claim Denial Letter",
+  "document_family": "claims",
+  "sender_name": "North Plains Select",
+  "sender_address": "901 Oak Harbor Row, Omaha, NE 68114",
+  "sender_phone": "(877) 555-4401",
+  "sender_fax": "(877) 555-4408",
+  "recipient_name": "KSWIC Revenue Cycle Billing Office",
+  "recipient_role": "Provider Billing Office",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Commercial PPO",
+  "clinical_area": "Durable Medical Equipment",
+  "summary": "Claim denied for powered wheelchair due to insufficient supporting documentation.",
+  "channel": "fax",
+  "member_name": "Jordan Pike",
+  "member_id": "NPS-332845-01",
+  "member_dob": "1967-07-30",
+  "provider_name": "KSWIC Revenue Cycle Billing Office",
+  "provider_npi": "1457965210",
+  "ordering_provider": "Dr. Reese Barlow",
+  "policy_or_group_id": "NPS-12040",
+  "claim_number": "CLM-5521907",
+  "authorization_number": "",
+  "service_description": "Powered wheelchair, HCPCS K0823",
+  "requested_units": "1",
+  "approved_units": "0",
+  "dates": {
+    "request_received": "",
+    "decision_date": "2026-02-19",
+    "service_date": "2026-01-22",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-20"
+  },
+  "decision_status": "denied",
+  "reason_category": "medical_necessity_not_met",
+  "reason_codes": [
+    "CO-50",
+    "N290"
+  ],
+  "reason_text": "The service was denied because records received did not establish medical necessity for a powered wheelchair.",
+  "financials": {
+    "billed_amount": 4280.0,
+    "allowed_amount": 0.0,
+    "plan_paid": 0.0,
+    "member_responsibility": 0.0
+  },
+  "documents_requested": [
+    "Face-to-face mobility evaluation",
+    "Physical therapy functional assessment",
+    "Detailed written order"
+  ],
+  "next_steps": [
+    "Open a denial case in the rev cycle system and add a patient-account note in Cerner.",
+    "Prepare a portal reconsideration package with the missing clinical support if the account remains collectible."
+  ]
+}

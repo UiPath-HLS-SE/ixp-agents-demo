@@ -1,0 +1,267 @@
+{
+  "record_label": "B",
+  "risk_tier": "Complex Polypharmacy Case",
+  "theme": "Diabetes complications + medication risk",
+  "member": {
+    "name": "Gerald T. Norris",
+    "member_id": "M-9015560",
+    "age": "67",
+    "gender": "Male",
+    "insurance_type": "Dual-Eligible Special Needs Plan",
+    "pcp": "Nina Patel, MD"
+  },
+  "care_manager": "Lena Ortiz, RN, CCM",
+  "care_manager_signed_at": "2026-02-24 13:16",
+  "medical_director": "Aaron Feldman, MD",
+  "medical_director_signed_at": "2026-02-24 16:42",
+  "pharmacist_reviewer": "Thomas Reeves, PharmD",
+  "pharmacy_review_signed_at": "2026-02-24 15:58",
+  "chronic_conditions": [
+    {
+      "condition": "Type 2 diabetes with neuropathy",
+      "status": "Active",
+      "impact": "Labile glucose; hypoglycemia admissions",
+      "hcc": "HCC 37"
+    },
+    {
+      "condition": "CKD stage 4",
+      "status": "Active",
+      "impact": "High risk medication dosing complexity",
+      "hcc": "HCC 136"
+    },
+    {
+      "condition": "Congestive heart failure",
+      "status": "Active",
+      "impact": "Fluid status and med balancing challenges",
+      "hcc": "HCC 85"
+    },
+    {
+      "condition": "COPD",
+      "status": "Active",
+      "impact": "Increases exacerbation and ED risk",
+      "hcc": "HCC 111"
+    },
+    {
+      "condition": "Hypertension",
+      "status": "Active",
+      "impact": "Target control often unmet",
+      "hcc": "Non-HCC"
+    },
+    {
+      "condition": "Depression (major depressive disorder)",
+      "status": "Active",
+      "impact": "Contributes to poor adherence",
+      "hcc": "HCC 59"
+    }
+  ],
+  "utilization_events": [
+    {
+      "date": "2025-09-22",
+      "type": "Inpatient",
+      "facility": "Community General",
+      "reason": "Hyperglycemia with dehydration",
+      "paid_amount": "$19,860"
+    },
+    {
+      "date": "2026-01-15",
+      "type": "ED",
+      "facility": "Community General ED",
+      "reason": "Hypoglycemia episode",
+      "paid_amount": "$2,140"
+    },
+    {
+      "date": "2026-02-03",
+      "type": "Inpatient",
+      "facility": "Community General",
+      "reason": "AKI on CKD stage 4",
+      "paid_amount": "$26,330"
+    }
+  ],
+  "claims_summary": [
+    {
+      "claim_month": "2025-09",
+      "claim_category": "Inpatient medical",
+      "episodes": "1",
+      "member_oop": "$190",
+      "plan_paid": "$16,480"
+    },
+    {
+      "claim_month": "2026-01",
+      "claim_category": "Emergency services",
+      "episodes": "1",
+      "member_oop": "$80",
+      "plan_paid": "$1,940"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Inpatient renal",
+      "episodes": "1",
+      "member_oop": "$240",
+      "plan_paid": "$21,700"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Pharmacy high-risk",
+      "episodes": "15 meds",
+      "member_oop": "$220",
+      "plan_paid": "$3,860"
+    }
+  ],
+  "medications": [
+    {
+      "medication": "Insulin glargine",
+      "dose": "28 units",
+      "class": "Insulin",
+      "schedule": "QHS",
+      "risk_note": "Nocturnal hypoglycemia risk"
+    },
+    {
+      "medication": "Insulin lispro",
+      "dose": "Sliding scale",
+      "class": "Insulin",
+      "schedule": "TID AC",
+      "risk_note": "Missed meals create mismatch risk"
+    },
+    {
+      "medication": "Warfarin",
+      "dose": "4 mg",
+      "class": "Anticoagulant",
+      "schedule": "Daily",
+      "risk_note": "INR instability and bleed risk"
+    },
+    {
+      "medication": "Metoprolol succinate",
+      "dose": "50 mg",
+      "class": "Beta blocker",
+      "schedule": "Daily",
+      "risk_note": "Can mask adrenergic hypoglycemia signs"
+    },
+    {
+      "medication": "Torsemide",
+      "dose": "20 mg",
+      "class": "Diuretic",
+      "schedule": "Daily",
+      "risk_note": "AKI risk in CKD stage 4"
+    },
+    {
+      "medication": "Spironolactone",
+      "dose": "25 mg",
+      "class": "Diuretic",
+      "schedule": "Daily",
+      "risk_note": "Hyperkalemia monitoring needed"
+    },
+    {
+      "medication": "Hydralazine",
+      "dose": "25 mg",
+      "class": "Vasodilator",
+      "schedule": "TID",
+      "risk_note": "Adherence burden (TID dosing)"
+    },
+    {
+      "medication": "Isosorbide mononitrate",
+      "dose": "30 mg",
+      "class": "Nitrate",
+      "schedule": "Daily",
+      "risk_note": "Headache leads to skipped doses"
+    },
+    {
+      "medication": "Atorvastatin",
+      "dose": "40 mg",
+      "class": "Statin",
+      "schedule": "Nightly",
+      "risk_note": "Multiple refill gaps"
+    },
+    {
+      "medication": "Gabapentin",
+      "dose": "300 mg",
+      "class": "Neuropathic pain",
+      "schedule": "TID",
+      "risk_note": "Sedation and duplicate therapy concern"
+    },
+    {
+      "medication": "Sertraline",
+      "dose": "100 mg",
+      "class": "SSRI",
+      "schedule": "Daily",
+      "risk_note": "Behavioral health continuity needed"
+    },
+    {
+      "medication": "Budesonide/formoterol",
+      "dose": "160/4.5",
+      "class": "ICS/LABA",
+      "schedule": "BID",
+      "risk_note": "Inhaler adherence inconsistent"
+    },
+    {
+      "medication": "Tiotropium",
+      "dose": "18 mcg",
+      "class": "LAMA",
+      "schedule": "Daily",
+      "risk_note": "Technique reinforcement needed"
+    },
+    {
+      "medication": "Aspirin",
+      "dose": "81 mg",
+      "class": "Antiplatelet",
+      "schedule": "Daily",
+      "risk_note": "Added bleed risk with warfarin"
+    },
+    {
+      "medication": "Pantoprazole",
+      "dose": "40 mg",
+      "class": "PPI",
+      "schedule": "Daily",
+      "risk_note": "Low-value continuation without review"
+    }
+  ],
+  "medication_risk_focus": [
+    "Medication count: 15 active agents with high interaction burden.",
+    "Warfarin + aspirin + CKD stage 4 creates elevated adverse event risk.",
+    "Insulin complexity plus missed meals linked to recent hypoglycemia ED visit.",
+    "Medication adherence concerns documented by fill-history gaps and member report."
+  ],
+  "functional_assessment": {
+    "mobility": "Ambulates with single-point cane; fatigues after one block",
+    "dme_use": "Cane, pill organizer, glucometer",
+    "oxygen_use": "No chronic oxygen",
+    "pt_ot_eval": "No active PT order",
+    "adl_details": [
+      "Independent in basic ADLs but slow transfers and fatigue with stairs.",
+      "Needs help organizing weekly medications.",
+      "Self-manages glucose checks with occasional missed bedtime checks."
+    ]
+  },
+  "social_factors": {
+    "findings": [
+      "Lives alone in second-floor apartment; limited family support.",
+      "Missed two nephrology appointments due to transportation and forgetfulness.",
+      "Reports occasional inability to afford all copays before month-end.",
+      "Financial difficulty affects adherence to warfarin monitoring and insulin supplies.",
+      "Current smoker (0.5 pack/day).",
+      "Medication adherence barriers include complex schedule and mood symptoms."
+    ]
+  },
+  "behavioral_health_note": "Behavioral health care manager documented persistent depressive symptoms, poor sleep, and low motivation. Member agreed to virtual counseling referral and weekly adherence check-ins.",
+  "snapshot_points": [
+    "Complex polypharmacy profile with 15 medications including insulin and warfarin.",
+    "High-cost CKD stage 4 and diabetes complications drive avoidable utilization risk.",
+    "Recent hypoglycemia ED event likely associated with insulin and meal inconsistency.",
+    "Lives alone with adherence and behavioral health barriers."
+  ],
+  "follow_up_plan": [
+    "Initiate pharmacist-led medication reconciliation every 2 weeks for 60 days.",
+    "Arrange home-delivery pharmacy and synchronized refill dates.",
+    "Behavioral health follow-up plus depression screening at PCP visit.",
+    "Provide transportation assistance for nephrology and diabetes clinic appointments."
+  ],
+  "risk_gaps": [
+    {
+      "gap": "Medication adherence gaps in high-risk regimen",
+      "impact": "Drives ED use and adverse drug events; escalate medication coaching"
+    },
+    {
+      "gap": "Behavioral health symptoms affecting self-management",
+      "impact": "Include integrated BH plan in care-management outreach"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_kswic" targetNamespace="https://uipath-demo/kswic">
+  <bpmn:process id="KSWICPayerCorrespondenceIntake" name="KSWIC Payer Correspondence Intake" isExecutable="false">
+    <bpmn:startEvent id="Start_FaxReceived" name="Fax received">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_PersistPacket" name="Store packet and create intake case">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_IXPExtract" name="Run IXP extraction and build review payload">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_Confidence" name="Review required or low confidence?">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_Validation" name="Validate extraction in Action App">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_RouteLogic" name="Apply routing rules">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:parallelGateway id="Gateway_Dispatch" name="Dispatch downstream automations">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Task_CernerAuth" name="Dummy Cerner auth update">
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_CernerAccount" name="Dummy Cerner patient account update">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_13</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_RevCycle" name="Dummy rev cycle work item">
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:outgoing>Flow_14</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_PayerPortal" name="Dummy payer portal follow-up">
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:outgoing>Flow_15</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:parallelGateway id="Gateway_Join" name="Join downstream updates">
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+      <bpmn:incoming>Flow_13</bpmn:incoming>
+      <bpmn:incoming>Flow_14</bpmn:incoming>
+      <bpmn:incoming>Flow_15</bpmn:incoming>
+      <bpmn:outgoing>Flow_16</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:endEvent id="End_Complete" name="Case routed">
+      <bpmn:incoming>Flow_16</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Start_FaxReceived" targetRef="Task_PersistPacket" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_PersistPacket" targetRef="Task_IXPExtract" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_IXPExtract" targetRef="Gateway_Confidence" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Gateway_Confidence" targetRef="Task_Validation" name="Yes" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Gateway_Confidence" targetRef="Task_RouteLogic" name="No" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Validation" targetRef="Task_RouteLogic" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_RouteLogic" targetRef="Gateway_Dispatch" />
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Gateway_Dispatch" targetRef="Task_CernerAuth" />
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Gateway_Dispatch" targetRef="Task_CernerAccount" />
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Gateway_Dispatch" targetRef="Task_RevCycle" />
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Gateway_Dispatch" targetRef="Task_PayerPortal" />
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_CernerAuth" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_CernerAccount" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_RevCycle" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_PayerPortal" targetRef="Gateway_Join" />
+    <bpmn:sequenceFlow id="Flow_16" sourceRef="Gateway_Join" targetRef="End_Complete" />
+  </bpmn:process>
+</bpmn:definitions>

@@ -1,0 +1,58 @@
+file_name,path,expected_value,ixp_value,ixp_verdict,deeprag_value,deeprag_verdict,deeprag_strategy_used,deeprag_comparison_state
+record_a_moderate_acuity,Admission Date,01/08/2026,1/8/2026,match,01/08/2026,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Attending Provider ID,1417028895,1417028895,match,1417028895,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Contact Name,"Harold Kim, MD",Harold Kim MD,mismatch,"Harold Kim, MD",match,jit_deep_rag,grounded
+record_a_moderate_acuity,Contact Phone,(615) 555-1101,615-555-1107,mismatch,(615) 555-1101,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Diagnosis Codes[1] > Diagnosis Code,A41.9,A41.9,match,A41.9,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Diagnosis Codes[2] > Diagnosis Code,N17.9,N17.9,match,N17.9,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Diagnosis Codes[3] > Diagnosis Code,I50.9,I50.9,match,I50.9,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Episode Type,Initial,,missing,Initial,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Existing Authorization Number,PA-SYN-24001,,missing,PA-SYN-24001,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Length of Stay,5,5 days,match,5,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Member ID,30014521,30014521,match,30014521,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Referring Provider ID,1063497781,,missing,1063497781,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Service Lines[1] > End Date,01/09/2026,01/09/2026,match,01/09/2026,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Service Lines[1] > Number of Units,1,,missing,1,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Service Lines[1] > Procedure Code,52332,52332,match,52332,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Service Lines[1] > Start Date,01/09/2026,01/09/2026,match,01/09/2026,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Standard,False,False,match,False,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Treating Provider ID,1881630041,1881630041,match,1881630041,match,jit_deep_rag,grounded
+record_a_moderate_acuity,Urgent,True,True,match,True,match,jit_deep_rag,grounded
+synthetic_patient_chart_case_001,Admission Date,02/05/2026,2/5/2026,match,02/05/2026,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Attending Provider ID,1508921143,1508921143,match,1508921143,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Contact Name,"Nina Patel, MD",Nina Patel,mismatch,"Nina Patel, MD",match,deep_rag,grounded
+synthetic_patient_chart_case_001,Contact Phone,(615) 555-0148,(615) 555-0148,match,,missing,deep_rag,grounded
+synthetic_patient_chart_case_001,Diagnosis Codes[1] > Diagnosis Code,E11.9,E11.9,match,E11.9,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Diagnosis Codes[2] > Diagnosis Code,I10,I10,match,I10,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Diagnosis Codes[3] > Diagnosis Code,E78.5,J45.20,mismatch,E78.5,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Episode Type,New,Initial,mismatch,New,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Existing Authorization Number,PA-SYN-24002,,missing,PA-SYN-24002,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Length of Stay,1,,missing,1,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Member ID,10458271,10458271,match,10458271,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Referring Provider ID,1770554208,,missing,1770554208,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Service Lines[1] > End Date,02/05/2026,02/05/2026,match,02/05/2026,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Service Lines[1] > Number of Units,1,2,mismatch,1,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Service Lines[1] > Procedure Code,93015,93015,match,93015,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Service Lines[1] > Start Date,02/05/2026,02/05/2026,match,02/05/2026,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Standard,True,True,match,True,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Treating Provider ID,1992874501,1992874501,match,1992874501,match,deep_rag,grounded
+synthetic_patient_chart_case_001,Urgent,False,False,match,False,match,deep_rag,grounded
+record_a_high_risk_member,Admission Date,02/10/2026,2/10/2026,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Attending Provider ID,1407785620,1407785620,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Contact Name,"Sonia Patel, RN, CCM",Sonia Patel RN CCM,mismatch,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Contact Phone,(615) 555-2203,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Diagnosis Codes[1] > Diagnosis Code,I50.9,I50.9,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Diagnosis Codes[2] > Diagnosis Code,J44.9,J44.9,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Diagnosis Codes[3] > Diagnosis Code,N18.30,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Episode Type,Extension,Extension,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Existing Authorization Number,PA-SYN-24003,PA-SYN-24003,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Length of Stay,3,3,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Member ID,M-8301124,M-8301124,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Referring Provider ID,1156293001,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Service Lines[1] > End Date,02/12/2026,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Service Lines[1] > Number of Units,3,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Service Lines[1] > Procedure Code,99223,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Service Lines[1] > Start Date,02/10/2026,,missing,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Standard,True,True,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Treating Provider ID,1023384756,1023384756,match,,not_comparable,ixp_hint_only,ixp_hint_only
+record_a_high_risk_member,Urgent,False,False,match,,not_comparable,ixp_hint_only,ixp_hint_only

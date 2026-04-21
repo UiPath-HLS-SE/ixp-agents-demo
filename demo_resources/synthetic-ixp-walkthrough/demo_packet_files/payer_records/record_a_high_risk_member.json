@@ -1,0 +1,246 @@
+{
+  "record_label": "A",
+  "risk_tier": "High-Risk Member",
+  "theme": "Frequent CHF exacerbations",
+  "member": {
+    "name": "Renee M. Caldwell",
+    "member_id": "M-8301124",
+    "age": "74",
+    "gender": "Female",
+    "insurance_type": "Medicare Advantage PPO",
+    "pcp": "Harold Kim, MD"
+  },
+  "care_manager": "Sonia Patel, RN, CCM",
+  "care_manager_signed_at": "2026-02-25 15:22",
+  "medical_director": "Priya Raman, MD",
+  "medical_director_signed_at": "2026-02-26 11:04",
+  "pharmacist_reviewer": "Elena Russo, PharmD",
+  "pharmacy_review_signed_at": "2026-02-25 17:31",
+  "chronic_conditions": [
+    {
+      "condition": "Congestive heart failure",
+      "status": "Active",
+      "impact": "Frequent volume overload and readmission risk",
+      "hcc": "HCC 85"
+    },
+    {
+      "condition": "COPD",
+      "status": "Active",
+      "impact": "Dyspnea overlap with CHF symptoms",
+      "hcc": "HCC 111"
+    },
+    {
+      "condition": "CKD stage 3",
+      "status": "Active",
+      "impact": "Diuretic dosing and renal monitoring complexity",
+      "hcc": "HCC 137"
+    },
+    {
+      "condition": "Type 2 diabetes mellitus",
+      "status": "Active",
+      "impact": "Glycemic variability with admissions",
+      "hcc": "HCC 37"
+    },
+    {
+      "condition": "Hypertension",
+      "status": "Active",
+      "impact": "Contributes to HF progression",
+      "hcc": "Non-HCC"
+    }
+  ],
+  "utilization_events": [
+    {
+      "date": "2025-11-12",
+      "type": "Inpatient",
+      "facility": "Community General",
+      "reason": "Acute CHF exacerbation",
+      "paid_amount": "$28,420"
+    },
+    {
+      "date": "2026-01-04",
+      "type": "Inpatient",
+      "facility": "Community General",
+      "reason": "CHF + fluid overload",
+      "paid_amount": "$24,910"
+    },
+    {
+      "date": "2026-02-10",
+      "type": "ED",
+      "facility": "Community General ED",
+      "reason": "Shortness of breath",
+      "paid_amount": "$2,680"
+    }
+  ],
+  "claims_summary": [
+    {
+      "claim_month": "2025-11",
+      "claim_category": "Inpatient facility",
+      "episodes": "1",
+      "member_oop": "$310",
+      "plan_paid": "$23,940"
+    },
+    {
+      "claim_month": "2026-01",
+      "claim_category": "Inpatient facility",
+      "episodes": "1",
+      "member_oop": "$280",
+      "plan_paid": "$20,670"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Emergency services",
+      "episodes": "1",
+      "member_oop": "$95",
+      "plan_paid": "$2,410"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Outpatient cardiology",
+      "episodes": "0 completed",
+      "member_oop": "$0",
+      "plan_paid": "$0"
+    }
+  ],
+  "medications": [
+    {
+      "medication": "Insulin glargine",
+      "dose": "22 units",
+      "class": "Insulin",
+      "schedule": "QHS",
+      "risk_note": "Hypoglycemia risk; monitor fasting glucose"
+    },
+    {
+      "medication": "Apixaban",
+      "dose": "5 mg",
+      "class": "Anticoagulant",
+      "schedule": "BID",
+      "risk_note": "Bleeding risk with falls"
+    },
+    {
+      "medication": "Carvedilol",
+      "dose": "12.5 mg",
+      "class": "Beta blocker",
+      "schedule": "BID",
+      "risk_note": "May mask hypoglycemia symptoms"
+    },
+    {
+      "medication": "Furosemide",
+      "dose": "40 mg",
+      "class": "Diuretic",
+      "schedule": "BID",
+      "risk_note": "Renal function and potassium monitoring"
+    },
+    {
+      "medication": "Spironolactone",
+      "dose": "25 mg",
+      "class": "Diuretic",
+      "schedule": "Daily",
+      "risk_note": "Hyperkalemia risk"
+    },
+    {
+      "medication": "Losartan",
+      "dose": "50 mg",
+      "class": "ARB",
+      "schedule": "Daily",
+      "risk_note": "Hypotension and AKI risk"
+    },
+    {
+      "medication": "Rosuvastatin",
+      "dose": "20 mg",
+      "class": "Statin",
+      "schedule": "Nightly",
+      "risk_note": "Myalgias; adherence variable"
+    },
+    {
+      "medication": "Empagliflozin",
+      "dose": "10 mg",
+      "class": "SGLT2",
+      "schedule": "Daily",
+      "risk_note": "Volume depletion concern with diuresis"
+    },
+    {
+      "medication": "Aspirin",
+      "dose": "81 mg",
+      "class": "Antiplatelet",
+      "schedule": "Daily",
+      "risk_note": "Dual antithrombotic exposure"
+    },
+    {
+      "medication": "Albuterol inhaler",
+      "dose": "2 puffs",
+      "class": "Bronchodilator",
+      "schedule": "PRN",
+      "risk_note": "Frequent refill suggests poor control"
+    },
+    {
+      "medication": "Tiotropium",
+      "dose": "18 mcg",
+      "class": "LAMA",
+      "schedule": "Daily",
+      "risk_note": "Technique adherence needed"
+    },
+    {
+      "medication": "Potassium chloride",
+      "dose": "20 mEq",
+      "class": "Electrolyte",
+      "schedule": "Daily",
+      "risk_note": "Dose tied to diuretic changes"
+    },
+    {
+      "medication": "Hydrocodone/APAP",
+      "dose": "5/325 mg",
+      "class": "Opioid PRN",
+      "schedule": "Q8h PRN",
+      "risk_note": "Sedation and constipation risk"
+    }
+  ],
+  "medication_risk_focus": [
+    "Polypharmacy count: 13 active medications with multiple high-risk interactions.",
+    "Insulin + variable intake after admissions increases hypoglycemia risk.",
+    "Anticoagulant + aspirin combination requires bleed-risk counseling.",
+    "Opioid PRN identified; monitor daytime sedation and fall risk."
+  ],
+  "functional_assessment": {
+    "mobility": "Ambulates short household distances with rolling walker",
+    "dme_use": "Rolling walker, shower bench, home scale",
+    "oxygen_use": "Home oxygen 2 L/min nocturnal and exertional",
+    "pt_ot_eval": "No new PT referral completed during last 30 days",
+    "adl_details": [
+      "Independent with feeding and basic grooming.",
+      "Needs standby help for bathing and lower-body dressing on bad days.",
+      "Requires frequent rest breaks due to dyspnea."
+    ]
+  },
+  "social_factors": {
+    "findings": [
+      "Missed cardiology follow-up on 2026-02-18 due to transportation failure.",
+      "Reports financial strain with inhaler copays and oxygen supplies.",
+      "Former smoker with occasional relapse (2-3 cigarettes/week).",
+      "Lives with spouse who has limited ability to assist with transfers.",
+      "Limited support available for complex medication and appointment management.",
+      "Two missed appointments in last 60 days related to ride availability."
+    ]
+  },
+  "snapshot_points": [
+    "Meets high-risk criteria: 2 CHF hospitalizations in 90 days and recent ED SOB visit.",
+    "High claim concentration in inpatient cardiac episodes over last 4 months.",
+    "Home oxygen and polypharmacy increase readmission vulnerability.",
+    "Care gap: missed cardiology appointment delayed medication optimization."
+  ],
+  "follow_up_plan": [
+    "Schedule urgent cardiology follow-up and arrange plan-sponsored transportation.",
+    "Weekly nurse call for weight/symptom check for 30 days.",
+    "Pharmacy sync and blister-pack option review to reduce regimen errors.",
+    "Assess eligibility for home-based heart-failure program."
+  ],
+  "risk_gaps": [
+    {
+      "gap": "Missed specialty follow-up after CHF admission",
+      "impact": "High readmission risk; escalate outreach within 48 hours"
+    },
+    {
+      "gap": "Inconsistent oxygen and inhaler refill timing",
+      "impact": "Potential avoidable ED use; coordinate respiratory vendor"
+    }
+  ]
+}

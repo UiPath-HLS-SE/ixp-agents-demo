@@ -1,0 +1,120 @@
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "document_type", "value": "Prior Authorization Approval Letter", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "document_family", "value": "prior_auth", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "payer_name", "value": "Prairie Horizon Health Plan", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "member_name", "value": "Avery Sutton", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "member_id", "value": "PHH-484920-01", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "claim_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "authorization_number", "value": "PA-884201", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "decision_status", "value": "approved", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "reason_text", "value": "Submitted records support medical necessity under imaging guidelines.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_001_prior_authorization_approval_letter", "canonical_field": "owner_queue", "value": "KSWIC Authorization Team", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "document_type", "value": "Prior Authorization Denial Letter", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "document_family", "value": "prior_auth", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "payer_name", "value": "Flint Hills CareNet", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "member_name", "value": "Mila Hart", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "member_id", "value": "FHC-228174-02", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "claim_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "authorization_number", "value": "PA-118943", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "decision_status", "value": "denied", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "reason_text", "value": "Clinical criteria for in-lab polysomnography were not met and a home sleep test must be completed first.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "payer_auth_problem", "value": "true", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_003_prior_authorization_denial_letter", "canonical_field": "owner_queue", "value": "KSWIC Authorization Team", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "document_type", "value": "Claim Denial Letter", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "document_family", "value": "claims", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "payer_name", "value": "North Plains Select", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "member_name", "value": "Jordan Pike", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "member_id", "value": "NPS-332845-01", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "claim_number", "value": "CLM-5521907", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "decision_status", "value": "denied", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "reason_text", "value": "The service was denied because records received did not establish medical necessity for a powered wheelchair.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "denial_of_service", "value": "true", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_004_claim_denial_letter", "canonical_field": "owner_queue", "value": "KSWIC Rev Cycle Denials", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "document_type", "value": "Request for Additional Information", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "document_family", "value": "claims", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "payer_name", "value": "Sun Prairie Medicaid Advantage", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "member_name", "value": "Darius Wynn", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "member_id", "value": "SPM-775114-05", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "claim_number", "value": "CLM-8100241", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "decision_status", "value": "pended", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "reason_text", "value": "Additional documentation is required to complete adjudication of the outpatient surgery claim.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_005_request_for_additional_information", "canonical_field": "owner_queue", "value": "KSWIC Billing Follow Up", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "document_type", "value": "Appeal Receipt Acknowledgment", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "document_family", "value": "appeal", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "payer_name", "value": "Prairie Horizon Health Plan", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "member_name", "value": "Paige Dorsey", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "member_id", "value": "PHH-664200-01", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "claim_number", "value": "CLM-6005121", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "decision_status", "value": "appeal_received", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "reason_text", "value": "The first-level appeal was accepted for review and a standard determination is expected within 30 calendar days.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_006_appeal_receipt_acknowledgment", "canonical_field": "owner_queue", "value": "KSWIC Appeals", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "document_type", "value": "Appeal Determination Overturn Letter", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "document_family", "value": "appeal", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "payer_name", "value": "Sun Prairie Medicare Advantage", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "member_name", "value": "Eliana Brooks", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "member_id", "value": "SPM-109448-02", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "claim_number", "value": "CLM-4400192", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "authorization_number", "value": "PA-4400192A", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "decision_status", "value": "overturned", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "reason_text", "value": "Additional specialist documentation demonstrated medical necessity and the prior denial was reversed.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_007_appeal_determination_overturn_letter", "canonical_field": "owner_queue", "value": "KSWIC Appeals", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "document_type", "value": "Explanation of Benefits", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "document_family", "value": "claims", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "payer_name", "value": "North Plains Select", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "member_name", "value": "Riley Mercer", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "member_id", "value": "NPS-118290-01", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "claim_number", "value": "CLM-7224508", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "decision_status", "value": "paid", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "reason_text", "value": "Claim processed per plan benefits with deductible and coinsurance applied.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_009_explanation_of_benefits", "canonical_field": "owner_queue", "value": "KSWIC Payment Posting", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "document_type", "value": "Coordination of Benefits Questionnaire Letter", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "document_family", "value": "member_admin", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "payer_name", "value": "Prairie Horizon Health Plan", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "member_name", "value": "Cameron Vale", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "member_id", "value": "PHH-551002-03", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "claim_number", "value": "CLM-8892014", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "decision_status", "value": "information_requested", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "reason_text", "value": "Claim processing is delayed pending verification of other active insurance coverage.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_010_coordination_of_benefits_questionnaire_letter", "canonical_field": "owner_queue", "value": "KSWIC Eligibility Follow Up", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "document_type", "value": "Overpayment Recovery Notice", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "document_family", "value": "payment_integrity", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "payer_name", "value": "Sun Prairie Medicaid Advantage", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "member_name", "value": "Hayden Cole", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "member_id", "value": "SPM-402884-08", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "claim_number", "value": "CLM-1045507", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "authorization_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "decision_status", "value": "recoupment", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "reason_text", "value": "Duplicate reimbursement was identified during post-payment review and recovery will occur through offset.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "payer_auth_problem", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_011_overpayment_recovery_notice", "canonical_field": "owner_queue", "value": "KSWIC Rev Cycle Integrity", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "document_type", "value": "Pharmacy Exception Denial", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "document_family", "value": "pharmacy", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "payer_name", "value": "HeartlandRx Benefit Services", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "member_name", "value": "Sasha Glenn", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "member_id", "value": "HRX-901114-01", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "claim_number", "value": "", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "authorization_number", "value": "RX-PA-661921", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "decision_status", "value": "denied", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "reason_text", "value": "Formulary exception criteria were not met because the preferred step-therapy alternatives have not been trialed.", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "denial_of_service", "value": "false", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "payer_auth_problem", "value": "true", "annotator_id": "synthetic-demo-builder"}
+{"doc_id": "scn_014_pharmacy_exception_denial", "canonical_field": "owner_queue", "value": "KSWIC Authorization Team", "annotator_id": "synthetic-demo-builder"}

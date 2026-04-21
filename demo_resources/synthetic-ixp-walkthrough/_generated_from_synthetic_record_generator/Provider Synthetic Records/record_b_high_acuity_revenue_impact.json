@@ -1,0 +1,337 @@
+{
+  "record_label": "B",
+  "acuity": "High Acuity / Revenue Impact",
+  "theme": "Respiratory failure with multiple comorbidities",
+  "patient": {
+    "name": "Daniel P. Morris",
+    "mrn": "30018477",
+    "age": "63",
+    "gender": "Male",
+    "admission_date": "2026-02-02",
+    "discharge_date": "2026-02-10",
+    "length_of_stay": "8 days",
+    "attending_physician": "Priya Raman, MD"
+  },
+  "admission_hnp": {
+    "chief_complaint": "Severe dyspnea and hypoxemia",
+    "admission_context": "Emergency admission via EMS",
+    "hpi": "Patient arrived in acute respiratory distress with hypoxemia requiring emergent intubation. Hospital course complicated by atrial fibrillation with rapid ventricular response and concern for hospital-acquired infection later in stay. Comorbid COPD, CKD stage 3, diabetes with neuropathy, and protein-calorie malnutrition increased risk and complexity.",
+    "past_medical_history": [
+      "Chronic obstructive pulmonary disease",
+      "Type 2 diabetes mellitus with peripheral neuropathy",
+      "Chronic kidney disease stage 3",
+      "Hypertension",
+      "Protein-calorie malnutrition"
+    ],
+    "medications": [
+      "Tiotropium inhaler daily",
+      "Albuterol/ipratropium nebulizer PRN",
+      "Insulin glargine 24 units nightly",
+      "Insulin lispro sliding scale with meals",
+      "Lisinopril 10 mg PO daily",
+      "Atorvastatin 40 mg PO nightly"
+    ],
+    "allergies": [
+      "Levofloxacin (tendon pain)",
+      "Codeine (nausea)"
+    ]
+  },
+  "progress_notes": [
+    {
+      "date": "2026-02-02",
+      "hospital_day": "HD1",
+      "title": "MICU Admission Note",
+      "service": "Critical Care",
+      "author": "Priya Raman, MD",
+      "events": [
+        "Intubated for acute respiratory failure with severe hypoxemia.",
+        "Initial hypotension after sedation; improved with fluid and vasopressor bolus."
+      ],
+      "assessment": [
+        "Respiratory failure requiring invasive mechanical ventilation.",
+        "COPD exacerbation with significant work of breathing."
+      ],
+      "plan": [
+        "Lung-protective ventilation strategy and serial ABGs.",
+        "Empiric antibiotics and bronchodilator protocol.",
+        "Continuous telemetry and glucose control."
+      ],
+      "signed_at": "2026-02-02 22:44"
+    },
+    {
+      "date": "2026-02-03",
+      "hospital_day": "HD2",
+      "title": "Ventilator Management Note",
+      "service": "Critical Care",
+      "author": "Priya Raman, MD",
+      "events": [
+        "Mechanical ventilation ongoing; cumulative duration 24 hours.",
+        "Lactate remained elevated; creatinine increased above baseline CKD stage 3."
+      ],
+      "assessment": [
+        "Critical illness with multiorgan stress pattern.",
+        "Nutritional reserve poor; malnutrition documented."
+      ],
+      "plan": [
+        "Continue ventilator support and spontaneous breathing trial readiness checks.",
+        "Early enteral nutrition and electrolyte optimization.",
+        "Daily CXR and culture follow-up."
+      ],
+      "signed_at": "2026-02-03 16:20"
+    },
+    {
+      "date": "2026-02-04",
+      "hospital_day": "HD3",
+      "title": "Extubation Progress Note",
+      "service": "Critical Care",
+      "author": "Priya Raman, MD",
+      "events": [
+        "Successfully extubated after total 36 hours mechanical ventilation.",
+        "Oxygen requirement decreased to 3 L nasal cannula."
+      ],
+      "assessment": [
+        "Clinical improvement in respiratory status.",
+        "Hemodynamics stable without sustained pressor infusion."
+      ],
+      "plan": [
+        "Transfer from MICU to telemetry when stable for 12 hours.",
+        "Pulmonary hygiene and incentive spirometry.",
+        "Advance diet with nutrition consult follow-up."
+      ],
+      "signed_at": "2026-02-04 14:05"
+    },
+    {
+      "date": "2026-02-05",
+      "hospital_day": "HD4",
+      "title": "Telemetry Escalation Note",
+      "service": "Hospital Medicine",
+      "author": "Nina Patel, MD",
+      "events": [
+        "New atrial fibrillation with RVR to 150 bpm; treated with diltiazem.",
+        "Mild hypotension and lactate rise prompted rapid-response assessment."
+      ],
+      "assessment": [
+        "Acute arrhythmia complicating respiratory recovery.",
+        "Need to monitor for infection-related trigger."
+      ],
+      "plan": [
+        "Rate control and anticoagulation risk discussion.",
+        "Repeat blood cultures and procalcitonin.",
+        "Continue broad-spectrum coverage pending source clarification."
+      ],
+      "signed_at": "2026-02-05 18:31"
+    },
+    {
+      "date": "2026-02-06",
+      "hospital_day": "HD5",
+      "title": "Possible HAI Note",
+      "service": "Hospital Medicine",
+      "author": "Nina Patel, MD",
+      "events": [
+        "Fever and rising WBC with concern for hospital-acquired infection.",
+        "Documentation noted possible HAI but source remained unclear in note."
+      ],
+      "assessment": [
+        "High-risk case with unresolved infection source linkage.",
+        "Respiratory status stable on low-flow oxygen."
+      ],
+      "plan": [
+        "Targeted imaging and sputum culture review.",
+        "Continue antibiotics with de-escalation strategy once source identified.",
+        "Monitor renal function and drug dosing with CKD stage 3."
+      ],
+      "signed_at": "2026-02-06 17:09"
+    },
+    {
+      "date": "2026-02-08",
+      "hospital_day": "HD7",
+      "title": "Improvement Note",
+      "service": "Hospital Medicine",
+      "author": "Nina Patel, MD",
+      "events": [
+        "No recurrent AF with RVR in last 48 hours.",
+        "WBC, lactate, and oxygen requirement improved."
+      ],
+      "assessment": [
+        "Overall clinical recovery with residual deconditioning.",
+        "Appropriate for discharge planning and close outpatient follow-up."
+      ],
+      "plan": [
+        "Discharge with pulmonary and cardiology appointments.",
+        "Document clear return precautions and medication reconciliation.",
+        "Nutrition support plan and diabetes regimen review."
+      ],
+      "signed_at": "2026-02-08 16:54"
+    }
+  ],
+  "escalation_event": {
+    "date": "2026-02-02",
+    "transfer_path": "ED -> MICU -> Telemetry",
+    "hypotension": "Yes (MAP low 60s during intubation period)",
+    "lactate_peak": "3.9 mmol/L",
+    "pressor_use": "Intermittent norepinephrine bolus support, no prolonged drip",
+    "mechanical_ventilation": "Yes (36 hours)",
+    "duration": "MICU stay 48 hours",
+    "outcome": "Extubated and stepped down to telemetry",
+    "transfer_note": [
+      "Transferred to MICU after emergency intubation for respiratory failure.",
+      "Ventilation continued for 36 hours with improvement in gas exchange.",
+      "Step-down completed after extubation and stable hemodynamics."
+    ],
+    "signed_by": "Priya Raman, MD",
+    "signed_at": "2026-02-04 14:12"
+  },
+  "lab_trends": [
+    {
+      "date": "02-02",
+      "time": "AM",
+      "wbc": "14.1 H",
+      "creatinine": "1.72 H",
+      "lactate": "3.4 H",
+      "hemoglobin": "11.0 L"
+    },
+    {
+      "date": "02-02",
+      "time": "PM",
+      "wbc": "15.7 H",
+      "creatinine": "1.89 H",
+      "lactate": "3.9 H",
+      "hemoglobin": "10.7 L"
+    },
+    {
+      "date": "02-03",
+      "time": "AM",
+      "wbc": "16.2 H",
+      "creatinine": "1.95 H",
+      "lactate": "3.5 H",
+      "hemoglobin": "10.4 L"
+    },
+    {
+      "date": "02-03",
+      "time": "PM",
+      "wbc": "15.8 H",
+      "creatinine": "1.88 H",
+      "lactate": "3.0 H",
+      "hemoglobin": "10.2 L"
+    },
+    {
+      "date": "02-04",
+      "time": "AM",
+      "wbc": "14.6 H",
+      "creatinine": "1.79 H",
+      "lactate": "2.6 H",
+      "hemoglobin": "10.1 L"
+    },
+    {
+      "date": "02-05",
+      "time": "AM",
+      "wbc": "17.3 H",
+      "creatinine": "1.84 H",
+      "lactate": "2.9 H",
+      "hemoglobin": "9.9 L"
+    },
+    {
+      "date": "02-06",
+      "time": "PM",
+      "wbc": "15.0 H",
+      "creatinine": "1.76 H",
+      "lactate": "2.3 H",
+      "hemoglobin": "9.8 L"
+    },
+    {
+      "date": "02-06",
+      "time": "AM",
+      "wbc": "12.1 H",
+      "creatinine": "1.61 H",
+      "lactate": "1.8",
+      "hemoglobin": "10.0 L"
+    }
+  ],
+  "lab_interpretation": [
+    "Abnormal trend present: persistent leukocytosis with secondary spike during possible HAI period.",
+    "Lactate remained elevated early then normalized with respiratory/hemodynamic improvement.",
+    "Creatinine stayed above baseline CKD stage 3 range throughout stay."
+  ],
+  "procedure_report": {
+    "procedure": "Flexible bronchoscopy with bronchoalveolar lavage",
+    "date": "2026-02-03",
+    "indication": "Acute respiratory failure with concern for infectious etiology",
+    "operator": "Thomas Reeves, MD",
+    "anesthesia": "Sedation while mechanically ventilated",
+    "complications": "No immediate complications",
+    "findings": [
+      "Diffuse erythematous airways with moderate purulent secretions.",
+      "BAL samples collected from right middle lobe for culture and cytology.",
+      "No endobronchial mass or active bleeding seen."
+    ],
+    "signed_at": "2026-02-03 15:26"
+  },
+  "discharge_summary": {
+    "final_diagnoses": [
+      "Acute respiratory failure requiring 36-hour mechanical ventilation",
+      "COPD exacerbation",
+      "Type 2 diabetes mellitus with neuropathy",
+      "Chronic kidney disease stage 3",
+      "Atrial fibrillation with rapid ventricular response, resolved",
+      "Protein-calorie malnutrition",
+      "Possible hospital-acquired infection (source not clearly linked)"
+    ],
+    "hospital_course": [
+      "Required ICU admission and ventilatory support for high-acuity respiratory decompensation.",
+      "Extubated successfully after 36 hours with gradual oxygen wean.",
+      "Developed AF with RVR and possible HAI event before eventual stabilization."
+    ],
+    "disposition": "Skilled nursing facility for rehab",
+    "follow_up": [
+      "Pulmonology follow-up in 1 week with repeat chest imaging.",
+      "Cardiology follow-up in 2 weeks for AF monitoring.",
+      "Nephrology and nutrition follow-up within 2-3 weeks."
+    ],
+    "author": "Priya Raman, MD",
+    "signed_at": "2026-02-10 10:41"
+  },
+  "coding": {
+    "principal_diagnosis": "Acute respiratory failure",
+    "principal_icd10": "J96.00",
+    "secondary_diagnoses": [
+      [
+        "J44.1",
+        "Chronic obstructive pulmonary disease with exacerbation"
+      ],
+      [
+        "E11.40",
+        "Type 2 diabetes mellitus with diabetic neuropathy"
+      ],
+      [
+        "N18.30",
+        "Chronic kidney disease, stage 3"
+      ],
+      [
+        "E46",
+        "Protein-calorie malnutrition"
+      ],
+      [
+        "I48.91",
+        "Atrial fibrillation, unspecified"
+      ],
+      [
+        "Y95",
+        "Nosocomial condition"
+      ],
+      [
+        "R65.20",
+        "Severe systemic response without shock, monitored"
+      ]
+    ],
+    "documentation_gaps": [
+      [
+        "Respiratory failure documented without type qualifier",
+        "Clarify hypoxic vs hypercapnic vs both"
+      ],
+      [
+        "Hospital-acquired infection noted without linked source",
+        "Specify source: pneumonia, line, urinary, or other"
+      ]
+    ]
+  }
+}

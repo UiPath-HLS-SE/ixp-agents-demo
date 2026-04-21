@@ -1,0 +1,53 @@
+{
+  "scenario_id": "SCN-006",
+  "document_type": "Appeal Receipt Acknowledgment",
+  "document_family": "appeal",
+  "sender_name": "Prairie Horizon Health Plan",
+  "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+  "sender_phone": "(800) 555-2101",
+  "sender_fax": "(800) 555-2102",
+  "recipient_name": "KSWIC Appeals Desk",
+  "recipient_role": "Provider",
+  "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+  "line_of_business": "Commercial EPO",
+  "clinical_area": "Infusion Therapy",
+  "summary": "Acknowledgment of first-level appeal for a denied infusion therapy claim.",
+  "channel": "fax",
+  "member_name": "Paige Dorsey",
+  "member_id": "PHH-664200-01",
+  "member_dob": "1984-03-09",
+  "provider_name": "KSWIC Appeals Desk",
+  "provider_npi": "1457965210",
+  "ordering_provider": "Dr. Aaron Pike",
+  "policy_or_group_id": "KS-81220",
+  "claim_number": "CLM-6005121",
+  "authorization_number": "",
+  "service_description": "Infusion therapy appeal acknowledgment",
+  "requested_units": "",
+  "approved_units": "",
+  "dates": {
+    "request_received": "2026-02-18",
+    "decision_date": "2026-02-22",
+    "service_date": "2026-01-14",
+    "authorization_start": "",
+    "authorization_end": "",
+    "response_deadline": "2026-03-24"
+  },
+  "decision_status": "appeal_received",
+  "reason_category": "appeal_tracking",
+  "reason_codes": [
+    "APP-RCVD-01"
+  ],
+  "reason_text": "The first-level appeal was accepted for review and a standard determination is expected within 30 calendar days.",
+  "financials": {
+    "billed_amount": 1865.42,
+    "allowed_amount": 0.0,
+    "plan_paid": 0.0,
+    "member_responsibility": 0.0
+  },
+  "documents_requested": [],
+  "next_steps": [
+    "Update the appeal tracker in the rev cycle system and record the appeal case number.",
+    "Hold outbound payer follow-up unless the expected decision timeframe is missed."
+  ]
+}

@@ -1,0 +1,552 @@
+[
+  {
+    "scenario_id": "SCN-001",
+    "document_type": "Prior Authorization Approval Letter",
+    "document_family": "prior_auth",
+    "sender_name": "Prairie Horizon Health Plan",
+    "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+    "sender_phone": "(800) 555-2101",
+    "sender_fax": "(800) 555-2102",
+    "recipient_name": "Kansas Sunflower Women's Imaging Center",
+    "recipient_role": "Provider",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Commercial PPO",
+    "clinical_area": "Advanced Imaging",
+    "summary": "Approval for CT abdomen/pelvis with contrast requested by KSWIC imaging scheduling.",
+    "channel": "fax",
+    "member_name": "Avery Sutton",
+    "member_id": "PHH-484920-01",
+    "member_dob": "1988-04-17",
+    "provider_name": "Kansas Sunflower Women's Imaging Center",
+    "provider_npi": "1881357012",
+    "ordering_provider": "Dr. Lena Ortiz",
+    "policy_or_group_id": "KS-77014",
+    "claim_number": "",
+    "authorization_number": "PA-884201",
+    "service_description": "CT abdomen/pelvis with contrast",
+    "requested_units": "1",
+    "approved_units": "1",
+    "dates": {
+      "request_received": "2026-02-04",
+      "decision_date": "2026-02-06",
+      "service_date": "2026-02-12",
+      "authorization_start": "2026-02-07",
+      "authorization_end": "2026-03-07",
+      "response_deadline": ""
+    },
+    "decision_status": "approved",
+    "reason_category": "medical_necessity_met",
+    "reason_codes": [
+      "MED-NEC-APP"
+    ],
+    "reason_text": "Submitted records support medical necessity under imaging guidelines.",
+    "financials": {
+      "billed_amount": null,
+      "allowed_amount": null,
+      "plan_paid": null,
+      "member_responsibility": null
+    },
+    "documents_requested": [],
+    "next_steps": [
+      "Update the Cerner authorization record with the approved authorization number and validity window.",
+      "Release the imaging visit from the auth workqueue once the scheduled service date is confirmed."
+    ]
+  },
+  {
+    "scenario_id": "SCN-003",
+    "document_type": "Prior Authorization Denial Letter",
+    "document_family": "prior_auth",
+    "sender_name": "Flint Hills CareNet",
+    "sender_address": "300 Meridian Center, Hutchinson, KS 67501",
+    "sender_phone": "(866) 555-3101",
+    "sender_fax": "(866) 555-3104",
+    "recipient_name": "Kansas Sunflower Women's Imaging Center",
+    "recipient_role": "Provider",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Commercial HMO",
+    "clinical_area": "Sleep Medicine",
+    "summary": "Denied in-lab sleep study; home sleep test recommended first.",
+    "channel": "fax",
+    "member_name": "Mila Hart",
+    "member_id": "FHC-228174-02",
+    "member_dob": "1979-11-08",
+    "provider_name": "Kansas Sunflower Women's Imaging Center",
+    "provider_npi": "1881357012",
+    "ordering_provider": "Dr. Naomi Beck",
+    "policy_or_group_id": "FHC-99120",
+    "claim_number": "",
+    "authorization_number": "PA-118943",
+    "service_description": "In-lab polysomnography",
+    "requested_units": "1",
+    "approved_units": "0",
+    "dates": {
+      "request_received": "2026-02-14",
+      "decision_date": "2026-02-16",
+      "service_date": "2026-02-24",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-02-26"
+    },
+    "decision_status": "denied",
+    "reason_category": "medical_necessity_not_met",
+    "reason_codes": [
+      "UM-102",
+      "ALT-CARE-01"
+    ],
+    "reason_text": "Clinical criteria for in-lab polysomnography were not met and a home sleep test must be completed first.",
+    "financials": {
+      "billed_amount": null,
+      "allowed_amount": null,
+      "plan_paid": null,
+      "member_responsibility": null
+    },
+    "documents_requested": [],
+    "next_steps": [
+      "Create an auth follow-up task in Cerner and route the case to the KSWIC authorization team.",
+      "Use the payer portal to confirm peer-to-peer and reconsideration deadlines before the sleep study date."
+    ]
+  },
+  {
+    "scenario_id": "SCN-004",
+    "document_type": "Claim Denial Letter",
+    "document_family": "claims",
+    "sender_name": "North Plains Select",
+    "sender_address": "901 Oak Harbor Row, Omaha, NE 68114",
+    "sender_phone": "(877) 555-4401",
+    "sender_fax": "(877) 555-4408",
+    "recipient_name": "KSWIC Revenue Cycle Billing Office",
+    "recipient_role": "Provider Billing Office",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Commercial PPO",
+    "clinical_area": "Durable Medical Equipment",
+    "summary": "Claim denied for powered wheelchair due to insufficient supporting documentation.",
+    "channel": "fax",
+    "member_name": "Jordan Pike",
+    "member_id": "NPS-332845-01",
+    "member_dob": "1967-07-30",
+    "provider_name": "KSWIC Revenue Cycle Billing Office",
+    "provider_npi": "1457965210",
+    "ordering_provider": "Dr. Reese Barlow",
+    "policy_or_group_id": "NPS-12040",
+    "claim_number": "CLM-5521907",
+    "authorization_number": "",
+    "service_description": "Powered wheelchair, HCPCS K0823",
+    "requested_units": "1",
+    "approved_units": "0",
+    "dates": {
+      "request_received": "",
+      "decision_date": "2026-02-19",
+      "service_date": "2026-01-22",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-20"
+    },
+    "decision_status": "denied",
+    "reason_category": "medical_necessity_not_met",
+    "reason_codes": [
+      "CO-50",
+      "N290"
+    ],
+    "reason_text": "The service was denied because records received did not establish medical necessity for a powered wheelchair.",
+    "financials": {
+      "billed_amount": 4280.0,
+      "allowed_amount": 0.0,
+      "plan_paid": 0.0,
+      "member_responsibility": 0.0
+    },
+    "documents_requested": [
+      "Face-to-face mobility evaluation",
+      "Physical therapy functional assessment",
+      "Detailed written order"
+    ],
+    "next_steps": [
+      "Open a denial case in the rev cycle system and add a patient-account note in Cerner.",
+      "Prepare a portal reconsideration package with the missing clinical support if the account remains collectible."
+    ]
+  },
+  {
+    "scenario_id": "SCN-005",
+    "document_type": "Request for Additional Information",
+    "document_family": "claims",
+    "sender_name": "Sun Prairie Medicaid Advantage",
+    "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+    "sender_phone": "(844) 555-5100",
+    "sender_fax": "(844) 555-5105",
+    "recipient_name": "KSWIC Revenue Cycle Billing Office",
+    "recipient_role": "Provider Billing Office",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Managed Medicaid",
+    "clinical_area": "Outpatient Surgery",
+    "summary": "Claim pended due to missing operative report and itemized bill.",
+    "channel": "fax",
+    "member_name": "Darius Wynn",
+    "member_id": "SPM-775114-05",
+    "member_dob": "1991-12-14",
+    "provider_name": "KSWIC Revenue Cycle Billing Office",
+    "provider_npi": "1457965210",
+    "ordering_provider": "Dr. Tessa Lin",
+    "policy_or_group_id": "SPM-22041",
+    "claim_number": "CLM-8100241",
+    "authorization_number": "",
+    "service_description": "Outpatient surgery facility claim",
+    "requested_units": "",
+    "approved_units": "",
+    "dates": {
+      "request_received": "",
+      "decision_date": "2026-02-21",
+      "service_date": "2026-02-03",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-08"
+    },
+    "decision_status": "pended",
+    "reason_category": "missing_information",
+    "reason_codes": [
+      "PEND-DOCS-14"
+    ],
+    "reason_text": "Additional documentation is required to complete adjudication of the outpatient surgery claim.",
+    "financials": {
+      "billed_amount": 7325.88,
+      "allowed_amount": null,
+      "plan_paid": null,
+      "member_responsibility": null
+    },
+    "documents_requested": [
+      "Operative report",
+      "Itemized bill",
+      "Implant log"
+    ],
+    "next_steps": [
+      "Create a patient-account follow-up in Cerner so the chart and billing packet can be assembled.",
+      "Upload the requested documents through the payer portal before the submission deadline."
+    ]
+  },
+  {
+    "scenario_id": "SCN-006",
+    "document_type": "Appeal Receipt Acknowledgment",
+    "document_family": "appeal",
+    "sender_name": "Prairie Horizon Health Plan",
+    "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+    "sender_phone": "(800) 555-2101",
+    "sender_fax": "(800) 555-2102",
+    "recipient_name": "KSWIC Appeals Desk",
+    "recipient_role": "Provider",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Commercial EPO",
+    "clinical_area": "Infusion Therapy",
+    "summary": "Acknowledgment of first-level appeal for a denied infusion therapy claim.",
+    "channel": "fax",
+    "member_name": "Paige Dorsey",
+    "member_id": "PHH-664200-01",
+    "member_dob": "1984-03-09",
+    "provider_name": "KSWIC Appeals Desk",
+    "provider_npi": "1457965210",
+    "ordering_provider": "Dr. Aaron Pike",
+    "policy_or_group_id": "KS-81220",
+    "claim_number": "CLM-6005121",
+    "authorization_number": "",
+    "service_description": "Infusion therapy appeal acknowledgment",
+    "requested_units": "",
+    "approved_units": "",
+    "dates": {
+      "request_received": "2026-02-18",
+      "decision_date": "2026-02-22",
+      "service_date": "2026-01-14",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-24"
+    },
+    "decision_status": "appeal_received",
+    "reason_category": "appeal_tracking",
+    "reason_codes": [
+      "APP-RCVD-01"
+    ],
+    "reason_text": "The first-level appeal was accepted for review and a standard determination is expected within 30 calendar days.",
+    "financials": {
+      "billed_amount": 1865.42,
+      "allowed_amount": 0.0,
+      "plan_paid": 0.0,
+      "member_responsibility": 0.0
+    },
+    "documents_requested": [],
+    "next_steps": [
+      "Update the appeal tracker in the rev cycle system and record the appeal case number.",
+      "Hold outbound payer follow-up unless the expected decision timeframe is missed."
+    ]
+  },
+  {
+    "scenario_id": "SCN-007",
+    "document_type": "Appeal Determination Overturn Letter",
+    "document_family": "appeal",
+    "sender_name": "Sun Prairie Medicare Advantage",
+    "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+    "sender_phone": "(844) 555-5100",
+    "sender_fax": "(844) 555-5105",
+    "recipient_name": "KSWIC Appeals Desk",
+    "recipient_role": "Provider",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Medicare Advantage",
+    "clinical_area": "Specialty Imaging",
+    "summary": "Initial denial overturned after review of specialist notes.",
+    "channel": "fax",
+    "member_name": "Eliana Brooks",
+    "member_id": "SPM-109448-02",
+    "member_dob": "1958-05-27",
+    "provider_name": "KSWIC Appeals Desk",
+    "provider_npi": "1457965210",
+    "ordering_provider": "Dr. Nate Fulton",
+    "policy_or_group_id": "SPM-60519",
+    "claim_number": "CLM-4400192",
+    "authorization_number": "PA-4400192A",
+    "service_description": "Appeal overturn for specialist imaging request",
+    "requested_units": "1",
+    "approved_units": "1",
+    "dates": {
+      "request_received": "2026-02-01",
+      "decision_date": "2026-02-24",
+      "service_date": "2026-01-10",
+      "authorization_start": "2026-02-24",
+      "authorization_end": "2026-03-31",
+      "response_deadline": ""
+    },
+    "decision_status": "overturned",
+    "reason_category": "medical_necessity_met_on_appeal",
+    "reason_codes": [
+      "OVT-APP-02"
+    ],
+    "reason_text": "Additional specialist documentation demonstrated medical necessity and the prior denial was reversed.",
+    "financials": {
+      "billed_amount": 1865.42,
+      "allowed_amount": 1865.42,
+      "plan_paid": 1678.88,
+      "member_responsibility": 186.54
+    },
+    "documents_requested": [],
+    "next_steps": [
+      "Update the rev cycle appeal tracker to closed-overturned and note that reprocessing is expected.",
+      "If the authorization is required downstream, update the Cerner authorization record with the reinstated decision."
+    ]
+  },
+  {
+    "scenario_id": "SCN-009",
+    "document_type": "Explanation of Benefits",
+    "document_family": "claims",
+    "sender_name": "North Plains Select",
+    "sender_address": "901 Oak Harbor Row, Omaha, NE 68114",
+    "sender_phone": "(877) 555-4401",
+    "sender_fax": "(877) 555-4408",
+    "recipient_name": "Member and provider copy",
+    "recipient_role": "Member",
+    "recipient_address": "Wichita, KS 67203",
+    "line_of_business": "Commercial PPO",
+    "clinical_area": "Office Visit and Labs",
+    "summary": "Paid office visit and lab panel with deductible and coinsurance applied.",
+    "channel": "portal_notice",
+    "member_name": "Riley Mercer",
+    "member_id": "NPS-118290-01",
+    "member_dob": "1995-09-21",
+    "provider_name": "Kansas Sunflower Women's Imaging Center",
+    "provider_npi": "1881357012",
+    "ordering_provider": "Dr. Maya Voss",
+    "policy_or_group_id": "NPS-42117",
+    "claim_number": "CLM-7224508",
+    "authorization_number": "",
+    "service_description": "Office visit and lab panel",
+    "requested_units": "",
+    "approved_units": "",
+    "dates": {
+      "request_received": "",
+      "decision_date": "2026-02-25",
+      "service_date": "2026-02-04",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": ""
+    },
+    "decision_status": "paid",
+    "reason_category": "claim_paid",
+    "reason_codes": [
+      "PAID"
+    ],
+    "reason_text": "Claim processed per plan benefits with deductible and coinsurance applied.",
+    "financials": {
+      "billed_amount": 640.0,
+      "allowed_amount": 425.0,
+      "plan_paid": 297.5,
+      "member_responsibility": 127.5
+    },
+    "documents_requested": [],
+    "next_steps": [
+      "Add a patient-account note in Cerner if the EOB needs to be reconciled against the claim balance.",
+      "No payer-portal follow-up is required unless the remittance and EOB disagree."
+    ]
+  },
+  {
+    "scenario_id": "SCN-010",
+    "document_type": "Coordination of Benefits Questionnaire Letter",
+    "document_family": "member_admin",
+    "sender_name": "Prairie Horizon Health Plan",
+    "sender_address": "4800 East Meadow Park Drive, Topeka, KS 66607",
+    "sender_phone": "(800) 555-2101",
+    "sender_fax": "(800) 555-2102",
+    "recipient_name": "Member and provider copy",
+    "recipient_role": "Member",
+    "recipient_address": "Wichita, KS 67203",
+    "line_of_business": "Commercial PPO",
+    "clinical_area": "Coordination of Benefits",
+    "summary": "Request to verify whether the member has other active insurance coverage.",
+    "channel": "fax",
+    "member_name": "Cameron Vale",
+    "member_id": "PHH-551002-03",
+    "member_dob": "1974-01-04",
+    "provider_name": "Kansas Sunflower Women's Imaging Center",
+    "provider_npi": "1881357012",
+    "ordering_provider": "Dr. Nia Walsh",
+    "policy_or_group_id": "KS-33207",
+    "claim_number": "CLM-8892014",
+    "authorization_number": "",
+    "service_description": "COB verification request",
+    "requested_units": "",
+    "approved_units": "",
+    "dates": {
+      "request_received": "",
+      "decision_date": "2026-02-26",
+      "service_date": "2026-02-02",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-18"
+    },
+    "decision_status": "information_requested",
+    "reason_category": "cob_verification",
+    "reason_codes": [
+      "COB-PEND-11"
+    ],
+    "reason_text": "Claim processing is delayed pending verification of other active insurance coverage.",
+    "financials": {
+      "billed_amount": 920.0,
+      "allowed_amount": null,
+      "plan_paid": null,
+      "member_responsibility": null
+    },
+    "documents_requested": [
+      "Completed COB questionnaire",
+      "Proof of active or inactive secondary coverage"
+    ],
+    "next_steps": [
+      "Add a coverage follow-up note to the patient account in Cerner so front office or billing staff can obtain the response.",
+      "If the patient returns updated insurance information, submit the COB update through the payer portal."
+    ]
+  },
+  {
+    "scenario_id": "SCN-011",
+    "document_type": "Overpayment Recovery Notice",
+    "document_family": "payment_integrity",
+    "sender_name": "Sun Prairie Medicaid Advantage",
+    "sender_address": "88 Capitol Trace, Jefferson City, MO 65101",
+    "sender_phone": "(844) 555-5100",
+    "sender_fax": "(844) 555-5105",
+    "recipient_name": "KSWIC Revenue Cycle Billing Office",
+    "recipient_role": "Provider Billing Office",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "Managed Medicaid",
+    "clinical_area": "Payment Integrity",
+    "summary": "Recovery initiated for duplicate payment on outpatient claim.",
+    "channel": "fax",
+    "member_name": "Hayden Cole",
+    "member_id": "SPM-402884-08",
+    "member_dob": "1982-08-18",
+    "provider_name": "KSWIC Revenue Cycle Billing Office",
+    "provider_npi": "1457965210",
+    "ordering_provider": "Dr. Elise Monroe",
+    "policy_or_group_id": "SPM-70218",
+    "claim_number": "CLM-1045507",
+    "authorization_number": "",
+    "service_description": "Duplicate outpatient payment recovery",
+    "requested_units": "",
+    "approved_units": "",
+    "dates": {
+      "request_received": "",
+      "decision_date": "2026-02-28",
+      "service_date": "2026-01-11",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-30"
+    },
+    "decision_status": "recoupment",
+    "reason_category": "duplicate_payment",
+    "reason_codes": [
+      "RC-202",
+      "DUP-PMT"
+    ],
+    "reason_text": "Duplicate reimbursement was identified during post-payment review and recovery will occur through offset.",
+    "financials": {
+      "billed_amount": 912.33,
+      "allowed_amount": 912.33,
+      "plan_paid": 912.33,
+      "member_responsibility": 0.0
+    },
+    "documents_requested": [
+      "Remittance advice copy",
+      "Posting audit trail if disputing"
+    ],
+    "next_steps": [
+      "Create a recoupment work item in the rev cycle system and note the impending offset date.",
+      "Add a Cerner patient-account note only if the recovery affects open A/R or collection logic."
+    ]
+  },
+  {
+    "scenario_id": "SCN-014",
+    "document_type": "Pharmacy Exception Denial",
+    "document_family": "pharmacy",
+    "sender_name": "HeartlandRx Benefit Services",
+    "sender_address": "2202 Cedar Exchange, Tulsa, OK 74103",
+    "sender_phone": "(855) 555-1400",
+    "sender_fax": "(855) 555-1406",
+    "recipient_name": "Kansas Sunflower Women's Imaging Center",
+    "recipient_role": "Prescriber and provider copy",
+    "recipient_address": "1777 North Prairie View Blvd, Wichita, KS 67203",
+    "line_of_business": "PBM / Pharmacy Benefit",
+    "clinical_area": "Rheumatology",
+    "summary": "Requested biologic denied pending trial of preferred formulary alternative.",
+    "channel": "fax",
+    "member_name": "Sasha Glenn",
+    "member_id": "HRX-901114-01",
+    "member_dob": "1990-06-11",
+    "provider_name": "Kansas Sunflower Women's Imaging Center",
+    "provider_npi": "1881357012",
+    "ordering_provider": "Dr. Priya Shah",
+    "policy_or_group_id": "HRX-61122",
+    "claim_number": "",
+    "authorization_number": "RX-PA-661921",
+    "service_description": "Biologic formulary exception request",
+    "requested_units": "30-day supply",
+    "approved_units": "0",
+    "dates": {
+      "request_received": "2026-02-20",
+      "decision_date": "2026-03-01",
+      "service_date": "2026-03-03",
+      "authorization_start": "",
+      "authorization_end": "",
+      "response_deadline": "2026-03-15"
+    },
+    "decision_status": "denied",
+    "reason_category": "step_therapy",
+    "reason_codes": [
+      "RX-STEP-17"
+    ],
+    "reason_text": "Formulary exception criteria were not met because the preferred step-therapy alternatives have not been trialed.",
+    "financials": {
+      "billed_amount": null,
+      "allowed_amount": null,
+      "plan_paid": null,
+      "member_responsibility": null
+    },
+    "documents_requested": [
+      "Trial-and-failure history",
+      "Prescriber clinical rationale"
+    ],
+    "next_steps": [
+      "Create a Cerner auth workqueue item for pharmacy follow-up and attach the preferred-alternative list.",
+      "Use the payer portal to submit additional step-therapy documentation or a formulary-exception appeal."
+    ]
+  }
+]

@@ -1,0 +1,421 @@
+{
+  "process_name": "KSWIC Payer Correspondence Intake",
+  "documents": [
+    {
+      "document_id": "scn_001_prior_authorization_approval_letter",
+      "document_type": "Prior Authorization Approval Letter",
+      "document_family": "prior_auth",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "low",
+      "owner_queue": "KSWIC Authorization Team",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_auth_update",
+          "action": "create_or_update_auth_record",
+          "rationale": "Authorization-style notice should update the Cerner auth record.",
+          "inputs": {
+            "document_id": "scn_001_prior_authorization_approval_letter",
+            "member_id": "PHH-484920-01",
+            "payer_name": "Prairie Horizon Health Plan",
+            "claim_number": "",
+            "authorization_number": "PA-884201",
+            "decision_status": "approved",
+            "service_description": "CT abdomen/pelvis with contrast",
+            "priority": "low",
+            "owner_queue": "KSWIC Authorization Team",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_003_prior_authorization_denial_letter",
+      "document_type": "Prior Authorization Denial Letter",
+      "document_family": "prior_auth",
+      "denial_of_service": false,
+      "payer_auth_problem": true,
+      "priority": "medium",
+      "owner_queue": "KSWIC Authorization Team",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_auth_update",
+          "action": "route_to_auth_workqueue",
+          "rationale": "Denied auth correspondence needs auth follow-up in Cerner.",
+          "inputs": {
+            "document_id": "scn_003_prior_authorization_denial_letter",
+            "member_id": "FHC-228174-02",
+            "payer_name": "Flint Hills CareNet",
+            "claim_number": "",
+            "authorization_number": "PA-118943",
+            "decision_status": "denied",
+            "service_description": "In-lab polysomnography",
+            "priority": "medium",
+            "owner_queue": "KSWIC Authorization Team",
+            "note_text": ""
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "check_status",
+          "rationale": "Authorization or pharmacy denial requires payer-portal follow-up.",
+          "inputs": {
+            "document_id": "scn_003_prior_authorization_denial_letter",
+            "member_id": "FHC-228174-02",
+            "payer_name": "Flint Hills CareNet",
+            "claim_number": "",
+            "authorization_number": "PA-118943",
+            "decision_status": "denied",
+            "service_description": "In-lab polysomnography",
+            "priority": "medium",
+            "owner_queue": "KSWIC Authorization Team",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_004_claim_denial_letter",
+      "document_type": "Claim Denial Letter",
+      "document_family": "claims",
+      "denial_of_service": true,
+      "payer_auth_problem": false,
+      "priority": "high",
+      "owner_queue": "KSWIC Rev Cycle Denials",
+      "tasks": [
+        {
+          "automation_id": "dummy_rev_cycle_work_item",
+          "action": "create_denial_case",
+          "rationale": "Claim denial should open a rev-cycle denial work item.",
+          "inputs": {
+            "document_id": "scn_004_claim_denial_letter",
+            "member_id": "NPS-332845-01",
+            "payer_name": "North Plains Select",
+            "claim_number": "CLM-5521907",
+            "authorization_number": "",
+            "decision_status": "denied",
+            "service_description": "Powered wheelchair, HCPCS K0823",
+            "priority": "high",
+            "owner_queue": "KSWIC Rev Cycle Denials",
+            "note_text": ""
+          }
+        },
+        {
+          "automation_id": "dummy_cerner_patient_account_update",
+          "action": "add_patient_account_note",
+          "rationale": "Claim denial should be visible on the Cerner patient account.",
+          "inputs": {
+            "document_id": "scn_004_claim_denial_letter",
+            "member_id": "NPS-332845-01",
+            "payer_name": "North Plains Select",
+            "claim_number": "CLM-5521907",
+            "authorization_number": "",
+            "decision_status": "denied",
+            "service_description": "Powered wheelchair, HCPCS K0823",
+            "priority": "high",
+            "owner_queue": "KSWIC Rev Cycle Denials",
+            "note_text": "Synthetic denial correspondence routed from payer intake."
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "check_status",
+          "rationale": "Billing denial needs payer portal review for reconsideration options.",
+          "inputs": {
+            "document_id": "scn_004_claim_denial_letter",
+            "member_id": "NPS-332845-01",
+            "payer_name": "North Plains Select",
+            "claim_number": "CLM-5521907",
+            "authorization_number": "",
+            "decision_status": "denied",
+            "service_description": "Powered wheelchair, HCPCS K0823",
+            "priority": "high",
+            "owner_queue": "KSWIC Rev Cycle Denials",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_005_request_for_additional_information",
+      "document_type": "Request for Additional Information",
+      "document_family": "claims",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "medium",
+      "owner_queue": "KSWIC Billing Follow Up",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_patient_account_update",
+          "action": "add_patient_account_note",
+          "rationale": "Missing-information notices should create a patient-account follow-up note.",
+          "inputs": {
+            "document_id": "scn_005_request_for_additional_information",
+            "member_id": "SPM-775114-05",
+            "payer_name": "Sun Prairie Medicaid Advantage",
+            "claim_number": "CLM-8100241",
+            "authorization_number": "",
+            "decision_status": "pended",
+            "service_description": "Outpatient surgery facility claim",
+            "priority": "medium",
+            "owner_queue": "KSWIC Billing Follow Up",
+            "note_text": "Synthetic pended claim awaiting records upload."
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "upload_missing_documents",
+          "rationale": "Pended claim requires document upload through the payer portal.",
+          "inputs": {
+            "document_id": "scn_005_request_for_additional_information",
+            "member_id": "SPM-775114-05",
+            "payer_name": "Sun Prairie Medicaid Advantage",
+            "claim_number": "CLM-8100241",
+            "authorization_number": "",
+            "decision_status": "pended",
+            "service_description": "Outpatient surgery facility claim",
+            "priority": "medium",
+            "owner_queue": "KSWIC Billing Follow Up",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_006_appeal_receipt_acknowledgment",
+      "document_type": "Appeal Receipt Acknowledgment",
+      "document_family": "appeal",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "high",
+      "owner_queue": "KSWIC Appeals",
+      "tasks": [
+        {
+          "automation_id": "dummy_rev_cycle_work_item",
+          "action": "update_appeal_tracker",
+          "rationale": "Appeal correspondence should update the appeal tracker.",
+          "inputs": {
+            "document_id": "scn_006_appeal_receipt_acknowledgment",
+            "member_id": "PHH-664200-01",
+            "payer_name": "Prairie Horizon Health Plan",
+            "claim_number": "CLM-6005121",
+            "authorization_number": "",
+            "decision_status": "appeal_received",
+            "service_description": "Infusion therapy appeal acknowledgment",
+            "priority": "high",
+            "owner_queue": "KSWIC Appeals",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_007_appeal_determination_overturn_letter",
+      "document_type": "Appeal Determination Overturn Letter",
+      "document_family": "appeal",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "high",
+      "owner_queue": "KSWIC Appeals",
+      "tasks": [
+        {
+          "automation_id": "dummy_rev_cycle_work_item",
+          "action": "update_appeal_tracker",
+          "rationale": "Appeal correspondence should update the appeal tracker.",
+          "inputs": {
+            "document_id": "scn_007_appeal_determination_overturn_letter",
+            "member_id": "SPM-109448-02",
+            "payer_name": "Sun Prairie Medicare Advantage",
+            "claim_number": "CLM-4400192",
+            "authorization_number": "PA-4400192A",
+            "decision_status": "overturned",
+            "service_description": "Appeal overturn for specialist imaging request",
+            "priority": "high",
+            "owner_queue": "KSWIC Appeals",
+            "note_text": ""
+          }
+        },
+        {
+          "automation_id": "dummy_cerner_patient_account_update",
+          "action": "note_denial_reversal",
+          "rationale": "An overturn should be reflected on the patient account if claim follow-up continues.",
+          "inputs": {
+            "document_id": "scn_007_appeal_determination_overturn_letter",
+            "member_id": "SPM-109448-02",
+            "payer_name": "Sun Prairie Medicare Advantage",
+            "claim_number": "CLM-4400192",
+            "authorization_number": "PA-4400192A",
+            "decision_status": "overturned",
+            "service_description": "Appeal overturn for specialist imaging request",
+            "priority": "high",
+            "owner_queue": "KSWIC Appeals",
+            "note_text": "Synthetic appeal overturn received."
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_009_explanation_of_benefits",
+      "document_type": "Explanation of Benefits",
+      "document_family": "claims",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "low",
+      "owner_queue": "KSWIC Payment Posting",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_patient_account_update",
+          "action": "post_payment_summary",
+          "rationale": "Paid EOB can be logged for downstream reconciliation when needed.",
+          "inputs": {
+            "document_id": "scn_009_explanation_of_benefits",
+            "member_id": "NPS-118290-01",
+            "payer_name": "North Plains Select",
+            "claim_number": "CLM-7224508",
+            "authorization_number": "",
+            "decision_status": "paid",
+            "service_description": "Office visit and lab panel",
+            "priority": "low",
+            "owner_queue": "KSWIC Payment Posting",
+            "note_text": "Synthetic EOB received and marked informational."
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_010_coordination_of_benefits_questionnaire_letter",
+      "document_type": "Coordination of Benefits Questionnaire Letter",
+      "document_family": "member_admin",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "medium",
+      "owner_queue": "KSWIC Eligibility Follow Up",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_patient_account_update",
+          "action": "add_coverage_follow_up",
+          "rationale": "COB correspondence should create coverage follow-up in Cerner.",
+          "inputs": {
+            "document_id": "scn_010_coordination_of_benefits_questionnaire_letter",
+            "member_id": "PHH-551002-03",
+            "payer_name": "Prairie Horizon Health Plan",
+            "claim_number": "CLM-8892014",
+            "authorization_number": "",
+            "decision_status": "information_requested",
+            "service_description": "COB verification request",
+            "priority": "medium",
+            "owner_queue": "KSWIC Eligibility Follow Up",
+            "note_text": "Synthetic COB verification request received."
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "submit_cob_update",
+          "rationale": "Coverage updates flow back through the payer portal once patient details are confirmed.",
+          "inputs": {
+            "document_id": "scn_010_coordination_of_benefits_questionnaire_letter",
+            "member_id": "PHH-551002-03",
+            "payer_name": "Prairie Horizon Health Plan",
+            "claim_number": "CLM-8892014",
+            "authorization_number": "",
+            "decision_status": "information_requested",
+            "service_description": "COB verification request",
+            "priority": "medium",
+            "owner_queue": "KSWIC Eligibility Follow Up",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_011_overpayment_recovery_notice",
+      "document_type": "Overpayment Recovery Notice",
+      "document_family": "payment_integrity",
+      "denial_of_service": false,
+      "payer_auth_problem": false,
+      "priority": "high",
+      "owner_queue": "KSWIC Rev Cycle Integrity",
+      "tasks": [
+        {
+          "automation_id": "dummy_rev_cycle_work_item",
+          "action": "create_recoupment_case",
+          "rationale": "Recoupment notices should create a rev-cycle payment-integrity work item.",
+          "inputs": {
+            "document_id": "scn_011_overpayment_recovery_notice",
+            "member_id": "SPM-402884-08",
+            "payer_name": "Sun Prairie Medicaid Advantage",
+            "claim_number": "CLM-1045507",
+            "authorization_number": "",
+            "decision_status": "recoupment",
+            "service_description": "Duplicate outpatient payment recovery",
+            "priority": "high",
+            "owner_queue": "KSWIC Rev Cycle Integrity",
+            "note_text": ""
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "request_recoupment_detail",
+          "rationale": "Teams often review the offset detail in the portal before disputing.",
+          "inputs": {
+            "document_id": "scn_011_overpayment_recovery_notice",
+            "member_id": "SPM-402884-08",
+            "payer_name": "Sun Prairie Medicaid Advantage",
+            "claim_number": "CLM-1045507",
+            "authorization_number": "",
+            "decision_status": "recoupment",
+            "service_description": "Duplicate outpatient payment recovery",
+            "priority": "high",
+            "owner_queue": "KSWIC Rev Cycle Integrity",
+            "note_text": ""
+          }
+        }
+      ]
+    },
+    {
+      "document_id": "scn_014_pharmacy_exception_denial",
+      "document_type": "Pharmacy Exception Denial",
+      "document_family": "pharmacy",
+      "denial_of_service": false,
+      "payer_auth_problem": true,
+      "priority": "medium",
+      "owner_queue": "KSWIC Authorization Team",
+      "tasks": [
+        {
+          "automation_id": "dummy_cerner_auth_update",
+          "action": "route_to_auth_workqueue",
+          "rationale": "Denied auth correspondence needs auth follow-up in Cerner.",
+          "inputs": {
+            "document_id": "scn_014_pharmacy_exception_denial",
+            "member_id": "HRX-901114-01",
+            "payer_name": "HeartlandRx Benefit Services",
+            "claim_number": "",
+            "authorization_number": "RX-PA-661921",
+            "decision_status": "denied",
+            "service_description": "Biologic formulary exception request",
+            "priority": "medium",
+            "owner_queue": "KSWIC Authorization Team",
+            "note_text": ""
+          }
+        },
+        {
+          "automation_id": "dummy_payer_portal_follow_up",
+          "action": "submit_reconsideration",
+          "rationale": "Authorization or pharmacy denial requires payer-portal follow-up.",
+          "inputs": {
+            "document_id": "scn_014_pharmacy_exception_denial",
+            "member_id": "HRX-901114-01",
+            "payer_name": "HeartlandRx Benefit Services",
+            "claim_number": "",
+            "authorization_number": "RX-PA-661921",
+            "decision_status": "denied",
+            "service_description": "Biologic formulary exception request",
+            "priority": "medium",
+            "owner_queue": "KSWIC Authorization Team",
+            "note_text": ""
+          }
+        }
+      ]
+    }
+  ]
+}

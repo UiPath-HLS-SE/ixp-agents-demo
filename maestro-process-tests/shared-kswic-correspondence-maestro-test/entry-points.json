@@ -1,0 +1,128 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/Process.bpmn#Event_start",
+      "uniqueId": "b7d61d7c-7fd3-499a-8ca9-7d5846f38c8d",
+      "type": "ProcessOrchestration",
+      "displayName": "Shared KSWIC Correspondence Maestro Test",
+      "input": {
+        "type": "object",
+        "properties": {
+          "packet_id": {
+            "type": "string",
+            "default": "KSWIC-SCN-004"
+          },
+          "scenario_id": {
+            "type": "string",
+            "default": "SCN-004"
+          },
+          "document_type": {
+            "type": "string",
+            "default": "Claim Denial Letter"
+          },
+          "decision_status": {
+            "type": "string",
+            "default": "denied"
+          },
+          "fax_category": {
+            "type": "string",
+            "default": "claim_denial"
+          },
+          "classification_confidence": {
+            "type": "number",
+            "default": 0.97
+          },
+          "extraction_confidence": {
+            "type": "number",
+            "default": 0.95
+          },
+          "is_denial_of_service": {
+            "type": "boolean",
+            "default": true
+          },
+          "payer_auth_problem": {
+            "type": "boolean",
+            "default": false
+          },
+          "missing_information": {
+            "type": "boolean",
+            "default": false
+          },
+          "target_record_type": {
+            "type": "string",
+            "default": "patient_account"
+          },
+          "payer_portal_action": {
+            "type": "string",
+            "default": "start_appeal"
+          },
+          "execute_live_follow_up": {
+            "type": "boolean",
+            "default": false
+          },
+          "delay_seconds": {
+            "type": "integer",
+            "default": 0
+          }
+        },
+        "required": [
+          "packet_id",
+          "scenario_id",
+          "document_type",
+          "decision_status",
+          "fax_category",
+          "classification_confidence",
+          "extraction_confidence",
+          "is_denial_of_service",
+          "payer_auth_problem",
+          "missing_information",
+          "target_record_type",
+          "payer_portal_action",
+          "execute_live_follow_up",
+          "delay_seconds"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "primary_route": {
+            "type": "string"
+          },
+          "needs_human_review": {
+            "type": "boolean"
+          },
+          "payer_portal_action": {
+            "type": "string"
+          },
+          "cerner_action": {
+            "type": "string"
+          },
+          "rev_cycle_action": {
+            "type": "string"
+          },
+          "execution_status": {
+            "type": "string"
+          },
+          "execution_detail": {
+            "type": "string"
+          },
+          "action_summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "primary_route",
+          "needs_human_review",
+          "payer_portal_action",
+          "cerner_action",
+          "rev_cycle_action",
+          "execution_status",
+          "execution_detail",
+          "action_summary"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "record_label": "C",
+  "risk_tier": "Socially Complex Case",
+  "theme": "Moderate clinical risk with high SDOH burden",
+  "member": {
+    "name": "Tanya L. Bishop",
+    "member_id": "M-7710935",
+    "age": "58",
+    "gender": "Female",
+    "insurance_type": "Marketplace Silver HMO",
+    "pcp": "Leah Morgan, MD"
+  },
+  "care_manager": "Maya Chen, RN, CCM",
+  "care_manager_signed_at": "2026-02-20 14:12",
+  "medical_director": "Harold Kim, MD",
+  "medical_director_signed_at": "2026-02-21 09:55",
+  "pharmacist_reviewer": "Jordan Lee, PharmD",
+  "pharmacy_review_signed_at": "2026-02-20 17:02",
+  "chronic_conditions": [
+    {
+      "condition": "Congestive heart failure",
+      "status": "Active",
+      "impact": "Intermittent edema and fatigue",
+      "hcc": "HCC 85"
+    },
+    {
+      "condition": "Type 2 diabetes mellitus",
+      "status": "Active",
+      "impact": "A1c above target with refill gaps",
+      "hcc": "HCC 37"
+    },
+    {
+      "condition": "CKD stage 3",
+      "status": "Active",
+      "impact": "Requires renal dosing consideration",
+      "hcc": "HCC 137"
+    },
+    {
+      "condition": "Hypertension",
+      "status": "Active",
+      "impact": "Periodic uncontrolled readings",
+      "hcc": "Non-HCC"
+    },
+    {
+      "condition": "Depression",
+      "status": "Active",
+      "impact": "Reduced self-management capacity",
+      "hcc": "HCC 59"
+    },
+    {
+      "condition": "COPD (mild)",
+      "status": "Active",
+      "impact": "Exertional dyspnea with smoking exposure",
+      "hcc": "HCC 111"
+    }
+  ],
+  "utilization_events": [
+    {
+      "date": "2025-10-19",
+      "type": "Inpatient",
+      "facility": "Community General",
+      "reason": "Volume overload and dyspnea",
+      "paid_amount": "$17,440"
+    },
+    {
+      "date": "2026-01-28",
+      "type": "ED",
+      "facility": "Community General ED",
+      "reason": "Medication lapse and dizziness",
+      "paid_amount": "$1,980"
+    }
+  ],
+  "claims_summary": [
+    {
+      "claim_month": "2025-10",
+      "claim_category": "Inpatient medical",
+      "episodes": "1",
+      "member_oop": "$260",
+      "plan_paid": "$14,210"
+    },
+    {
+      "claim_month": "2026-01",
+      "claim_category": "Emergency services",
+      "episodes": "1",
+      "member_oop": "$70",
+      "plan_paid": "$1,760"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Outpatient PT eval",
+      "episodes": "1",
+      "member_oop": "$25",
+      "plan_paid": "$320"
+    },
+    {
+      "claim_month": "2026-02",
+      "claim_category": "Pharmacy",
+      "episodes": "9 meds",
+      "member_oop": "$165",
+      "plan_paid": "$1,040"
+    }
+  ],
+  "medications": [
+    {
+      "medication": "Insulin degludec",
+      "dose": "18 units",
+      "class": "Insulin",
+      "schedule": "QHS",
+      "risk_note": "Refill timing inconsistent"
+    },
+    {
+      "medication": "Rivaroxaban",
+      "dose": "20 mg",
+      "class": "Anticoagulant",
+      "schedule": "Daily",
+      "risk_note": "Missed doses reported"
+    },
+    {
+      "medication": "Metoprolol tartrate",
+      "dose": "25 mg",
+      "class": "Beta blocker",
+      "schedule": "BID",
+      "risk_note": "Occasional missed evening dose"
+    },
+    {
+      "medication": "Furosemide",
+      "dose": "40 mg",
+      "class": "Diuretic",
+      "schedule": "Daily",
+      "risk_note": "Skipped on travel days due bathroom access"
+    },
+    {
+      "medication": "Losartan",
+      "dose": "50 mg",
+      "class": "ARB",
+      "schedule": "Daily",
+      "risk_note": "Cost-related intermittent nonadherence"
+    },
+    {
+      "medication": "Sertraline",
+      "dose": "50 mg",
+      "class": "SSRI",
+      "schedule": "Daily",
+      "risk_note": "Depression symptoms persist"
+    },
+    {
+      "medication": "Albuterol inhaler",
+      "dose": "2 puffs",
+      "class": "Bronchodilator",
+      "schedule": "PRN",
+      "risk_note": "Frequent use during smoking periods"
+    },
+    {
+      "medication": "Budesonide/formoterol",
+      "dose": "160/4.5",
+      "class": "ICS/LABA",
+      "schedule": "BID",
+      "risk_note": "Technique reviewed at PT visit"
+    },
+    {
+      "medication": "Atorvastatin",
+      "dose": "20 mg",
+      "class": "Statin",
+      "schedule": "Nightly",
+      "risk_note": "Often delayed refill by 1 week"
+    }
+  ],
+  "medication_risk_focus": [
+    "Moderate medication burden but high SDOH-driven adherence risk.",
+    "Financial hardship linked to delayed refill pickup for insulin and ARB.",
+    "Smoking contributes to COPD symptoms and rescue inhaler overuse."
+  ],
+  "functional_assessment": {
+    "mobility": "Independent household ambulation; reduced endurance in community",
+    "dme_use": "No routine DME, occasional borrowed cane during flares",
+    "oxygen_use": "No chronic oxygen",
+    "pt_ot_eval": "PT evaluation completed 2026-02-12 for deconditioning",
+    "adl_details": [
+      "Independent in basic ADLs.",
+      "IADL challenges: shopping and pharmacy pickup when transportation unavailable.",
+      "PT noted reduced lower-extremity endurance and recommended home exercise plan."
+    ]
+  },
+  "social_factors": {
+    "findings": [
+      "Limited transportation (bus-dependent, missed last-mile rides).",
+      "Financial medication hardship documented at pharmacy outreach call.",
+      "Current smoker (approximately 1 pack every 3 days).",
+      "Lives alone with minimal nearby support network.",
+      "Missed appointments tied to transportation and work-hour conflicts."
+    ]
+  },
+  "snapshot_points": [
+    "Lower clinical acuity than Records A/B but high social complexity burden.",
+    "One recent hospitalization and one ED visit with avoidable drivers.",
+    "Depression, smoking, and transportation barriers increase longitudinal risk.",
+    "PT evaluation supports deconditioning concern and fall-prevention planning."
+  ],
+  "follow_up_plan": [
+    "Enroll member in transportation benefit reminder workflow.",
+    "Apply copay assistance pathway for insulin and key cardiovascular meds.",
+    "Smoking cessation referral plus depression follow-up through PCP.",
+    "Reinforce PT home exercise plan and schedule reassessment in 6 weeks."
+  ],
+  "risk_gaps": [
+    {
+      "gap": "Transportation instability causing missed care",
+      "impact": "High no-show risk; trigger non-emergency transport support"
+    },
+    {
+      "gap": "Medication affordability barriers",
+      "impact": "Potential decompensation; prioritize financial assistance intervention"
+    }
+  ]
+}

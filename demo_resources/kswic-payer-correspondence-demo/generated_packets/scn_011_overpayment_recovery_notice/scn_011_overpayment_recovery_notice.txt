@@ -1,0 +1,32 @@
+Overpayment Recovery Notice
+Scenario ID: SCN-011
+Sender: Sun Prairie Medicaid Advantage
+Recipient: KSWIC Revenue Cycle Billing Office
+Member: Hayden Cole (SPM-402884-08)
+Member DOB: 1982-08-18
+Provider: KSWIC Revenue Cycle Billing Office (1457965210)
+Claim Number: CLM-1045507
+Authorization Number: N/A
+Line Of Business: Managed Medicaid
+Clinical Area: Payment Integrity
+Decision Status: recoupment
+Reason Category: duplicate_payment
+Reason Codes: RC-202, DUP-PMT
+Reason Text: Duplicate reimbursement was identified during post-payment review and recovery will occur through offset.
+Request Received: N/A
+Decision Date: 2026-02-28
+Service Date: 2026-01-11
+Authorization Window: N/A to N/A
+Response Deadline: 2026-03-30
+Summary: Recovery initiated for duplicate payment on outpatient claim.
+Service Description: Duplicate outpatient payment recovery
+Requested Units: N/A
+Approved Units: N/A
+Billed Amount: $912.33
+Allowed Amount: $912.33
+Plan Paid: $912.33
+Member Responsibility: $0.00
+Documents Requested: Remittance advice copy, Posting audit trail if disputing
+Next Steps:
+- Create a recoupment work item in the rev cycle system and note the impending offset date.
+- Add a Cerner patient-account note only if the recovery affects open A/R or collection logic.

@@ -1,0 +1,29 @@
+[
+  {
+    "file_name": "record_a_moderate_acuity",
+    "source_family": "provider_records",
+    "source_pdf_path": "demo_packet_files/provider_records/record_a_moderate_acuity.pdf",
+    "source_json_path": "demo_packet_files/provider_records/record_a_moderate_acuity.json",
+    "synthetic_note": "Freshly generated from synthetic-record-generator via generate_provider_synthetic_records.py.",
+    "document_type_name": "Inpatient Prior Auth",
+    "generated_by_repo": "synthetic-record-generator/SyntheticRecordGenerator"
+  },
+  {
+    "file_name": "synthetic_patient_chart_case_001",
+    "source_family": "base_patient_chart",
+    "source_pdf_path": "demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.pdf",
+    "source_json_path": "demo_packet_files/base_patient_chart/synthetic_patient_chart_case_001.json",
+    "synthetic_note": "Freshly generated from synthetic-record-generator via generate_synthetic_patient_pdf.py.",
+    "document_type_name": "Outpatient Prior Auth",
+    "generated_by_repo": "synthetic-record-generator/SyntheticRecordGenerator"
+  },
+  {
+    "file_name": "record_a_high_risk_member",
+    "source_family": "payer_records",
+    "source_pdf_path": "demo_packet_files/payer_records/record_a_high_risk_member.pdf",
+    "source_json_path": "demo_packet_files/payer_records/record_a_high_risk_member.json",
+    "synthetic_note": "Freshly generated from synthetic-record-generator via generate_payer_synthetic_records.py.",
+    "document_type_name": "Extension Review Packet",
+    "generated_by_repo": "synthetic-record-generator/SyntheticRecordGenerator"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "record": "A",
+    "acuity": "Moderate Acuity",
+    "pdf": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_a_moderate_acuity.pdf",
+    "json": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_a_moderate_acuity.json"
+  },
+  {
+    "record": "B",
+    "acuity": "High Acuity / Revenue Impact",
+    "pdf": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_b_high_acuity_revenue_impact.pdf",
+    "json": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_b_high_acuity_revenue_impact.json"
+  },
+  {
+    "record": "C",
+    "acuity": "Lower Acuity (Gap-Heavy)",
+    "pdf": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_c_lower_acuity_gap_heavy.pdf",
+    "json": "_generated_from_synthetic_record_generator/Provider Synthetic Records/record_c_lower_acuity_gap_heavy.json"
+  }
+]

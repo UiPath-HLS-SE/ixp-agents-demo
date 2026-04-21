@@ -1,0 +1,1405 @@
+{
+  "demo_name": "KSWIC Payer Correspondence Intake",
+  "documents": [
+    {
+      "document_id": "scn_001_prior_authorization_approval_letter",
+      "source_pdf": "generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.pdf",
+      "source_text": "generated_packets/scn_001_prior_authorization_approval_letter/scn_001_prior_authorization_approval_letter.txt",
+      "classification": {
+        "document_type": "Prior Authorization Approval Letter",
+        "document_family": "prior_auth",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Prior Authorization Approval Letter",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "prior_auth",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial PPO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Prairie Horizon Health Plan",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Avery Sutton",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "PHH-484920-01",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1988-04-17",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1881357012",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_number": {
+          "value": "PA-884201",
+          "confidence": 0.98
+        },
+        "policy_or_group_id": {
+          "value": "KS-77014",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "CT abdomen/pelvis with contrast",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "approved",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "medical_necessity_met",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "MED-NEC-APP"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Submitted records support medical necessity under imaging guidelines.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "2026-02-04",
+          "confidence": 0.95
+        },
+        "decision_date": {
+          "value": "2026-02-06",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-02-12",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "2026-02-07",
+          "confidence": 0.95
+        },
+        "authorization_end": {
+          "value": "2026-03-07",
+          "confidence": 0.95
+        },
+        "response_deadline": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "requested_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "approved_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "billed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "allowed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "plan_paid": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "member_responsibility": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "documents_requested": {
+          "value": [],
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "document_id": "scn_003_prior_authorization_denial_letter",
+      "source_pdf": "generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.pdf",
+      "source_text": "generated_packets/scn_003_prior_authorization_denial_letter/scn_003_prior_authorization_denial_letter.txt",
+      "classification": {
+        "document_type": "Prior Authorization Denial Letter",
+        "document_family": "prior_auth",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Prior Authorization Denial Letter",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "prior_auth",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial HMO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Flint Hills CareNet",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Mila Hart",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "FHC-228174-02",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1979-11-08",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1881357012",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_number": {
+          "value": "PA-118943",
+          "confidence": 0.98
+        },
+        "policy_or_group_id": {
+          "value": "FHC-99120",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "In-lab polysomnography",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "denied",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "medical_necessity_not_met",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "UM-102",
+            "ALT-CARE-01"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Clinical criteria for in-lab polysomnography were not met and a home sleep test must be completed first.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "2026-02-14",
+          "confidence": 0.95
+        },
+        "decision_date": {
+          "value": "2026-02-16",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-02-24",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-02-26",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "approved_units": {
+          "value": "0",
+          "confidence": 0.95
+        },
+        "billed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "allowed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "plan_paid": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "member_responsibility": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "documents_requested": {
+          "value": [],
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "document_id": "scn_004_claim_denial_letter",
+      "source_pdf": "generated_packets/scn_004_claim_denial_letter/scn_004_claim_denial_letter.pdf",
+      "source_text": "generated_packets/scn_004_claim_denial_letter/scn_004_claim_denial_letter.txt",
+      "classification": {
+        "document_type": "Claim Denial Letter",
+        "document_family": "claims",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Claim Denial Letter",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "claims",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial PPO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "North Plains Select",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Jordan Pike",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "NPS-332845-01",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1967-07-30",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1457965210",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-5521907",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "NPS-12040",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Powered wheelchair, HCPCS K0823",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "denied",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "medical_necessity_not_met",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "CO-50",
+            "N290"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "The service was denied because records received did not establish medical necessity for a powered wheelchair.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "decision_date": {
+          "value": "2026-02-19",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-01-22",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-20",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "approved_units": {
+          "value": "0",
+          "confidence": 0.95
+        },
+        "billed_amount": {
+          "value": 4280.0,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "plan_paid": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "member_responsibility": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "documents_requested": {
+          "value": [
+            "Face-to-face mobility evaluation",
+            "Physical therapy functional assessment",
+            "Detailed written order"
+          ],
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "document_id": "scn_005_request_for_additional_information",
+      "source_pdf": "generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.pdf",
+      "source_text": "generated_packets/scn_005_request_for_additional_information/scn_005_request_for_additional_information.txt",
+      "classification": {
+        "document_type": "Request for Additional Information",
+        "document_family": "claims",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Request for Additional Information",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "claims",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Managed Medicaid",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Sun Prairie Medicaid Advantage",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Darius Wynn",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "SPM-775114-05",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1991-12-14",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1457965210",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-8100241",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "SPM-22041",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Outpatient surgery facility claim",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "pended",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "missing_information",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "PEND-DOCS-14"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Additional documentation is required to complete adjudication of the outpatient surgery claim.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "decision_date": {
+          "value": "2026-02-21",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-02-03",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-08",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "approved_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "billed_amount": {
+          "value": 7325.88,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "plan_paid": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "member_responsibility": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "documents_requested": {
+          "value": [
+            "Operative report",
+            "Itemized bill",
+            "Implant log"
+          ],
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "document_id": "scn_006_appeal_receipt_acknowledgment",
+      "source_pdf": "generated_packets/scn_006_appeal_receipt_acknowledgment/scn_006_appeal_receipt_acknowledgment.pdf",
+      "source_text": "generated_packets/scn_006_appeal_receipt_acknowledgment/scn_006_appeal_receipt_acknowledgment.txt",
+      "classification": {
+        "document_type": "Appeal Receipt Acknowledgment",
+        "document_family": "appeal",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Appeal Receipt Acknowledgment",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "appeal",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial EPO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Prairie Horizon Health Plan",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "KSWIC Appeals Desk",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Paige Dorsey",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "PHH-664200-01",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1984-03-09",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "KSWIC Appeals Desk",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1457965210",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-6005121",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "KS-81220",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Infusion therapy appeal acknowledgment",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "appeal_received",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "appeal_tracking",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "APP-RCVD-01"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "The first-level appeal was accepted for review and a standard determination is expected within 30 calendar days.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "2026-02-18",
+          "confidence": 0.95
+        },
+        "decision_date": {
+          "value": "2026-02-22",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-01-14",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-24",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "approved_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "billed_amount": {
+          "value": 1865.42,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "plan_paid": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "member_responsibility": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "documents_requested": {
+          "value": [],
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "document_id": "scn_007_appeal_determination_overturn_letter",
+      "source_pdf": "generated_packets/scn_007_appeal_determination_overturn_letter/scn_007_appeal_determination_overturn_letter.pdf",
+      "source_text": "generated_packets/scn_007_appeal_determination_overturn_letter/scn_007_appeal_determination_overturn_letter.txt",
+      "classification": {
+        "document_type": "Appeal Determination Overturn Letter",
+        "document_family": "appeal",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Appeal Determination Overturn Letter",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "appeal",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Medicare Advantage",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Sun Prairie Medicare Advantage",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "KSWIC Appeals Desk",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Eliana Brooks",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "SPM-109448-02",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1958-05-27",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "KSWIC Appeals Desk",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1457965210",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-4400192",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "PA-4400192A",
+          "confidence": 0.98
+        },
+        "policy_or_group_id": {
+          "value": "SPM-60519",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Appeal overturn for specialist imaging request",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "overturned",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "medical_necessity_met_on_appeal",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "OVT-APP-02"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Additional specialist documentation demonstrated medical necessity and the prior denial was reversed.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "2026-02-01",
+          "confidence": 0.95
+        },
+        "decision_date": {
+          "value": "2026-02-24",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-01-10",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "2026-02-24",
+          "confidence": 0.95
+        },
+        "authorization_end": {
+          "value": "2026-03-31",
+          "confidence": 0.95
+        },
+        "response_deadline": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "requested_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "approved_units": {
+          "value": "1",
+          "confidence": 0.95
+        },
+        "billed_amount": {
+          "value": 1865.42,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": 1865.42,
+          "confidence": 0.95
+        },
+        "plan_paid": {
+          "value": 1678.88,
+          "confidence": 0.95
+        },
+        "member_responsibility": {
+          "value": 186.54,
+          "confidence": 0.95
+        },
+        "documents_requested": {
+          "value": [],
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "document_id": "scn_009_explanation_of_benefits",
+      "source_pdf": "generated_packets/scn_009_explanation_of_benefits/scn_009_explanation_of_benefits.pdf",
+      "source_text": "generated_packets/scn_009_explanation_of_benefits/scn_009_explanation_of_benefits.txt",
+      "classification": {
+        "document_type": "Explanation of Benefits",
+        "document_family": "claims",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Explanation of Benefits",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "claims",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial PPO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "North Plains Select",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "Member and provider copy",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Riley Mercer",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "NPS-118290-01",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1995-09-21",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1881357012",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-7224508",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "NPS-42117",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Office visit and lab panel",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "paid",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "claim_paid",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "PAID"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Claim processed per plan benefits with deductible and coinsurance applied.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "decision_date": {
+          "value": "2026-02-25",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-02-04",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "requested_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "approved_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "billed_amount": {
+          "value": 640.0,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": 425.0,
+          "confidence": 0.95
+        },
+        "plan_paid": {
+          "value": 297.5,
+          "confidence": 0.95
+        },
+        "member_responsibility": {
+          "value": 127.5,
+          "confidence": 0.95
+        },
+        "documents_requested": {
+          "value": [],
+          "confidence": 0.0
+        }
+      }
+    },
+    {
+      "document_id": "scn_010_coordination_of_benefits_questionnaire_letter",
+      "source_pdf": "generated_packets/scn_010_coordination_of_benefits_questionnaire_letter/scn_010_coordination_of_benefits_questionnaire_letter.pdf",
+      "source_text": "generated_packets/scn_010_coordination_of_benefits_questionnaire_letter/scn_010_coordination_of_benefits_questionnaire_letter.txt",
+      "classification": {
+        "document_type": "Coordination of Benefits Questionnaire Letter",
+        "document_family": "member_admin",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Coordination of Benefits Questionnaire Letter",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "member_admin",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Commercial PPO",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Prairie Horizon Health Plan",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "Member and provider copy",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Cameron Vale",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "PHH-551002-03",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1974-01-04",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1881357012",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-8892014",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "KS-33207",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "COB verification request",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "information_requested",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "cob_verification",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "COB-PEND-11"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Claim processing is delayed pending verification of other active insurance coverage.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "decision_date": {
+          "value": "2026-02-26",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-02-02",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-18",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "approved_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "billed_amount": {
+          "value": 920.0,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "plan_paid": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "member_responsibility": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "documents_requested": {
+          "value": [
+            "Completed COB questionnaire",
+            "Proof of active or inactive secondary coverage"
+          ],
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "document_id": "scn_011_overpayment_recovery_notice",
+      "source_pdf": "generated_packets/scn_011_overpayment_recovery_notice/scn_011_overpayment_recovery_notice.pdf",
+      "source_text": "generated_packets/scn_011_overpayment_recovery_notice/scn_011_overpayment_recovery_notice.txt",
+      "classification": {
+        "document_type": "Overpayment Recovery Notice",
+        "document_family": "payment_integrity",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Overpayment Recovery Notice",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "payment_integrity",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "Managed Medicaid",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "Sun Prairie Medicaid Advantage",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Hayden Cole",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "SPM-402884-08",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1982-08-18",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "KSWIC Revenue Cycle Billing Office",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1457965210",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "CLM-1045507",
+          "confidence": 0.98
+        },
+        "authorization_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "policy_or_group_id": {
+          "value": "SPM-70218",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Duplicate outpatient payment recovery",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "recoupment",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "duplicate_payment",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "RC-202",
+            "DUP-PMT"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Duplicate reimbursement was identified during post-payment review and recovery will occur through offset.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "decision_date": {
+          "value": "2026-02-28",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-01-11",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-30",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "approved_units": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "billed_amount": {
+          "value": 912.33,
+          "confidence": 0.95
+        },
+        "allowed_amount": {
+          "value": 912.33,
+          "confidence": 0.95
+        },
+        "plan_paid": {
+          "value": 912.33,
+          "confidence": 0.95
+        },
+        "member_responsibility": {
+          "value": 0.0,
+          "confidence": 0.95
+        },
+        "documents_requested": {
+          "value": [
+            "Remittance advice copy",
+            "Posting audit trail if disputing"
+          ],
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "document_id": "scn_014_pharmacy_exception_denial",
+      "source_pdf": "generated_packets/scn_014_pharmacy_exception_denial/scn_014_pharmacy_exception_denial.pdf",
+      "source_text": "generated_packets/scn_014_pharmacy_exception_denial/scn_014_pharmacy_exception_denial.txt",
+      "classification": {
+        "document_type": "Pharmacy Exception Denial",
+        "document_family": "pharmacy",
+        "confidence": 0.97
+      },
+      "fields": {
+        "document_type": {
+          "value": "Pharmacy Exception Denial",
+          "confidence": 0.98
+        },
+        "document_family": {
+          "value": "pharmacy",
+          "confidence": 0.98
+        },
+        "line_of_business": {
+          "value": "PBM / Pharmacy Benefit",
+          "confidence": 0.95
+        },
+        "payer_name": {
+          "value": "HeartlandRx Benefit Services",
+          "confidence": 0.98
+        },
+        "recipient_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "member_name": {
+          "value": "Sasha Glenn",
+          "confidence": 0.98
+        },
+        "member_id": {
+          "value": "HRX-901114-01",
+          "confidence": 0.98
+        },
+        "member_dob": {
+          "value": "1990-06-11",
+          "confidence": 0.95
+        },
+        "provider_name": {
+          "value": "Kansas Sunflower Women's Imaging Center",
+          "confidence": 0.95
+        },
+        "provider_npi": {
+          "value": "1881357012",
+          "confidence": 0.95
+        },
+        "claim_number": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_number": {
+          "value": "RX-PA-661921",
+          "confidence": 0.98
+        },
+        "policy_or_group_id": {
+          "value": "HRX-61122",
+          "confidence": 0.95
+        },
+        "service_description": {
+          "value": "Biologic formulary exception request",
+          "confidence": 0.92
+        },
+        "decision_status": {
+          "value": "denied",
+          "confidence": 0.98
+        },
+        "reason_category": {
+          "value": "step_therapy",
+          "confidence": 0.95
+        },
+        "reason_codes": {
+          "value": [
+            "RX-STEP-17"
+          ],
+          "confidence": 0.95
+        },
+        "reason_text": {
+          "value": "Formulary exception criteria were not met because the preferred step-therapy alternatives have not been trialed.",
+          "confidence": 0.92
+        },
+        "request_received": {
+          "value": "2026-02-20",
+          "confidence": 0.95
+        },
+        "decision_date": {
+          "value": "2026-03-01",
+          "confidence": 0.95
+        },
+        "service_date": {
+          "value": "2026-03-03",
+          "confidence": 0.95
+        },
+        "authorization_start": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "authorization_end": {
+          "value": "",
+          "confidence": 0.0
+        },
+        "response_deadline": {
+          "value": "2026-03-15",
+          "confidence": 0.95
+        },
+        "requested_units": {
+          "value": "30-day supply",
+          "confidence": 0.95
+        },
+        "approved_units": {
+          "value": "0",
+          "confidence": 0.95
+        },
+        "billed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "allowed_amount": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "plan_paid": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "member_responsibility": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "documents_requested": {
+          "value": [
+            "Trial-and-failure history",
+            "Prescriber clinical rationale"
+          ],
+          "confidence": 0.92
+        }
+      }
+    }
+  ]
+}

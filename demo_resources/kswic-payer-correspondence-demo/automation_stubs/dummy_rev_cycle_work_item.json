@@ -1,0 +1,24 @@
+{
+  "automation_id": "dummy_rev_cycle_work_item",
+  "display_name": "Dummy - Rev Cycle Work Item",
+  "system": "Synthetic rev cycle platform",
+  "supported_actions": [
+    "create_denial_case",
+    "update_appeal_tracker",
+    "create_recoupment_case"
+  ],
+  "required_inputs": [
+    "document_id",
+    "claim_number",
+    "decision_status",
+    "priority",
+    "owner_queue",
+    "action"
+  ],
+  "outputs": [
+    "work_item_id",
+    "owner_queue",
+    "status",
+    "notes"
+  ]
+}

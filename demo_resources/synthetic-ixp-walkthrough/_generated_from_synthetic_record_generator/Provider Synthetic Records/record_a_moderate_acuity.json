@@ -1,0 +1,288 @@
+{
+  "record_label": "A",
+  "acuity": "Moderate Acuity",
+  "theme": "Sepsis with organ dysfunction",
+  "patient": {
+    "name": "Amelia R. Greene",
+    "mrn": "30014521",
+    "age": "69",
+    "gender": "Female",
+    "admission_date": "2026-01-08",
+    "discharge_date": "2026-01-13",
+    "length_of_stay": "5 days",
+    "attending_physician": "Harold Kim, MD"
+  },
+  "admission_hnp": {
+    "chief_complaint": "Fever, confusion, and decreased urine output",
+    "admission_context": "Direct admission from emergency department",
+    "hpi": "Patient presented with 2 days of malaise, rigors, urinary urgency, and progressive confusion. Initial evaluation documented sepsis on admission with acute kidney injury and hypotension. Past history includes chronic heart failure, but systolic/diastolic type was not specified in documentation.",
+    "past_medical_history": [
+      "Chronic heart failure (type not specified)",
+      "Type 2 diabetes mellitus",
+      "Hypertension",
+      "Coronary artery disease",
+      "Chronic kidney disease (baseline creatinine 1.1 mg/dL)"
+    ],
+    "medications": [
+      "Metformin 1000 mg PO BID",
+      "Losartan 50 mg PO daily",
+      "Furosemide 20 mg PO daily",
+      "Carvedilol 6.25 mg PO BID",
+      "Aspirin 81 mg PO daily"
+    ],
+    "allergies": [
+      "Penicillin (rash)",
+      "Sulfa drugs (hives)"
+    ]
+  },
+  "progress_notes": [
+    {
+      "date": "2026-01-08",
+      "hospital_day": "HD1",
+      "title": "Admission Progress Note",
+      "service": "Hospital Medicine",
+      "author": "Harold Kim, MD",
+      "events": [
+        "Sepsis documented on admission with suspected urinary source.",
+        "Initial BP 92/58 after fluids; urine output low over first 6 hours."
+      ],
+      "assessment": [
+        "Sepsis with early organ dysfunction.",
+        "AKI present but stage not specified in chart."
+      ],
+      "plan": [
+        "Broad-spectrum antibiotics and fluid resuscitation.",
+        "Trend lactate, CBC, BMP every 12 hours.",
+        "Strict intake/output and nephrology awareness."
+      ],
+      "signed_at": "2026-01-08 18:11"
+    },
+    {
+      "date": "2026-01-09",
+      "hospital_day": "HD2",
+      "title": "Escalation Note",
+      "service": "Critical Care",
+      "author": "Maya Chen, DO",
+      "events": [
+        "Rapid decline with MAP 56 and lactate peak 4.5 mmol/L.",
+        "Transferred to ICU; norepinephrine started for refractory hypotension."
+      ],
+      "assessment": [
+        "Septic shock physiology for approximately 24 hours.",
+        "Volume status and CHF history complicated fluid strategy."
+      ],
+      "plan": [
+        "Titrate norepinephrine to MAP >= 65.",
+        "Repeat cultures and narrow antibiotics when sensitivities return.",
+        "Hourly urine output and renal function monitoring."
+      ],
+      "signed_at": "2026-01-09 09:40"
+    },
+    {
+      "date": "2026-01-10",
+      "hospital_day": "HD3",
+      "title": "ICU Improvement Note",
+      "service": "Critical Care",
+      "author": "Maya Chen, DO",
+      "events": [
+        "Hemodynamics improved; pressor weaned off overnight.",
+        "Lactate declined to 2.8 mmol/L and mentation improved."
+      ],
+      "assessment": [
+        "Sepsis physiology improving with treatment.",
+        "AKI plateauing; creatinine trending down from peak."
+      ],
+      "plan": [
+        "Transfer back to telemetry floor.",
+        "Continue IV antibiotics and daily renal labs.",
+        "Resume home heart-failure meds cautiously."
+      ],
+      "signed_at": "2026-01-10 07:32"
+    },
+    {
+      "date": "2026-01-11",
+      "hospital_day": "HD4",
+      "title": "Floor Progress Note",
+      "service": "Hospital Medicine",
+      "author": "Harold Kim, MD",
+      "events": [
+        "No recurrent hypotension; oral intake improving.",
+        "Lactate reached 2.1 mmol/L; creatinine near baseline."
+      ],
+      "assessment": [
+        "Clinical improvement sustained.",
+        "Ready for discharge planning with close follow-up."
+      ],
+      "plan": [
+        "Complete antibiotic course with oral transition.",
+        "Arrange PCP and cardiology follow-up within 7 days.",
+        "Discharge expected next morning if stable overnight."
+      ],
+      "signed_at": "2026-01-11 17:05"
+    }
+  ],
+  "escalation_event": {
+    "date": "2026-01-09",
+    "transfer_path": "Telemetry -> ICU -> Telemetry",
+    "hypotension": "Yes (MAP nadir 56, BP 78/46)",
+    "lactate_peak": "4.5 mmol/L",
+    "pressor_use": "Norepinephrine infusion for 14 hours",
+    "mechanical_ventilation": "No",
+    "duration": "ICU stay 24 hours",
+    "outcome": "Stabilized and transferred back to floor",
+    "transfer_note": [
+      "Escalation triggered by persistent hypotension despite fluid challenge.",
+      "Critical care accepted transfer; central access obtained and pressor initiated.",
+      "After 24 hours, blood pressure stabilized and lactate improved."
+    ],
+    "signed_by": "Maya Chen, DO",
+    "signed_at": "2026-01-10 07:30"
+  },
+  "lab_trends": [
+    {
+      "date": "01-08",
+      "time": "AM",
+      "wbc": "17.2 H",
+      "creatinine": "1.58 H",
+      "lactate": "3.8 H",
+      "hemoglobin": "11.2 L"
+    },
+    {
+      "date": "01-08",
+      "time": "PM",
+      "wbc": "18.5 H",
+      "creatinine": "1.72 H",
+      "lactate": "4.5 H",
+      "hemoglobin": "10.9 L"
+    },
+    {
+      "date": "01-09",
+      "time": "AM",
+      "wbc": "16.8 H",
+      "creatinine": "1.80 H",
+      "lactate": "3.9 H",
+      "hemoglobin": "10.6 L"
+    },
+    {
+      "date": "01-09",
+      "time": "PM",
+      "wbc": "15.1 H",
+      "creatinine": "1.66 H",
+      "lactate": "3.1 H",
+      "hemoglobin": "10.5 L"
+    },
+    {
+      "date": "01-10",
+      "time": "AM",
+      "wbc": "13.9 H",
+      "creatinine": "1.51 H",
+      "lactate": "2.8 H",
+      "hemoglobin": "10.3 L"
+    },
+    {
+      "date": "01-10",
+      "time": "PM",
+      "wbc": "12.8 H",
+      "creatinine": "1.39 H",
+      "lactate": "2.4 H",
+      "hemoglobin": "10.4 L"
+    },
+    {
+      "date": "01-11",
+      "time": "AM",
+      "wbc": "11.4 H",
+      "creatinine": "1.26 H",
+      "lactate": "2.1 H",
+      "hemoglobin": "10.6 L"
+    },
+    {
+      "date": "01-11",
+      "time": "PM",
+      "wbc": "10.2",
+      "creatinine": "1.14",
+      "lactate": "1.9",
+      "hemoglobin": "10.8 L"
+    }
+  ],
+  "lab_interpretation": [
+    "Abnormal trend present: lactate improved 4.5 -> 2.1 mmol/L with resuscitation.",
+    "Creatinine peaked at 1.80 mg/dL then down-trended toward baseline.",
+    "WBC remained elevated early and normalized by discharge trajectory."
+  ],
+  "procedure_report": {
+    "procedure": "Cystoscopy with left ureteral stent placement",
+    "date": "2026-01-09",
+    "indication": "Source control for obstructive urosepsis",
+    "operator": "Elena Russo, MD",
+    "anesthesia": "General endotracheal",
+    "complications": "None documented",
+    "findings": [
+      "Distal left ureteral obstruction with purulent efflux after decompression.",
+      "Stent deployed in satisfactory position under fluoroscopic guidance.",
+      "No immediate bleeding or perforation."
+    ],
+    "signed_at": "2026-01-09 22:18"
+  },
+  "discharge_summary": {
+    "final_diagnoses": [
+      "Sepsis on admission with transient septic shock physiology",
+      "Acute kidney injury (stage not specified in provider note)",
+      "Chronic heart failure, unspecified type",
+      "Type 2 diabetes mellitus",
+      "Hypertension"
+    ],
+    "hospital_course": [
+      "Admitted for sepsis and organ dysfunction with hypotension requiring ICU transfer.",
+      "Received vasopressor support for 14 hours and source-control procedure.",
+      "Progressive hemodynamic and metabolic improvement; lactate and creatinine down-trended."
+    ],
+    "disposition": "Home with home-health nursing",
+    "follow_up": [
+      "Primary care and cardiology follow-up in 1 week.",
+      "Repeat BMP and CBC within 72 hours after discharge.",
+      "Complete oral antibiotic course and return for recurrent fever/hypotension."
+    ],
+    "author": "Harold Kim, MD",
+    "signed_at": "2026-01-13 09:02"
+  },
+  "coding": {
+    "principal_diagnosis": "Sepsis with acute organ dysfunction",
+    "principal_icd10": "A41.9",
+    "secondary_diagnoses": [
+      [
+        "N17.9",
+        "Acute kidney injury, unspecified"
+      ],
+      [
+        "I50.9",
+        "Heart failure, unspecified"
+      ],
+      [
+        "E11.9",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      [
+        "I10",
+        "Essential hypertension"
+      ],
+      [
+        "N39.0",
+        "Urinary tract infection, site not specified"
+      ],
+      [
+        "E86.0",
+        "Dehydration"
+      ]
+    ],
+    "documentation_gaps": [
+      [
+        "Heart failure documented as CHF without type",
+        "Needs systolic/diastolic/combined specificity"
+      ],
+      [
+        "AKI documented without stage",
+        "Requires KDIGO stage for severity accuracy"
+      ]
+    ]
+  }
+}
