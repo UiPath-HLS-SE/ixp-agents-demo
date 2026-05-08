@@ -5,6 +5,10 @@ __pycache__/
 .env
 .uipath/
 __uipath/
+.claude/
+artifacts/
+current-state-documents/
+demo_resources/kswic-payer-correspondence-demo/live_ixp/
 *.pyc
 *.pyo
 *.pyd

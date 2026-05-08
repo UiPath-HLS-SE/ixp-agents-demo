@@ -55,13 +55,13 @@ def load_runtime_env(
     root = repo_root or ROOT
     load_dotenv(root / ".env", override=override)
 
-    os.environ.setdefault("UIPATH_TENANT", "HLS_SE_Team")
-    os.environ.setdefault(
-        "UIPATH_URL",
-        f"https://cloud.uipath.com/uipathlabs/{os.environ['UIPATH_TENANT']}",
-    )
+    account_logical_name = os.environ.get("UIPATH_ACCOUNT_LOGICAL_NAME")
+    tenant_name = os.environ.get("UIPATH_TENANT")
+    if not os.environ.get("UIPATH_URL") and account_logical_name and tenant_name:
+        os.environ["UIPATH_URL"] = f"https://cloud.uipath.com/{account_logical_name}/{tenant_name}"
     os.environ.setdefault("UIPATH_FOLDER_PATH", "Shared")
-    os.environ.setdefault("UIPATH_BASE_URL", os.environ["UIPATH_URL"])
+    if os.environ.get("UIPATH_URL"):
+        os.environ.setdefault("UIPATH_BASE_URL", os.environ["UIPATH_URL"])
 
     auth_cache = resolve_auth_cache(root)
     if prefer_cli_auth_cache and auth_cache is not None:

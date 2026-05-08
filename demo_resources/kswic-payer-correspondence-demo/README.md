@@ -35,8 +35,8 @@ That matches the current UiPath platform guidance:
 - `simulated_ixp_output.json`
   - IXP-style structured payloads that Maestro would consume
 - `live_ixp/`
-  - outputs from the live `UM Intake` IXP extractor run against a small fake-doc batch
-  - includes `results.json`, `manifest.json`, `summary.md`, `review_payloads.json`, `review_summary.md`, and raw per-document payloads
+  - local-only outputs from the live `UM Intake` IXP extractor run against a small fake-doc batch
+  - ignored by git because they can include tenant document IDs, project IDs, and local paths
 - `simulated_maestro_run.json`
   - routing results showing which dummy automations fire for each notice
 - `ground_truth.jsonl`
@@ -53,8 +53,8 @@ That matches the current UiPath platform guidance:
 
 ## Shared-folder cloud test path
 
-The repo now carries a real cloud smoke-test lane for the HLS tenant's `Shared`
-folder, modeled after the sibling orchestrator demo repo:
+The repo now carries a real cloud smoke-test lane for a configured tenant's
+`Shared` folder, modeled after the sibling orchestrator demo repo:
 
 1. deploy `cloud-api-smoke/shared-kswic-correspondence-smoke-agent`
 2. deploy `maestro-process-tests/shared-kswic-correspondence-maestro-test`
@@ -108,6 +108,7 @@ Notes:
   - `scn_005_request_for_additional_information`
 - override the batch with repeated `--doc <packet_folder_name>` flags
 - output artifacts land in `live_ixp/`
+- `live_ixp/` is intentionally ignored by git and should not be pushed
 
 ## Start the published Shared demo from live IXP output
 

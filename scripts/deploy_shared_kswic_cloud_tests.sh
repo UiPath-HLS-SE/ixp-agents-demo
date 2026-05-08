@@ -17,10 +17,12 @@ if [[ -f ".env" ]]; then
   set +a
 fi
 
-: "${UIPATH_TENANT:=HLS_SE_Team}"
-: "${UIPATH_URL:=https://cloud.uipath.com/uipathlabs/${UIPATH_TENANT}}"
+: "${UIPATH_TENANT:=}"
 : "${UIPATH_FOLDER_PATH:=Shared}"
-if [[ -z "${UIPATH_BASE_URL:-}" ]]; then
+if [[ -z "${UIPATH_URL:-}" && -n "${UIPATH_ACCOUNT_LOGICAL_NAME:-}" && -n "${UIPATH_TENANT:-}" ]]; then
+  UIPATH_URL="https://cloud.uipath.com/${UIPATH_ACCOUNT_LOGICAL_NAME}/${UIPATH_TENANT}"
+fi
+if [[ -z "${UIPATH_BASE_URL:-}" && -n "${UIPATH_URL:-}" ]]; then
   UIPATH_BASE_URL="$UIPATH_URL"
 fi
 

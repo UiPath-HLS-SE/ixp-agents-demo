@@ -157,8 +157,8 @@ End-to-end flow:
 ./.venv/bin/python scripts/run_shared_kswic_cloud_smoke.py --target maestro --wait
 ```
 
-The default target folder is `Shared` via `.env.example`, and the default tenant
-settings point at `HLS_SE_Team`.
+The default target folder is `Shared` via `.env.example`. Tenant and base URL
+settings must be supplied locally in `.env`.
 
 To feed the published smoke or Maestro release from the live `UM Intake` fake-doc
 run instead of the built-in synthetic profiles:
@@ -191,7 +191,7 @@ Artifacts are written to
 `demo_resources/kswic-payer-correspondence-demo/live_ixp/`, including
 `results.json`, `manifest.json`, per-document raw payloads under `raw/`, a
 compact `summary.md`, and reviewer-oriented `review_payloads.json` /
-`review_summary.md`.
+`review_summary.md`. This directory is ignored and should remain local.
 
 ## How to demo this in 10 minutes
 

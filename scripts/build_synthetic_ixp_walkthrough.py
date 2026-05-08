@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SYNTHETIC_ROOT = REPO_ROOT.parent / "synthetic-record-generator" / "SyntheticRecordGenerator" / "output"
 SYNTHETIC_GENERATOR_PACKAGE_ROOT = REPO_ROOT.parent / "synthetic-record-generator" / "SyntheticRecordGenerator"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "demo_resources" / "synthetic-ixp-walkthrough"
-CURRENT_IXP_TAXONOMY_PATH = REPO_ROOT / "current-state-documents" / "prior-auth-acfc-raisa-universal-v5-taxonomy.json"
+CURRENT_IXP_TAXONOMY_PATH = REPO_ROOT / "current-state-documents" / "prior-auth-demo-taxonomy.json"
 PROMPT_RECOMMENDATIONS_PATH = REPO_ROOT / "artifacts" / "fax-ground-truth-eval" / "ixp_prompt_test_recommendations.md"
 GROUND_TRUTH_WORKBOOK_NAME = "synthetic_ground_truth.xlsx"
 IXP_WORKBOOK_NAME = "synthetic_ixp_results.xlsx"
@@ -1060,15 +1060,7 @@ def normalize_prompt_name(value: str) -> str:
 
 
 def sanitize_prompt_for_demo(text: str) -> str:
-    sanitized = text
-    replacements = {
-        "AmeriHealth Caritas (ACFC)": "the target health plan",
-        "AmeriHealth Caritas": "the target health plan",
-        "ACFC": "the target health plan",
-    }
-    for original, replacement in replacements.items():
-        sanitized = sanitized.replace(original, replacement)
-    return sanitized
+    return text
 
 
 def load_current_ixp_prompt_review() -> dict[str, Any]:
@@ -1220,7 +1212,7 @@ def build_ixp_run_payload(packets: list[SyntheticPacket], output_dir: Path) -> d
         "finished_at": finished_at,
         "project_name": "UM Intake",
         "project_id": "synthetic-um-intake",
-        "tag_name": "Production",
+        "tag_name": "synthetic",
         "project_version": 999,
         "project_version_name": "synthetic-demo",
         "processed_count": len(results),
